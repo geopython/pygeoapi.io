@@ -4,7 +4,7 @@ title: pygeoapi - an OGC API to geospatial data
 
 ![pygeoapi logo](img/pygeoapi-logo.png "pygeoapi logo")
 
-<h4>pygeoapi is a Python server implementation of the <a href="https://www.opengeospatial.org/blog/2996">OGC API suite of standards</a>. The project emerged as part of the next generation OGC API efforts in 2018 and provides the capability for organizations to deploy an RESTful OGC API endpoint using OpenAPI, GeoJSON, and HTML. pygeoapi is <a href="https://opensource.org">open source</a> and released under an <a href="https://github.com/geopython/pygeoapi/blob/master/LICENSE.md">MIT license</a>. <a title="OSGeo Community Project" href="https://osgeo.org"><img alt="OSGeo Community Project" src="https://raw.githubusercontent.com/OSGeo/osgeo/master/incubation/community/OSGeo_community.png" height="64"/></a></h4>
+<h4>pygeoapi is a Python server implementation of the <a href="https://www.opengeospatial.org/blog/2996">OGC API suite of standards</a>. The project emerged as part of the next generation OGC API efforts in 2018 and provides the capability for organizations to deploy an RESTful OGC API endpoint using OpenAPI, GeoJSON, and HTML. pygeoapi is <a href="https://opensource.org">open source</a> and released under an <a href="https://github.com/geopython/pygeoapi/blob/master/LICENSE.md">MIT license</a>. <a title="OSGeo Community Project" href="https://www.osgeo.org/projects/pygeoapi"><img alt="OSGeo Community Project" src="https://raw.githubusercontent.com/OSGeo/osgeo/master/incubation/community/OSGeo_community.png" height="64"/></a></h4>
 
 ## Install in 5 minutes
 ```python
