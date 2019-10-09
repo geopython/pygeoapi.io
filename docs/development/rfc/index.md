@@ -10,4 +10,4 @@ An RFC describes a major change in the technological underpinnings of
 pygeoapi, major additions to functionality, or changes in the direction of
 the project.
 
-* [RFC1: Project Steering Committee Guidelines](rfc-1)
+* [RFC1: Project Steering Committee Guidelines](1)
