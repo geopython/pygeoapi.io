@@ -4,7 +4,7 @@ title: Project Steering Committee
 
 ## Project Steering Committee
 
-In accordance with [RFC1](../../development/rfc-1),
+In accordance with [RFC1](../../development/rfc/rfc-1),
 the authoritative and current PSC membership list is maintained at
 [https://pygeoapi.io/community/psc](psc)
 
@@ -17,4 +17,4 @@ the authoritative and current PSC membership list is maintained at
 - [Tom Kralidis](https://github.com/tomkralidis) (Chair)
 - [Angelos Tzotsos](https://github.com/kalxas)
 
-<script src="https://embed.github.com/view/geojson/geopython/pycsw.org/gh-pages/community/psc.geojson?width=400&height=300"> </script>
+<script src="https://embed.github.com/view/geojson/geopython/pygeoapio.io/gh-pages/community/psc.geojson?width=400&height=300"> </script>
