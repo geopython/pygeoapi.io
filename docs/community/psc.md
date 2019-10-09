@@ -17,4 +17,4 @@ the authoritative and current PSC membership list is maintained at
 - [Tom Kralidis](https://github.com/tomkralidis) (Chair)
 - [Angelos Tzotsos](https://github.com/kalxas)
 
-<script src="https://embed.github.com/view/geojson/geopython/pygeoapio.io/gh-pages/community/psc.geojson?width=400&height=300"> </script>
+<script src="https://embed.github.com/view/geojson/geopython/pygeoapi.io/gh-pages/community/psc.geojson?width=400&height=300"> </script>
