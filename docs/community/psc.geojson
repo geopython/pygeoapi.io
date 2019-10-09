@@ -1,0 +1,65 @@
+{
+    "type": "FeatureCollection", 
+    "features": [
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    12.6514,
+                    42.3759
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "marker-color": "0000FF", 
+                "role": "PSC", 
+                "name": "<a target=\"_blank\" href=\"https://github.com/francbartoli\">Francesco Bartoli</a>"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    4.8517,
+                    52.3099
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "marker-color": "0000FF", 
+                "role": "PSC", 
+                "name": "<a target=\"_blank\" href=\"https://github.com/justb4\">Just van den Broecke</a>"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -79.383184, 
+                    43.653226
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "marker-color": "0000FF", 
+                "role": "PSC Chair", 
+                "name": "<a target=\"_blank\" href=\"https://github.com/tomkralidis\">Tom Kralidis</a>"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    23.72936, 
+                    37.983917
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "marker-color": "0000FF", 
+                "role": "PSC", 
+                "name": "<a target=\"_blank\" href=\"https://github.com/kalxas\">Angelos Tzotsos</a>"
+            }
+        }
+    ]
+}
