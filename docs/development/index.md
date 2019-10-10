@@ -1,3 +1,7 @@
+---
+title: Development
+---
+
 ## Development
 
 - [Project Steering Committee](../community/psc)

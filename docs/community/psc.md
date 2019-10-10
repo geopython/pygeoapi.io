@@ -6,7 +6,7 @@ title: Project Steering Committee
 
 In accordance with [RFC1](../../development/rfc/1),
 the authoritative and current PSC membership list is maintained at
-[https://pygeoapi.io/community/psc](psc)
+[https://pygeoapi.io/community/psc](../psc)
 
 ### Members (in alphabetical order)
 

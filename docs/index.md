@@ -36,3 +36,5 @@ At a glance:
     - implement custom processes and workflows
     - deploy via Flask, Django, or any Python framework
 - Compliant: passes OGC Compliance testing
+
+[![Open Hub project report for pygeoapi](https://www.openhub.net/p/pygeoapi/widgets/project_thin_badge?format=gif&ref=Thin+badge)](https://www.openhub.net/p/pygeoapi)

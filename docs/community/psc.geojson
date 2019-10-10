@@ -35,6 +35,36 @@
             "geometry": {
                 "type": "Point", 
                 "coordinates": [
+                    5.67375,
+                    51.99934
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "marker-color": "0000FF", 
+                "role": "PSC", 
+                "name": "<a target=\"_blank\" href=\"https://github.com/pvgenuchten\">Paul van Genuchten</a>"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    5.67137,
+                    51.97286
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "marker-color": "0000FF", 
+                "role": "PSC", 
+                "name": "<a target=\"_blank\" href=\"https://github.com/jorgejesus\">Jorge Samuel Mendes de Jesus</a>"
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
                     -79.383184, 
                     43.653226
                 ]
