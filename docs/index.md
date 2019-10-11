@@ -5,7 +5,7 @@ title: pygeoapi - an OGC API to geospatial data
 ![pygeoapi logo](img/pygeoapi-logo.png "pygeoapi logo")
 
 <h4>pygeoapi is a Python server implementation of the <a href="https://www.opengeospatial.org/blog/2996">OGC API suite of standards</a>. The project emerged as part of the next generation OGC API efforts in 2018 and provides the capability for organizations to deploy an RESTful OGC API endpoint using OpenAPI, GeoJSON, and HTML. pygeoapi is <a href="https://opensource.org">open source</a> and released under an <a href="https://github.com/geopython/pygeoapi/blob/master/LICENSE.md">MIT license</a>.
-<br/><a title="OSGeo Community Project" href="https://www.osgeo.org/projects/pygeoapi"><img alt="OSGeo Community Project" src="https://raw.githubusercontent.com/OSGeo/osgeo/master/incubation/community/OSGeo_community.png" width="164" height="64"/></a><a title="FOSS4G Conference" href="https://2020.foss4g.org"><img alt="FOSS4G Conference" width="145" height="45" src="http://2020foss4g.ca/wp-content/uploads/2019/08/HeaderLogo_2-1.png"/></a></h4>
+<br/><a title="OSGeo Community Project" href="https://www.osgeo.org/projects/pygeoapi"><img alt="OSGeo Community Project" src="https://raw.githubusercontent.com/OSGeo/osgeo/master/incubation/community/OSGeo_community.png" width="164" height="64"/></a><a title="FOSS4G Conference" href="https://2020.foss4g.org"><img alt="FOSS4G Conference" width="145" height="45" src="https://2020foss4g.ca/wp-content/uploads/2019/08/HeaderLogo_2-1.png"/></a></h4>
 
 ## Install in 5 minutes
 ```python
