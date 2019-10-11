@@ -17,8 +17,6 @@ nav:
 
 use_directory_urls: true
 
-#theme: yeti
-
 theme:
     name: null
     custom_dir: pygeoapi.io-theme
