@@ -12,7 +12,7 @@ main {
 
 .crumbs {
     background-color:rgb(230, 230, 230);
-    padding: 6px;   
+    padding: 6px;
 }
 
 .crumbs a {
@@ -46,4 +46,22 @@ main {
 
 table:not(.horizontal) {
     max-height: none;
+}
+
+@media only screen and (min-width: 768px) {
+    [type="checkbox"].drawer+* {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    nav > a {
+        padding: 5px;
+    }
+    .logo > img {
+        padding: 0;
+    }
 }
