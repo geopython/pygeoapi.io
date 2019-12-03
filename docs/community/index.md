@@ -20,6 +20,10 @@ Mailing list archives are available at [https://lists.osgeo.org/pipermail/pygeoa
 
 Gitter provides a web-based instant messaging and chatroom.  The pygeoapi [Gitter chatroom](https://gitter.im/geopython/pygeoapi) is public and open to anyone (you require a Gitter or Twitter account to sign in).
 
+## Stack Overflow
+
+pygeoapi discussions on Stack Overflow can be found with the [pygeoapi](https://stackoverflow.com/questions/tagged/pygeoapi) tag.
+
 ## Service Providers
 
 pygeoapi service providers (core development, support, training) can be found on the [OSGeo Service Provider Directory](https://www.osgeo.org/service-providers).
