@@ -4,7 +4,7 @@ title: Download
 
 ## Download
 
-- Current Stable Release (0.6.0) [zip](https://github.com/geopython/pygeoapi/archive/0.6.0.zip) [tar.gz](https://github.com/geopython/pygeoapi/archive/0.6.0.tar.gz)
+- Current Stable Release (0.7.0) [zip](https://github.com/geopython/pygeoapi/archive/0.7.0.zip) [tar.gz](https://github.com/geopython/pygeoapi/archive/0.7.0.tar.gz)
 
 * [All Releases](https://github.com/geopython/pygeoapi/releases)
 
