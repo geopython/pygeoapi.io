@@ -16,9 +16,25 @@ The pygeoapi mailing list enables users and developers to exchange ideas, discus
 
 Mailing list archives are available at [https://lists.osgeo.org/pipermail/pygeoapi](https://lists.osgeo.org/pipermail/pygeoapi).
 
-## Gitter
+## Chat
+
+pygeoapi provides open communication in real-time, and provides chat via Gitter, Slack, or IRC (note: connecting via either Gitter or Slack or IRC plugs you in to the same chat).
+
+PSC discussions, meetings and user discussion can typically be found in pygeoapi's chat.
+
+### Gitter
 
 Gitter provides a web-based instant messaging and chatroom.  The pygeoapi [Gitter chatroom](https://gitter.im/geopython/pygeoapi) is public and open to anyone (you require a Gitter or Twitter account to sign in).
+
+### Slack
+
+The OSGeo Slack is provided at [https://osgeo.slack.com/pygeoapi](https://osgeo.slack.com/pygeoapi).
+
+### IRC
+
+The pygeoapi IRC can be found at [irc://irc.freenode.net#pygeoapi](irc://irc.freenode.net#pygeoapi).
+
+For those wishing only to follow repository changes/updates, the pygeoapi-activity IRC can be found at [irc://irc.freenode.net#pygeoapi-activity](irc://irc.freenode.net#pygeoapi-activity).
 
 ## Stack Overflow
 
