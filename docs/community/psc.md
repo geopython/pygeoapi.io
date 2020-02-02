@@ -8,6 +8,8 @@ In accordance with [RFC1](../../development/rfc/1),
 the authoritative and current PSC membership list is maintained at
 [https://pygeoapi.io/community/psc](../psc)
 
+### PSC Meetings
+
 PSC meetings are managed on the [pygeoapi wiki](https://github.com/geopython/pygeoapi/wiki/Meetings).
 
 ### Members (in alphabetical order)
