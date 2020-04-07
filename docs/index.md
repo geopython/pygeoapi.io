@@ -21,7 +21,7 @@ cd pygeoapi
 . bin/activate
 git clone https://github.com/geopython/pygeoapi.git
 cd pygeoapi
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 python setup.py install
 cp pygeoapi-config.yml example-config.yml
 vi example-config.yml
