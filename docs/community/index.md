@@ -36,6 +36,10 @@ The pygeoapi IRC can be found at [irc://irc.freenode.net#pygeoapi](irc://irc.fre
 
 For those wishing only to follow repository changes/updates, the pygeoapi-activity IRC can be found at [irc://irc.freenode.net#pygeoapi-activity](irc://irc.freenode.net#pygeoapi-activity).
 
+## Twitter
+
+The official pygeoapi Twitter handle is at [https://twitter.com/pygeoapi](https://twitter.com/pygeoapi).
+
 ## Stack Overflow
 
 pygeoapi discussions on Stack Overflow can be found with the [pygeoapi](https://stackoverflow.com/questions/tagged/pygeoapi) tag.
