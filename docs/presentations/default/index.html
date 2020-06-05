@@ -259,7 +259,8 @@
 						<li>OGC API - Common (OWS Common)</li>
 						<li>OGC API - Features (WFS)</li>
 						<li>OGC API - Coverages (WCS)</li>
-						<li>OGC API - Maps and Tiles (WMS/WMTS)</li>
+						<li>OGC API - Maps (WMS)</li>
+						<li>OGC API - Tiles (WMTS)</li>
 						<li>OGC API - Processing (WPS)</li>
 						<li>OGC API - Records (CSW)</li>
 					</ul>
@@ -291,12 +292,23 @@
 						<li>Geospatial data API framework</li>
 						<li>OGC Compliant (already!)</li>
 						<li>OSGeo Community Project</li>
-						<li>International team (Canada, Netherlands, Greece)
+						<li>International team (Canada, Netherlands, Greece, New Zealand)
 							<ul>
-								<li>13 core contributors</li>
+								<li>13 core <a href="https://github.com/geopython/pygeoapi/graphs/contributors">contributors</a></li>
 								<li>21000 upstream contributors (dependencies)</li>
 							</ul>
 						</li>
+					</ul>
+				</section>
+				<section>
+					<h1>Technical Overview</h1>
+					<ul>
+						<li>Publishing (leaves data pristine/alone)
+							<ul>
+								<li>Fits to the data (not the inverse)</li>
+							</ul>
+						</li>
+						<li>Leverages power Python packages</li>
 					</ul>
 				</section>
 				<section>
@@ -341,6 +353,23 @@
 						<li>Unleashes <a href="https://gdal.org/drivers/vector/" target="_blank">~100 Vector Formats!</a> (WFS 1/2, GeoPackage, Shapefile, GeoJSON, PostGIS, ...)</li>
 						<li>Paging, reprojection, spatial/attribute query</li>
 						<li>Unlock existing WFS 1/2s!</li>
+					</ul>
+				</section>
+				<section>
+					<h2>schema.org</h2>
+					<img src="static/schemaorg.png" style="max-height:300px" />
+					<ul>
+						<li>Lower the barrier to data search</li>
+						<li>HTML encoding is annotated as schema.org/Dataset to facilitate search engines</li>
+						<li><a href="https://toolbox.google.com/datasetsearch">Google dataset search</a> locates pygeoapi datasets</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Linked Data - JSON-LD</h2>
+					<ul>
+						<li>JSON-LD provided as additional representation</li>
+						<li>Default out of the box functionality for most pygeoapi resources / endpoints</li>
+						<li><a href="https://docs.pygeoapi.io/en/latest/configuration.html#linked-data">Additional configuration</a></li>
 					</ul>
 				</section>
 			</section>
@@ -410,7 +439,7 @@
 				</section>
 				<section>
 					<h1>Canada</h1>
-					<h2>Meteorological Service of Canada <a href="https://www.canada.ca/en/environment-climate-change/services/weather-general-tools-resources/weather-tools-specialized-data/geospatial-web-services.html">GeoMet</a> platform</h2>
+					<h2>Meteorological Service of Canada <a href="https://eccc-msc.github.io/open-data/msc-geomet/readme_en">GeoMet</a> platform</h2>
 					<ul>
 						<li>OGC web services platform of Canadian weather, climate and water data</li>
 						<li>Realtime weather</li>
@@ -442,6 +471,7 @@
 					<li>More data providers</li>
 					<li>Content negotiation (e.g. Response as GeoPackage, GML,...)</li>
 					<li>Advanced filters (CQL) </li>
+					<li>Transactions</li>
 					<li>More OGC APIs: Maps, Tiles, Coverages, Processes</li>
 				</ul>
 			</section>
@@ -491,6 +521,7 @@
 					<a href="https://twitter.com/justb4">@justb4</a>
 					<a href="https://twitter.com/pvangenuchten">@pvgenuchten</a>
 					<a href="https://twitter.com/tzotsos">@tzotsos</a>
+					<a href="https://github.com/alpha-beta-soup">@alpha-beta-soup</a>
 				</p>
 			</section>
 		</div>
