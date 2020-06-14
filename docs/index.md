@@ -4,8 +4,6 @@ title: pygeoapi - an OGC API to geospatial data
 
 ![pygeoapi logo](img/pygeoapi-logo.png "pygeoapi logo")
 
-<mark class="tag secondary">#StayAtHome #μένουμεσπίτι #FicaEmCasa #QuedateEnCasa #restateacasa #blijfthuis #RestezChezVous #תישארובבית</mark>
-
 <h4>pygeoapi is a Python server implementation of the <a href="http://ogcapi.org">OGC API suite of standards</a>. The project emerged as part of the next generation OGC API efforts in 2018 and provides the capability for organizations to deploy a RESTful OGC API endpoint using OpenAPI, GeoJSON, and HTML. pygeoapi is <a href="https://opensource.org">open source</a> and released under an <a href="https://github.com/geopython/pygeoapi/blob/master/LICENSE.md">MIT license</a>.
 
 <br/>
