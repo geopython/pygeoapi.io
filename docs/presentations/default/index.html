@@ -68,12 +68,10 @@
 					<li>REST/JSON/OpenAPI/Swagger</li>
 					<li>OGC activity</li>
 					<li>Say hello to pygeoapi</li>
-					<li>History</li>
-					<li>Features</li>
-					<li>Installation</li>
+					<li>Core capabilities</li>
 					<li>Deploying</li>
 					<li>Production instances</li>
-					<li>Community</li>
+					<li>Roadmap</li>
 					<li>Support</li>
 				</ul>
 			</section>
@@ -215,13 +213,14 @@
 			<section id="ogc-activity">
 				<section>
 					<h1>OGC activity</h1>
+					<p><a href="https://ogcapi.ogc.org">https://ogcapi.ogc.org</a></p>
 				</section>
 				<section>
 					<h1>W3C Spatial Data on the Web Best Practices (2017)</h1>
 					<ul>
 						<li>Recommendations on formats, identifiers, access, licensing, provenance</li>
 						<li>Being webby</li>
-						<li>https://www.w3.org/TR/sdw-bp/</li>
+						<li><a href="https://www.w3.org/TR/sdw-bp">https://www.w3.org/TR/sdw-bp</a></li>
 					</ul>
 				</section>
 				<section>
@@ -250,7 +249,8 @@
 						<li>2017: W3C Spatial Data on the Web Best Practices</li>
 						<li>2017: OGC API Whitepaper</li>
 						<li>2018: WFS3 Hackathon, Weather on the Web API Hackathon</li>
-						<li>2019: OGC API Hackathon</li>
+						<li>2019-2020: OGC API Hackathons</li>
+						<li><a href="https://ogcapi.ogc.org/apiroadmap.html">OGC API Roadmap</a></li>
 					</ul>
 				</section>
 				<section>
@@ -261,12 +261,13 @@
 						<li>OGC API - Coverages (WCS)</li>
 						<li>OGC API - Maps (WMS)</li>
 						<li>OGC API - Tiles (WMTS)</li>
-						<li>OGC API - Processing (WPS)</li>
+						<li>OGC API - Processes (WPS)</li>
 						<li>OGC API - Records (CSW)</li>
+						<li>OGC API - Styles (SE/SLD)</li>
 					</ul>
 				</section>
 				<section>
-					<h1>OGC activity on GitHub</h1>
+					<h1>OGC <a href="https://github.com/opengeospatial">activity</a> on GitHub</h1>
 					<ul>
 						<li>webby</li>
 						<li>Specification development</li>
@@ -284,6 +285,7 @@
 					<ul>
 						<li><a href="https://geopython.github.io" target="_blank"><img width="60" height="60" src="static/geopython.png" alt="geopython.github.io" style="background: white; border-radius: 10px"/></a> A <a href="https://geopython.github.io">Geopython</a> project</li>
 						<li>Created by <a href="https://twitter.com/tomkralidis">Tom Kralidis</a> in 2018 on Valentine's Day with ❤️ </li>
+						<li><a href="https://www.osgeo.org/projects/pygeoapi/">OSGeo Community Project</a></li>
 					</ul>
 				</section>
 				<section>
@@ -292,9 +294,9 @@
 						<li>Geospatial data API framework</li>
 						<li>OGC Compliant (already!)</li>
 						<li>OSGeo Community Project</li>
-						<li>International team (Canada, Netherlands, Greece, New Zealand)
+						<li>International team (Canada, Netherlands, Greece, Italy, New Zealand)
 							<ul>
-								<li>13 core <a href="https://github.com/geopython/pygeoapi/graphs/contributors">contributors</a></li>
+								<li>Numerous core <a href="https://github.com/geopython/pygeoapi/graphs/contributors">contributors</a></li>
 								<li>21000 upstream contributors (dependencies)</li>
 							</ul>
 						</li>
@@ -318,7 +320,7 @@
 						<li>YAML configuration (metadata, dataset connections</li>
 						<li>Automated OpenAPI document generation (data binding)</li>
 						<li>Robust plugin framework (data connections, formats, processing)</li>
-						<li>Easy deployment (pip install, Docker)</li>
+						<li>Easy deployment (pip install, Docker, conda, UbuntuGIS)</li>
 						<li>Minimal dependencies</li>
 					</ul>
 				</section>
@@ -326,7 +328,7 @@
 					<img src="static/pygeoapi-arch1.png" style="background: white; border-radius: 10px"/>
 				</section>
 				<section>
-					<h1>Data Providers</h1>
+					<h1>Feature Data Providers</h1>
 					<table>
 						<tbody>
 							<tr>
@@ -346,13 +348,31 @@
 					<p>* also via GDAL-OGR Provider</p>
 				</section>
 				<section>
-					<h2>Data Providers - GDAL/OGR</h2>
+					<h2>Feature Data Providers - GDAL/OGR</h2>
 					<img src="static/gdal.png" />
 					<ul>
 						<li>Via OGR-Python bindings</li>
 						<li>Unleashes <a href="https://gdal.org/drivers/vector/" target="_blank">~100 Vector Formats!</a> (WFS 1/2, GeoPackage, Shapefile, GeoJSON, PostGIS, ...)</li>
 						<li>Paging, reprojection, spatial/attribute query</li>
 						<li>Unlock existing WFS 1/2s!</li>
+					</ul>
+				</section>
+				<section>
+					<h1>Coverage Data Providers</h1>
+					<table>
+						<tbody>
+							<tr>
+								<td><img style="background-color: white;" src="static/xarray.png" /></td>
+								<td><img src="static/rasterio.jpeg" /></td>
+							</tr>
+							<tr>
+								<td align="center">xarray</td>
+								<td align="center">rasterio</td>
+							</tr>
+						</tbody>
+					</table>
+					<ul>
+						<li>NetCDF, Cloud Optimized GeoTIFF (COG)</li>
 					</ul>
 				</section>
 				<section>
@@ -373,21 +393,50 @@
 					</ul>
 				</section>
 			</section>
+			<section id="core-capabilities">
+				<section>
+					<h1>Core Capabilities</h1>
+					<h1 style="background-color: white"><img src="static/pygeoapi-core-capabilities.png" style="vertical-align: middle;"/></h1>
+				</section>
+				<section>
+					<h1>OpenAPI</h1>
+					<h1 style="background-color: white"><img src="static/tour-openapi.png" style="vertical-align: middle;"/></h1>
+				</section>
+				<section>
+					<h1>OGC API - Features</h1>
+					<h1 style="background-color: white"><img src="static/tour-oafeat.png" style="vertical-align: middle;"/></h1>
+				</section>
+				<section>
+					<h1>OGC API - Coverages</h1>
+					<h1 style="background-color: white"><img src="static/tour-oacov.png" style="vertical-align: middle;"/></h1>
+				</section>
+				<section>
+					<h1>OGC API - Processes</h1>
+					<h1 style="background-color: white"><img src="static/tour-oaproc.png" style="vertical-align: middle;"/></h1>
+				</section>
+				<section>
+					<h1>SpatioTemporal Asset Catalog (STAC)</h1>
+					<h1 style="background-color: white"><img src="static/tour-stac.png" style="vertical-align: middle;"/></h1>
+				</section>
+			</section>
 			<section id="deploying">
 				<section>
 					<h1>Deploying</h1>
 				</section>
 				<section>
 					<h1>Packaging</h1>
-					<p>Numerous deployment options</p>
+					<p>Numerous <a href="https://docs.pygeoapi.io/en/latest/installation.html">deployment options</a></p>
 					<ul>
-						<li><a href="https://launchpad.net/~ubuntugis/+archive/ubuntu/ubuntugis-unstable">UbuntuGIS</a></li>
-						<li>Coming to OSGeoLive</li>
+						<li>PyPI</li>
+						<li>UbuntuGIS</li>
 						<li>Docker</li>
+						<li>Conda</li>
+						<li>FreeBSD</li>
+						<li>Coming to OSGeoLive</li>
 					</ul>
 				</section>
 				<section>
-					<h1>Overview</h1>
+					<h1>Docker overview</h1>
 					<img alt="Docker" src="static/docker.png" />
 					<ul>
 						<li>pygeoapi <a href="https://hub.docker.com/r/geopython/pygeoapi">Docker Images</a> on DockerHub</li>
@@ -412,7 +461,7 @@
 					</textarea>
 				</section>
 				<section>
-					<h1>Docker</h1>
+					<h1>Docker options</h1>
 					<ul>
 						<li>Custom config via Docker Volume Mapping</li>
 						<li>Run with Docker Compose</li>
@@ -461,11 +510,13 @@
 			<section id="roadmap">
 				<h2>Roadmap</h2>
 				<ul>
+					<li>More OGC APIs: Maps, Tiles, Records</li>
+					<li>OGC API Improvements: Processes</li>
 					<li>More data providers</li>
-					<li>Content negotiation (e.g. Response as GeoPackage, GML,...)</li>
 					<li>Advanced filters (CQL) </li>
 					<li>Transactions</li>
-					<li>More OGC APIs: Maps, Tiles, Coverages, Processes</li>
+					<li>Content negotiation (e.g. Response as GeoPackage, GML,...)</li>
+					<li><a href="https://live.osgeo.org">OSGeoLive</a></li>
 				</ul>
 			</section>
 			<section id="support">
@@ -515,6 +566,7 @@
 					<a href="https://twitter.com/pvangenuchten">@pvgenuchten</a>
 					<a href="https://twitter.com/tzotsos">@tzotsos</a>
 					<a href="https://github.com/alpha-beta-soup">@alpha-beta-soup</a>
+					<a href="https://twitter.com/francbartoli">@francbartoli</a>
 				</p>
 			</section>
 		</div>
