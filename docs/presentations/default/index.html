@@ -537,8 +537,8 @@
 				<section>
 					<h2>Roadmap</h2>
 					<ul>
-						<li>More OGC APIs: Maps, Records</li>
-						<li>OGC API Improvements: Processes</li>
+						<li>More OGC APIs: Maps, Records, Styles</li>
+						<li>OGC API Improvements: Processes management</li>
 						<li>More data providers</li>
 						<li>Advanced filters (CQL) </li>
 						<li>Transactions</li>
@@ -547,20 +547,20 @@
 					</ul>
 				</section>
 				<section>
-					<h2>OGC API Records</h2>
+					<h2>OGC API - Records</h2>
 					<ul>
-						<li><a href="https://github.com/opengeospatial/ogcapi-records/blob/master/implementations.md#pygeoapi">Initial implementation</a> currently in a <a href="https://github.com/tomkralidis/pygeoapi/tree/oarec">branch</a></li>
+						<li><a href="https://github.com/opengeospatial/ogcapi-records/blob/master/implementations.md#pygeoapi">Initial implementation</a> currently <a href="https://github.com/tomkralidis/pygeoapi/tree/oarec">in development</a> with specification</li>
 						<li>Development team part of OGC API - Records SWG</li>
 						<li>Plan to use pycsw <a href="https://github.com/geopython/pycsw/blob/master/pycsw/core/admin.py#L115-L195">backend</a> (PostgreSQL-based)</li>
-						<li>Users will be able to update a single backend and have both CSW and OGC API - Records support.</li>
-						<li>Dependency strategy to be determined (e.g. pygeoapi might become pycsw dependency to support OGC API - Records)</li>
+						<li>Users will be able to update a single backend and have both CSW and OGC API - Records support</li>
+						<li>Dependency strategy to be determined (e.g. pygeoapi may become pycsw dependency to support OGC API - Records)</li>
 					</ul>
 				</section>
 				<section style="font-size: xx-large !important">
 					<h2>Django app</h2>
 					<div>
 					<ul>
-						<li>django application project</li>
+						<li>Django application project</li>
 							<ul>
 								<li>django_app folder next to <code>flask_app.py</code> and <code>starlette_app.py</code></li>
 								<li><code>urls.py</code> with routes</li>
@@ -573,7 +573,7 @@
 							<ul>
 								<li>Use DRF serializers</li>
 								<li>Inject generated OpenAPI document into drf-spectacular</li>
-								<li>Inject jinja templates or use Django templates natively</li>
+								<li>Inject Jinja2 templates or use Django templates natively</li>
 							</ul>
 					</ul>
 					</div>
@@ -583,7 +583,7 @@
 					<ul>
 						<li>Next generation of GeoNode API has been discussed since 2017: <a href="https://github.com/GeoNode/geonode/issues/3228">GNIP-51: GeoNode 4</a></li>
 						<li>Recently a new GeoNode REST API has been merged into master: <a href="https://github.com/GeoNode/geonode/issues/6685">GNIP-79: GeoNode REST APIs (v2)</a></li>
-						<li>Discussion needs to take place to determine how GeoNode could use pygeoapi as a backend:
+						<li>Discussion needed to determine how GeoNode could use pygeoapi as a backend:
 							<ul>
 								<li><a href="https://github.com/GeoNode/geonode/blob/master/geonode/base/models.py#L547-L859">Resource base model</a> could be mapped by pygeoapi to serve OGC API - Records (similar to pycsw GeoNode integration)</li>
 								<li>For OGC API Features, Maps, Styles, Tiles, Coverages (similar to GeoServer and QGIS Server)</li>
