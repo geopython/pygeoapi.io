@@ -556,6 +556,28 @@
 						<li>Dependency strategy to be determined (e.g. pygeoapi might become pycsw dependency to support OGC API Records)</li>
 					</ul>
 				</section>
+				<section style="font-size: xx-large !important">
+					<h2>Django app</h2>
+					<div>
+					<ul>
+						<li>django application project</li>
+							<ul>
+								<li>django_app folder next to <code>flask_app.py</code> and <code>starlette_app.py</code></li>
+								<li><code>urls.py</code> with routes</li>
+								<li><code>views.py</code> with the binding of pygeoapi core API into the process of Request/Response</li>
+								<li><code>settings.py</code> with the pygeoapi configuration path</li>
+							</ul>
+						<li>Add <code>--django</code> option to the cli command to serve the usual django server</li>
+						<li>Make the django app reusable</li>
+						<li>Challenges:</li>
+							<ul>
+								<li>Use DRF serializers</li>
+								<li>Inject generated OpenAPI document into drf-spectacular</li>
+								<li>Inject jinja templates or use Django templates natively</li>
+							</ul>
+					</ul>
+					</div>
+				</section>
 				<section>
 					<h2>GeoNode integration</h2>
 					<ul>
