@@ -550,10 +550,10 @@
 					<h2>OGC API Records</h2>
 					<ul>
 						<li><a href="https://github.com/opengeospatial/ogcapi-records/blob/master/implementations.md#pygeoapi">Initial implementation</a> currently in a <a href="https://github.com/tomkralidis/pygeoapi/tree/oarec">branch</a></li>
-						<li>Development team part of OGC API Records SWG</li>
+						<li>Development team part of OGC API - Records SWG</li>
 						<li>Plan to use pycsw <a href="https://github.com/geopython/pycsw/blob/master/pycsw/core/admin.py#L115-L195">backend</a> (PostgreSQL-based)</li>
-						<li>Users will be able to update a single backend and have both CSW and OGC API Records support.</li>
-						<li>Dependency strategy to be determined (e.g. pygeoapi might become pycsw dependency to support OGC API Records)</li>
+						<li>Users will be able to update a single backend and have both CSW and OGC API - Records support.</li>
+						<li>Dependency strategy to be determined (e.g. pygeoapi might become pycsw dependency to support OGC API - Records)</li>
 					</ul>
 				</section>
 				<section>
@@ -563,8 +563,8 @@
 						<li>Recently a new GeoNode REST API has been merged into master: <a href="https://github.com/GeoNode/geonode/issues/6685">GNIP-79: GeoNode REST APIs (v2)</a></li>
 						<li>Discussion needs to take place to determine how GeoNode could use pygeoapi as a backend:
 							<ul>
-								<li><a href="https://github.com/GeoNode/geonode/blob/master/geonode/base/models.py#L547-L859">Resource base model</a> could be mapped by pygeoapi to serve OGC API Records (similar to pycsw GeoNode integration)</li>
-								<li>For OGC API Features, Maps, Tiles, Coverages (similar to GeoServer and QGIS Server)</li>
+								<li><a href="https://github.com/GeoNode/geonode/blob/master/geonode/base/models.py#L547-L859">Resource base model</a> could be mapped by pygeoapi to serve OGC API - Records (similar to pycsw GeoNode integration)</li>
+								<li>For OGC API Features, Maps, Styles, Tiles, Coverages (similar to GeoServer and QGIS Server)</li>
 								<li>How would auth work in this case?</li>
 							</ul>
 						</li>
