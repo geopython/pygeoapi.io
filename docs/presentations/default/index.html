@@ -567,8 +567,8 @@
 								<li><code>views.py</code> with the binding of pygeoapi core API into the process of Request/Response</li>
 								<li><code>settings.py</code> with the pygeoapi configuration path</li>
 							</ul>
-						<li>Add <code>--django</code> option to the cli command to serve the usual django server</li>
-						<li>Make the django app reusable</li>
+						<li>Add <code>--django</code> option to the cli command to serve the usual Django server</li>
+						<li>Make the Django app reusable</li>
 						<li>Challenges:</li>
 							<ul>
 								<li>Use DRF serializers</li>
@@ -582,11 +582,12 @@
 				<section>
 					<h2>GeoNode integration</h2>
 					<ul>
-						<li>Next generation of GeoNode API has been discussed since 2017: <a href="https://github.com/GeoNode/geonode/issues/3228">GNIP-51: GeoNode 4</a></li>
-						<li>Recently a new GeoNode REST API has been merged into master: <a href="https://github.com/GeoNode/geonode/issues/6685">GNIP-79: GeoNode REST APIs (v2)</a></li>
+						<li>Next generation GeoNode API <a href="https://github.com/GeoNode/geonode/issues/3228">GNIP-51</a></li>
+						<li>New v2 GeoNode REST API has been merged into master: <a href="https://github.com/GeoNode/geonode/issues/6685">GNIP-79</a></li>
 						<li>Discussion needed to determine how GeoNode could use pygeoapi as a backend:
 							<ul>
-								<li><a href="https://github.com/GeoNode/geonode/blob/master/geonode/base/models.py#L547-L859">Resource base model</a> could be mapped by pygeoapi to serve OGC API - Records (similar to pycsw GeoNode integration)</li>
+								<li>Metadata (<a href="https://github.com/GeoNode/geonode/blob/master/geonode/base/models.py#L547-L859">Resource base model</a> -- similar to pycsw GeoNode integration)</li>
+								<li>Direct Elasticsearch integration</li>
 								<li>For OGC API Features, Maps, Styles, Tiles, Coverages (similar to GeoServer and QGIS Server)</li>
 								<li>How would auth work in this case?</li>
 							</ul>
