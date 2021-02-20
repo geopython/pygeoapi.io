@@ -1,3 +1,6 @@
+[![Build Status](https://github.com/geopython/pygeoapi.io/workflows/build%20%E2%9A%99%EF%B8%8F/badge.svg)](https://github.com/geopython/pygeoapi.io/actions)
+[![Join the chat at https://gitter.im/geopython/pygeoapi.io](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/geopython/pygeoapi)
+
 # pygeoapi.io website
 
 The pygeoapi [website](https://pygeoapi.io) is powered
