@@ -20,5 +20,4 @@ jobs:
           python -m pip install --upgrade pip 
           pip install mkdocs
       - name: Deploy 📦
-        run: | 
-          git pull mkdocs gh-deploy
+        run: mkdocs gh-deploy
