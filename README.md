@@ -1,3 +1,6 @@
+[![Build Status](https://github.com/geopython/pygeoapi.io/workflows/build%20%E2%9A%99%EF%B8%8F/badge.svg)](https://github.com/geopython/pygeoapi.io/actions)
+[![Join the chat at https://gitter.im/geopython/pygeoapi.io](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/geopython/pygeoapi)
+
 # pygeoapi.io website
 
 The pygeoapi [website](https://pygeoapi.io) is powered
@@ -55,6 +58,8 @@ git push origin master
 ```
 
 ## Publishing updates to the live site
+
+Website updates are automatically published via GitHub Actions, but just in case:
 
 ```bash
 # NOTE: you require access privileges to the GitHub repository
