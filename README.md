@@ -59,6 +59,8 @@ git push origin master
 
 ## Publishing updates to the live site
 
+Website updates are automatically published via GitHub Actions, but just in case:
+
 ```bash
 # NOTE: you require access privileges to the GitHub repository
 # to publish live updates
