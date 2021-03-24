@@ -16,6 +16,10 @@ The pygeoapi mailing list enables users and developers to exchange ideas, discus
 
 Mailing list archives are available at [https://lists.osgeo.org/pipermail/pygeoapi](https://lists.osgeo.org/pipermail/pygeoapi).
 
+## GitHub Discussions
+
+pygeoapi also provides [GitHub Discussions](https://github.com/geopython/pygeoapi/discussions) as a collaborative community space for general questions, ideas, and more.
+
 ## Chat
 
 pygeoapi provides open communication in real-time, and provides chat via Gitter, Slack, or IRC (note: connecting via either Gitter or Slack or IRC plugs you in to the same chat).
