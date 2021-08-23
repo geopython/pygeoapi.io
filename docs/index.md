@@ -20,14 +20,15 @@ cd pygeoapi
 git clone https://github.com/geopython/pygeoapi.git
 cd pygeoapi
 pip3 install -r requirements.txt
-python setup.py install
+python3 setup.py install
 cp pygeoapi-config.yml example-config.yml
-vi example-config.yml
+vi example-config.yml  # edit as required
 export PYGEOAPI_CONFIG=example-config.yml
 export PYGEOAPI_OPENAPI=example-openapi.yml
 pygeoapi openapi generate $PYGEOAPI_CONFIG > $PYGEOAPI_OPENAPI
 pygeoapi serve
-curl http://localhost:5000
+# in another terminal
+curl http://localhost:5000  # or open in a web browser
 ```
 
 ## Features
