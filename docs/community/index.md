@@ -12,7 +12,7 @@ There are numerous ways to interact with the pygeoapi community.
 
 ## Mailing List
 
-The pygeoapi mailing list enables users and developers to exchange ideas, discuss improvements / issues, and ask questions. To subscribe, visit [https://lists.osgeo.org/mailman/listinfo/pygeoapi](https://lists.osgeo.org/mailman/listinfo/pygeoapi).  The mailing list is also available/searchable via the [OSGeo Nabble forum](http://osgeo-org.1560.x6.nabble.com/pygeoapi-f5404170.html).
+The pygeoapi mailing list enables users and developers to exchange ideas, discuss improvements / issues, and ask questions. To subscribe, visit [https://lists.osgeo.org/mailman/listinfo/pygeoapi](https://lists.osgeo.org/mailman/listinfo/pygeoapi).
 
 Mailing list archives are available at [https://lists.osgeo.org/pipermail/pygeoapi](https://lists.osgeo.org/pipermail/pygeoapi).
 
