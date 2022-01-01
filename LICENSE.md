@@ -1,4 +1,4 @@
-Copyright (c) 2019 - 2021 Tom Kralidis
+Copyright (c) 2019 - 2022 Tom Kralidis
 
 This website is released under the Creative Commons Attribution 4.0 International (CC BY 4.0) license.
 
