@@ -62,6 +62,10 @@ GitHub provides the ability for users to issue [pull requests](https://help.gith
 
 All pygeoapi [source code](https://github.com/geopython/pygeoapi) is managed on GitHub, which includes the latest (`master`) and other supported branches.
 
+## Security issues
+
+If you encounter a security vulnerability in pygeoapi please report as per our [Security Policy](https://github.com/geopython/pygeoapi/blob/master/SECURITY.md)
+
 ## Getting Involved
 
 Users, developers and others are more than welcome!  There are plenty of ways to get involved:
