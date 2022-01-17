@@ -65,3 +65,7 @@ table:not(.horizontal) {
         padding: 0;
     }
 }
+
+span {
+    padding: 5px;
+}
