@@ -27,7 +27,7 @@ If you are a service provider and would like to be listed on this page, please f
     <h2>EOX IT Services GmbH</h2>
     <p>
       <span><a href="https://eox.at"><img width="100" src="https://eox.at/EOX_Logo.svg"/></a></span>
-      EOX IT Services GmbH (Austria) offers solutions and services in the geodata domain in general and in the Earth Observation domain in particular. EOX is strongly committed towards utilizing and contributing to Open Source Software for example by adapting pygeoapi for <a href="https://github.com/eurodatacube/pygeoapi-kubernetes-papermill">kubernetes-based cloud environments</a>. EOX furthermore provides managed compute and storage resources in the EOxHub Workspace.</span>
+      <span>EOX IT Services GmbH (Austria) offers solutions and services in the geodata domain in general and in the Earth Observation domain in particular. EOX is strongly committed towards utilizing and contributing to Open Source Software for example by adapting pygeoapi for <a href="https://github.com/eurodatacube/pygeoapi-kubernetes-papermill">kubernetes-based cloud environments</a>. EOX furthermore provides managed compute and storage resources in the EOxHub Workspace.</span>
     </p>
   </div>
 
