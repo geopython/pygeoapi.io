@@ -11,6 +11,7 @@ title: Documentation
 
 ### Presentations
 
+- Slides: [Elastic Community Conference 2022 presentation](../presentations/elastic-cc-2022)
 - Slides: [FOSS4G 2021 presentation](../presentations/foss4g2021)
 - Slides: [Default - Latest](../presentations/default)
 - Slides: [pygeoapi Practical Sessions - 118th OGC Member Meeting](https://docs.google.com/presentation/d/13A5QfSgepiOmd4ttjr376MjRKgx2zdJaty0LPXgqkQk)
