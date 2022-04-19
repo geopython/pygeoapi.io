@@ -50,7 +50,12 @@ If you are a service provider and would like to be listed on this page, please f
 
   <div class="service-provider">
     <h2>Just Objects B.V.</h2>
-    <p>TODO</p>
+    <p>
+      <span><a href="https://justobjects.nl">Just Objects</a> is the trading name for the professional activities of <a href="https://github.com/justb4">Just van den Broecke</a>. 
+         Just is a full-stack developer with over 25 years experience.
+       He is a pygeoapi core developer, has developed the <a href="https://demo.pygeoapi.io">pygeoapi demo server</a>, and contributes to many other open source geospatial projects. 
+        Through <a href="https://justobjects.nl">Just Objects</a> he provides a range of services for Free and Open Source Software Geospatial (FOSS4G) technology, including consultancy, training, development and (DevOps) deployment.</span>
+    </p>
   </div>
 
 </div>
