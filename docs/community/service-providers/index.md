@@ -32,8 +32,10 @@ If you are a service provider and would like to be listed on this page, please f
   </div>
 
   <div class="service-provider">
-    <h2>GeoBeyond Srl</h2>
-    <p>TODO</p>
+    <h2>Geobeyond Srl</h2>
+    <p>
+      <span><a href="http://www.geobeyond.it">Geobeyond Srl</a> (Italy) is a small company established in 2012 that brings innovation into the digital identity and geospatial market of open-source based solutions. Geobeyond offers commercial support and core development on pygeoapi to build robust and affordable solutions which can scale up the authentication and authorization capabilities on client's premises. We provide managed serverless solutions on top of pygeoapi with <a href="https://github.com/geobeyond/fastgeoapi">FASTGeoAPI</a>.</span>
+    </p>
   </div>
 
   <div class="service-provider">
