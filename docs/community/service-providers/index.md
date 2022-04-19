@@ -27,7 +27,7 @@ If you are a service provider and would like to be listed on this page, please f
     <h2>EOX IT Services GmbH</h2>
     <p>
       <span><a href="https://eox.at"><img width="100" src="https://eox.at/EOX_Logo.svg"/></a></span>
-      <span>EOX IT Services GmbH (Austria) offers solutions and services in the geodata domain in general and in the Earth Observation domain in particular. EOX is strongly committed towards utilizing and contributing to Open Source Software for example by adapting pygeoapi for <a href="https://github.com/eurodatacube/pygeoapi-kubernetes-papermill">kubernetes-based cloud environments</a>. EOX furthermore provides managed compute and storage resources in the EOxHub Workspace.</span>
+      <span><a href="https://eox.at">EOX IT Services GmbH</a> (Austria) offers solutions and services in the geodata domain in general and in the Earth Observation domain in particular. EOX is strongly committed towards utilizing and contributing to Open Source Software for example by adapting pygeoapi for <a href="https://github.com/eurodatacube/pygeoapi-kubernetes-papermill">kubernetes-based cloud environments</a>. EOX furthermore provides managed compute and storage resources in the EOxHub Workspace.</span>
     </p>
   </div>
 
@@ -44,7 +44,7 @@ If you are a service provider and would like to be listed on this page, please f
   <div class="service-provider">
     <h2>GeoComvos Ltd</h2>
     <p>
-    <span>Geocomvos Ltd. is a technical consultancy and open source geospatial service provider, specializing in the development, deployment of Free and Open Source Software Geospatial (FOSS4G) technology, particularly in the development of Spatial Data Infrastructure (SDI) platforms and Geospatial Catalogues. The company specializes in promoting, developing and contributing Open Source and Open Data solutions to governments, organizations and the private sector. GeoComvos provides support and development services for pygeoapi.</span>
+      <span><a href="http://geocomvos.com">GeoComvos Ltd.</a> is a technical consultancy and open source geospatial service provider, specializing in the development, deployment of Free and Open Source Software Geospatial (FOSS4G) technology, particularly in the development of Spatial Data Infrastructure (SDI) platforms and Geospatial Catalogues. The company specializes in promoting, developing and contributing Open Source and Open Data solutions to governments, organizations and the private sector. GeoComvos provides support and development services for pygeoapi.</span>
     </p>
   </div>
 
