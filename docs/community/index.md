@@ -50,7 +50,9 @@ pygeoapi discussions on Stack Overflow can be found with the [pygeoapi](https://
 
 ## Service Providers
 
-pygeoapi service providers (core development, support, training) can be found on the [OSGeo Service Provider Directory](https://www.osgeo.org/service-providers).
+pygeoapi service providers (core development, support, training) can be found on the [Service Providers page](service-providers/).
+
+Service providers are also listed on the [OSGeo Service Provider Directory](https://www.osgeo.org/service-providers).
 
 ## GitHub (Wiki, Issues, Code)
 
