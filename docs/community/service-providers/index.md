@@ -43,7 +43,9 @@ If you are a service provider and would like to be listed on this page, please f
 
   <div class="service-provider">
     <h2>GeoComvos Ltd</h2>
-    <p>TODO</p>
+    <p>
+    <span>Geocomvos Ltd. is a technical consultancy and open source geospatial service provider, specializing in the development, deployment of Free and Open Source Software Geospatial (FOSS4G) technology, particularly in the development of Spatial Data Infrastructure (SDI) platforms and Geospatial Catalogues. The company specializes in promoting, developing and contributing Open Source and Open Data solutions to governments, organizations and the private sector. GeoComvos provides support and development services for pygeoapi.</span>
+    </p>
   </div>
 
   <div class="service-provider">
