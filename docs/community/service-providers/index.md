@@ -26,7 +26,7 @@ If you are a service provider and would like to be listed on this page, please f
   <div class="service-provider">
     <h2>Center for Geospatial Solutions</h2>
     <p>
-      <span>The <a href="https://cgs.earth"> Center for Geospatial Solutions </a> is working to ensure that organizations of all sizes have access to data and advanced technologies to improve decision-making for land and water conservation, climate action, and social equity. We develop geospatial data tools and infrastructure that leverage linked data principles and common standards like OGC-API. We also provide training, deployment, feature development, and operational services for organizations wishing to adopt pygeoapi as part of their spatial data infrastructure. </span>
+      <span>The <a href="https://www.lincolninst.edu/center-geospatial-solutions">Center for Geospatial Solutions </a> works to ensure that organizations of all sizes have access to data and advanced technologies to improve decision-making for land and water conservation, climate action, and social equity. We develop geospatial data tools and infrastructure that leverage linked data principles and international standards like OGC API. We also provide training, deployment, feature development, and operational services for organizations wishing to adopt pygeoapi as part of their spatial data infrastructure.</span>
     </p>
   </div>
 
