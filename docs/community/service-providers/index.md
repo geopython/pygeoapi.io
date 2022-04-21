@@ -4,7 +4,7 @@ title: Service Providers
 
 # Service Providers
 
-pygeoapi is developed and supported by a a number of businesses, organizations and individuals around the world.
+pygeoapi is developed and supported by a number of businesses, organizations and individuals around the world.
 
 Using a service provider is a great way to get started with pygeoapi and contributes to the ongoing sustainability of the project.  Services include (but are not limited to):
 
@@ -47,7 +47,9 @@ If you are a service provider and would like to be listed on this page, please f
 
   <div class="service-provider">
     <h2>GeoCat B.V.</h2>
-    <p>TODO</p>
+    <p>
+      <span><a href="https://geocat.net">GeoCat</a> (Netherlands/Canada) offers cutting-edge customized software and services that make publishing geospatial data on the Internet easier and more efficient. Specialized in Spatial Data Infrastructure (SDI) and geospatial data cloud solutions, GeoCat builds sustainable applications following the Free and Open Source Software (FOSS) principle and open standards, and it also is a pygeoapi contributor.</span>
+    </p>
   </div>
 
   <div class="service-provider">
