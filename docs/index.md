@@ -25,7 +25,7 @@ cp pygeoapi-config.yml example-config.yml
 vi example-config.yml  # edit as required
 export PYGEOAPI_CONFIG=example-config.yml
 export PYGEOAPI_OPENAPI=example-openapi.yml
-pygeoapi openapi generate $PYGEOAPI_CONFIG > $PYGEOAPI_OPENAPI
+pygeoapi openapi generate $PYGEOAPI_CONFIG --output-file $PYGEOAPI_OPENAPI
 pygeoapi serve
 # in another terminal
 curl http://localhost:5000  # or open in a web browser
