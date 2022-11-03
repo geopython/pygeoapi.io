@@ -1,5 +1,6 @@
 ## Presentations
 
+- [FedGeoDay2022 presentation](fedgeoday2022)
 - [FOSS4G 2022 presentation](../presentations/foss4g2022)
 - [Elastic Community Conference 2022 presentation](../presentations/elastic-cc-2022)
 - [FOSS4G 2021 presentation](../presentations/foss4g2021)
