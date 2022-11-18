@@ -73,7 +73,7 @@ If you are a service provider and would like to be listed on this page, please f
     <h2>GatewayGeo</h2>
     <p>
       <span><a href="https://gatewaygeomatics.com/gatewaygeo.com"><img width="200" src="https://gatewaygeomatics.com/images/gatewaygeo-logo.png"/></a></span>
-      <span><a href="https://gatewaygeomatics.com/">GatewayGeo</a> (Canada) is a company on the East Coast of Canada that has long specialized in assisting organizations to publish, discover and share their geospatial data through openness : OGC services, leveraging FOSS4G software.  GatewayGeo is known for its longtime participation in the MapServer project, as well as being the company who gave the initial pycsw metadata publishing workshop back in 2013.</span>
+      <span><a href="https://gatewaygeomatics.com/">GatewayGeo</a> (Canada) is a company on the East Coast of Canada that has long specialized in assisting organizations to publish, discover and share their geospatial data through openness : OGC services, leveraging FOSS4G software.  GatewayGeo is known for its longtime participation in the MapServer project, as well as being the company who gave the initial pycsw metadata publishing workshop back in 2013.  GatewayGeo's popular product, <a href="https://ms4w.com">MS4W</a>, is freely available and comes pre-configured with various OGC services running out-of-the-box.</span>
     </p>
   </div>  
 
