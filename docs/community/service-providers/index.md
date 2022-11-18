@@ -68,6 +68,14 @@ If you are a service provider and would like to be listed on this page, please f
         Through <a href="https://justobjects.nl">Just Objects</a> he provides a range of services for Free and Open Source Software Geospatial (FOSS4G) technology, including consultancy, training, development and (DevOps) deployment.</span>
     </p>
   </div>
+  
+  <div class="service-provider">
+    <h2>GatewayGeo</h2>
+    <p>
+      <span><a href="https://gatewaygeomatics.com/gatewaygeo.com"><img width="100" src="https://gatewaygeomatics.com/images/gatewaygeo-logo.png"/></a></span>
+      <span><a href="https://gatewaygeomatics.com/">GatewayGeo</a> (Canada) is a company on the East Coast of Canada that has long specialized in assisting organizations to publish, discover and share their geospatial data through openness : OGC services, leveraging FOSS4G software.  GatewayGeo is known for its longtime participation in the MapServer project, as well as being the company who gave the initial pycsw metadata publishing workshop back in 2013.</span>
+    </p>
+  </div>  
 
 </div>
 
