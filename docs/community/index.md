@@ -44,6 +44,11 @@ For those wishing only to follow repository changes/updates, the pygeoapi-activi
 
 The official pygeoapi Twitter handle is at [https://twitter.com/pygeoapi](https://twitter.com/pygeoapi).
 
+
+## Mastodon
+
+The official pygeoapi Mastodon handle is at [https://noc.social/@pygeoapi](https://noc.social/@pygeoapi).
+
 ## Stack Overflow
 
 pygeoapi discussions on Stack Overflow can be found with the [pygeoapi](https://stackoverflow.com/questions/tagged/pygeoapi) tag.
