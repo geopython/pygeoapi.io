@@ -11,6 +11,7 @@ title: Documentation
 
 ### Presentations
 
+- Slides: [OGC Stack Winter School 2022 presentation](../presentations/ogc-stack-winter-school-2022)
 - Slides: [FedGeoDay2022 presentation](../presentations/fedgeoday2022)
 - Slides: [FOSS4G 2022 presentation](../presentations/foss4g2022)
 - Slides: [Elastic Community Conference 2022 presentation](../presentations/elastic-cc-2022)
