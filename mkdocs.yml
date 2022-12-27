@@ -2,7 +2,8 @@ site_name: pygeoapi
 site_description: "pygeoapi: an OGC API to geospatial data"
 site_author: the pygeoapi community
 copyright: "&copy; 2019 - 2022 Tom Kralidis"
-site_url: https://pygeoapi.io
+#site_url: https://pygeoapi.io
+site_url: http://localhost:8001
 repo_url: https://github.com/geopython/pygeoapi.io
 docs_dir: docs
 
