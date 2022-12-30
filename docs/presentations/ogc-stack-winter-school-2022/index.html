@@ -346,7 +346,7 @@ curl http://localhost:5000  # or open in a web browser
 						<li>YAML configuration (metadata, dataset connections</li>
 						<li>Automated OpenAPI document generation (data binding)</li>
 						<li>Robust plugin framework (data connections, formats, processing)</li>
-						<li>Easy deployment (pip install, Docker, conda, UbuntuGIS)</li>
+						<li>Easy deployment (pip3 install, Docker, conda, UbuntuGIS)</li>
 						<li>Minimal dependencies</li>
 					</ul>
 				</section>
@@ -359,19 +359,21 @@ curl http://localhost:5000  # or open in a web browser
 						<tbody>
 							<tr>
 								<td><img src="static/elastic_search.png" /></td>
+								<td><img src="static/PostGIS_logo.png" /></td>
 								<td><img src="static/csv_file.jpg" /></td>
 								<td><img src="static/spaltiallite.jpg" /></td>
 								<td><img src="static/geojson-logo.png" /></td>
 							</tr>
 							<tr>
 								<td align="center">Elasticsearch</td>
+								<td align="center">PostgreSQL/PostGIS</td>
 								<td align="center">CSV</td>
-								<td align="center">Spatialite*</td>
-								<td align="center">GeoJSON*</td>
+								<td align="center">Spatialite</td>
+								<td align="center">GeoJSON</td>
 							</tr>
 						</tbody>
 					</table>
-					<p>* also via GDAL-OGR Provider</p>
+					<p>* also via GDAL/OGR Provider</p>
 				</section>
 				<section>
 					<h2>Feature Data Providers - GDAL/OGR</h2>
@@ -654,7 +656,7 @@ resources:
 						<li>Docker</li>
 						<li>Conda</li>
 						<li>FreeBSD</li>
-						<li>Coming to OSGeoLive</li>
+						<li>OSGeoLive</li>
 					</ul>
 				</section>
 				<section>
@@ -746,7 +748,7 @@ resources:
                                         <ul>
                                                 <li>US Geospatial Platform (Geoplatform) provides a central point of access to federal geospatial metadata, services and data</li>
                                                 <li>Aligns with FAIR principles</li>
-                                                <li>Powered by numerous FOSS4G components</li>Aligns with FAIR principles</li>
+                                                <li>Powered by numerous FOSS4G components</li>
                                                 <li>100+ National Geospatial Data Assets</li>
                                         </ul>
                                         <p><a href="https://geoapi.geoplatform.gov">geoapi.geoplatform.gov</a></p>
@@ -820,7 +822,6 @@ resources:
 						<li>More data providers</li>
 						<li>Refactoring / pre 1.0 adjustments</li>
 						<li>Content negotiation (e.g. Response as GeoPackage, GML,...)</li>
-						<li><a href="https://live.osgeo.org">OSGeoLive</a></li>
 					</ul>
 				</section>
 				<section>
