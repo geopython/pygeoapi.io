@@ -2,7 +2,7 @@
 
 - [OGC Stack Winter School 2022 presentation](ogc-stack-winter-school-2022)
 - [FedGeoDay2022 presentation](fedgeoday2022)
-- [FOSS4G 2022 presentation](/foss4g2022)
+- [FOSS4G 2022 presentation](foss4g2022)
 - [Elastic Community Conference 2022 presentation](elastic-cc-2022)
 - [FOSS4G 2021 presentation](foss4g2021)
 - Slides: [Default - Latest](default)
