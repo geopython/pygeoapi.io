@@ -77,6 +77,15 @@ If you are a service provider and would like to be listed on this page, please f
     </p>
   </div>  
 
+  <div class="service-provider">
+    <h2>Byte Road</h2>
+    <p>
+      <span><a href="https://byteroad.net/"><img width="100" src="https://byteroad.net/assets/img/BR_02.png"/></a></span>
+      <span><a href="https://byteroad.net/">Byte Road</a> (Portugal) is a consulting and R&D company, operating in the fields of data engineering and data analytics. We leverage open standards, free and open source software, cloud computing, software containers, SQL and NoSQL databases, to pave roads that connect users to their data assets. 
+      Byte Road develops and maintains the <a href="https://emotional.byteroad.net/">pygeoapi-based spatial data infrastructure (SDI)</a>, created in the context of the <a href="https://emotionalcities-h2020.eu/">eMOTIONAL Cities project</a>. We speak Portuguese, Italian, Spanish and English.
+    </p>
+  </div>
+
 </div>
 
 
