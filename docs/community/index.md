@@ -28,7 +28,7 @@ PSC discussions, meetings and user discussion can typically be found in pygeoapi
 
 ### Gitter
 
-Gitter provides a web-based instant messaging and chatroom.  The pygeoapi [Gitter chatroom](https://gitter.im/geopython/pygeoapi) is public and open to anyone (you require a Gitter or Twitter account to sign in).
+Gitter provides a web-based instant messaging and chatroom.  The pygeoapi [Gitter chatroom](https://app.gitter.im/#/room/#geopython_pygeoapi:gitter.im) is public and open to anyone.
 
 ### Slack
 
