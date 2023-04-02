@@ -1,5 +1,5 @@
-[![Build Status](https://github.com/geopython/pygeoapi.io/workflows/Deploy%20website%20%E2%9A%99%EF%B8%8F/badge.svg)](https://github.com/geopython/pygeoapi.io/actions)
-[![Join the chat at https://gitter.im/geopython/pygeoapi.io](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/geopython/pygeoapi)
+[![Build Status](https://github.com/geopython/pygeoapi.io/actions/workflows/main.yml/badge.svg)](https://github.com/geopython/pygeoapi.io/actions)
+[![Join the chat at https://app.gitter.im/#/room/#geopython_pygeoapi:gitter.img](https://badges.gitter.im/Join%20Chat.svg)](https://app.gitter.im/#/room/#geopython_pygeoapi:gitter.im)
 
 # pygeoapi.io website
 
