@@ -67,22 +67,21 @@
 			<p style="font-size: 20px;">The tender doc is available at <a href="static/geonovum-tender-doc.pdf">geonovum-tender-doc.pdf</a></p>
 		</section>
 			<section id="table-of-contents">
-				<h1>Table of contents</h1>
+				<h2>Table of contents</h2>
 				<ul>
 					<li>About pygeoapi</li>
 <!--					<li>The Geonovum Tender</li>-->
 					<li>Adding CRS support ("OAPIF Part 2")</li>
-					<li>Additions for INSPIRE</li>
-					<li>Additions for (Dutch) API Design rules</li>
+					<li>INSPIRE improvements</li>
+					<li>Adherence to (Dutch) API Design rules</li>
 				</ul>
 			</section>
 			<section id="about-pygeoapi">
-                <section>
-                    <h1>About pygeoapi</h1>
-                </section>
-
+            <section>
+               <h2>About pygeoapi</h2>
+            </section>
 				<section>
-					<h1>Project overview</h1>
+					<h2>Project overview</h2>
 					<img src="../default/static/pygeoapi-logo-notrans.png" style="vertical-align: middle;" height="60"/>
 					<ul>
 					  <li><a href="https://geopython.github.io" target="_blank"><img width="60" height="60" src="static/geopython.png" alt="geopython.github.io" style="background: white; border-radius: 10px"/></a> A <a href="https://geopython.github.io">Geopython</a> project</li>
@@ -91,7 +90,7 @@
 					</ul>
                 </section>
                 <section>
-					<h1>Project Overview</h1>
+					<h2>Project Overview</h2>
 					<ul>
 						<li>Geospatial data Web API framework via <a href="https://ogcapi.org">OGC API</a></li>
 						<li>REST/JSON/OpenAPI/Swagger</li>
@@ -106,7 +105,7 @@
 					</ul>
 				</section>
 				<section>
-					<h1>Data Publishing</h1>
+					<h2>Data Publishing</h2>
 					<h3 style="font-style: italic">Leave data as-is</h3>
 					<ul>
 						<li>Fits to the data (not the inverse)</li>
@@ -115,7 +114,7 @@
 					<h3 style="font-style: italic">New: leave projection as-is <br/>(CRS support!)</h3>
 				</section>
 				<section>
-					<h1>Technical Overview</h1>
+					<h2>Technical Overview</h2>
 					<ul>
 						<li>Web framework agnostic (default Flask)</li>
 						<li>YAML configuration</li>
@@ -129,7 +128,7 @@
 					<img src="static/pygeoapi-arch1.png" width="70%" style="background: white; border-radius: 10px"/>
 				</section>
 				<section>
-					<h1>Feature Data Providers</h1>
+					<h2>Feature Data Providers</h2>
 					<table>
 						<tbody>
 							<tr>
@@ -161,7 +160,7 @@
 					</ul>
 				</section>
 				<section>
-					<h1>Other OGC APIs</h1>
+					<h2>Other OGC APIs</h2>
 					<ul>
 						<li>Coverage - NetCDF, Cloud Optimized GeoTIFF, ...</li>
 						<li>Tiles - minio, ZXY, ...</li>
@@ -171,7 +170,7 @@
 					</ul>
 				</section>
                  <section>
-                    <h1>Implementing your own Plugin</h1>
+                    <h2>Implementing your own Plugin</h2>
                     <ul>
                         <li>Develop / propose / maintain as core plugin</li>
                         <li>Develop / maintain in your own repository</li>
@@ -179,17 +178,16 @@
                 </section>
 			</section>
 			<section id="adding-crs">
-                <section>
-                    <h1>Adding CRS Support</h1>
-					<p>
-						<a href="https://docs.opengeospatial.org/is/18-058r1/18-058r1.html">
-							OGC API - Features - Part 2: <br/>Coordinate Reference Systems by Reference
-
-						</a>
-					</p>
-                </section>
+            <section>
+               <h2>Adding CRS Support</h2>
+               <p>
+                  <a href="https://docs.opengeospatial.org/is/18-058r1/18-058r1.html">
+                     OGC API - Features - Part 2: <br/>Coordinate Reference Systems by Reference
+                  </a>
+               </p>
+            </section>
 				<section>
-				   <h1>Aspects</h1>
+				   <h2>Aspects</h2>
 				   <ul>
 					   <li>metadata: CRS list and storageCRS</li>
 					   <li>parameter: CRS bounding box</li>
@@ -223,7 +221,7 @@ AddressesNL_28992:
 						</code></pre>
 				</section>
 				<section>
-				   <h1>pygeoapi CRS Implementation</h1>
+				   <h2>pygeoapi CRS Implementation</h2>
 				   <ul>
 					   <li>available for ALL Feature Providers</li>
 					   <li>Per Feature Provider
@@ -237,29 +235,109 @@ AddressesNL_28992:
 				   </ul>
    				</section>
 				<section>
-				   <h1>Development Aspects</h1>
+				   <h2>Development Aspects</h2>
 				   <ul>
 					   <li>Added to core via <a href="https://github.com/geopython/pygeoapi/pull/1174">PR 1174</a></li>
 					   <li>Community cooperation - <a href="https://github.com/mtachon">Mathieu Tachon!</a></li>
 					   <li><a href="https://apitestbed.geonovum.nl/">demo: Geonovum testbed server</a></li>
 					   <li><a href="https://docs.pygeoapi.io/en/latest/crs.html">documentation</a></li>
 				   </ul>
-   				</section>
-
+            </section>
 			</section>
+         <section id="inspire">
+            <section>
+               <h2>INSPIRE improvements</h2>
+            </section>
+            <section>
+               <h2>Aspects</h2>
+               <ul>
+                  <li>Collection link(s) to data license</li>
+                  <li>Collection link(s) to "description of encoding"</li>
+                  <li>Collection link(s) for bulk downloads</li>
+               </ul>
+            </section>
+            <section>
+				   <h2>Development (1/2)</h2>
+				   <ul>
+                  <li>
+                     Mostly about configuration:
+                     <img src="static/collection_links.png" alt="pygeoapi collection links"/>
+                  </li>
+				   </ul>
+            </section>
+            <section>
+				   <h2>Development (2/2)</h2>
+				   <ul>
+                  <li>Created <code>UrlPrefetcher</code> to get content details of <code>enclosure</code> links (<code>HEAD</code> request)</li>
+                  <li>Note: response may not contain <code>Content-Type</code> or<br/><code>Content-Length</code> headers</li>
+					   <li>Added to core via <a href="https://github.com/geopython/pygeoapi/pull/1173">PR 1173</a></li>
+					   <li><a href="https://docs.pygeoapi.io/en/latest/configuration.html#adding-links-to-collections">Documentation</a></li>
+				   </ul>
+            </section>
+         </section>
+         <section id="adr">
+            <section>
+               <h2>Adherence to (Dutch) API Design Rules</h2>
+            </section>
+            <section>
+               <h2>Aspects</h2>
+               <ul>
+                  <li>API-03: <s>Apply standard HTTP methods</s></li>
+                  <li>API-16: <s>Provide OpenAPI Specification</s></li>
+                  <li>API-20: Include major version number in URI</li>
+                  <li>API-48: Leave off trailing slashes from URIs</li>
+                  <li>API-51: <s>OAS at a standard location as JSON</s></li>
+                  <li>API-56: Adhere to Semantic Versioning model</li>
+                  <li>API-57: Full version number in response header</li>
+               </ul>
+            </section>
+            <section>
+               <h2>Development (1/2)</h2>
+               <ul>
+                  <li>OAS doc proofed crucial: embedded some components</li>
+                  <li>API-20 / API-48:</li>
+                     <ul>
+                        <li>implement at router or app level?</li>
+                        <li>implemented for Flask, Starlette, and Django</li>
+                        <li>landing page rule conflict!</li>
+                     </ul>
+                  <li>API-56:</li>
+                  <ul>
+                     <li>semantic versioning for API software or schema?</li>
+                     <li>currently software versioning only</li>
+                  </ul>
+               </ul>
+            </section>
+            <section>
+				   <h2>Development (2/2)</h2>
+				   <ul>
+                  <li>Added a lot of unit tests</li>
+                  <li>ADR is fully configurable (inactive by default)</li>
+					   <li>Added to core via <a href="https://github.com/geopython/pygeoapi/pull/1152">PR 1152</a></li>
+					   <li><a href="https://docs.pygeoapi.io/en/latest/configuration.html#api-design-rules">Documentation</a></li>
+				   </ul>
+            </section>
+            <section>
+				   <h2>Dutch ADR validator</h2>
+				   <img src="static/adr_validator.png" alt="ADR validator result">
+            </section>
+         </section>
 			<section>
-				<h1>Links</h1>
+				<h2>Links</h2>
 				<ul>
-					<li>apitestbed: <a href="https://apitestbed.geonovum.nl" target="_blank">apitestbed.geonovum.nl</a></li>
-					<li>test page: <a href="https://apitestbed.geonovum.nl/test/" target="_blank">/test/</a></li>
-					<li>pygeoapi endpoint: <a href="https://apitestbed.geonovum.nl/pygeoapi" target="_blank">/pygeoapi</a></li>
-					<li>pygeoapi ADR endpoint: <a href="https://apitestbed.geonovum.nl/adr_pygeoapi/v1/" target="_blank">/adr_pygeoapi/v1/</a></li>
-				</ul>
-				<h3>pygeoapi</h3>
-				<ul>
-					<li>Home: <a href="https://pygeoapi.io" target="_blank">pygeoapi.io</a></li>
-					<li>Docs: <a href="https://docs.pygeoapi.io" target="_blank">docs.pygeoapi.io</a></li>
-					<li>Demo: <a href="https://demo.pygeoapi.io" target="_blank">demo.pygeoapi.io</a></li>
+					<li><b>Geonovum API testbed</b></li>
+               <ul>
+                  <li>Home: <a href="https://apitestbed.geonovum.nl" target="_blank">apitestbed.geonovum.nl</a></li>
+                  <li>Test page: <a href="https://apitestbed.geonovum.nl/test/" target="_blank">./test</a></li>
+					   <li>pygeoapi endpoint: <a href="https://apitestbed.geonovum.nl/pygeoapi" target="_blank">./pygeoapi</a></li>
+					   <li>pygeoapi ADR endpoint: <a href="https://apitestbed.geonovum.nl/adr_pygeoapi/v1/" target="_blank">./adr_pygeoapi/v1</a></li>
+               </ul>
+               <li><b>pygeoapi official</b></li>
+               <ul>
+                  <li>Home: <a href="https://pygeoapi.io" target="_blank">pygeoapi.io</a></li>
+                  <li>Documentation: <a href="https://docs.pygeoapi.io" target="_blank">docs.pygeoapi.io</a></li>
+                  <li>Demo: <a href="https://demo.pygeoapi.io" target="_blank">demo.pygeoapi.io</a></li>
+               </ul>
 				</ul>
 			</section>
 			<section>
