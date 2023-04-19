@@ -106,12 +106,12 @@
 				</section>
 				<section>
 					<h2>Data Publishing</h2>
-					<h3 style="font-style: italic">Leave data as-is</h3>
+					<h3 style="font-style: italic; color: greenyellow">Leave data as-is</h3>
 					<ul>
 						<li>Fits to the data (not the inverse)</li>
 						<li>Proxy/wrap remote legacy services: <br/> WFS, ESRI FS, WMS,...</li>
 					</ul>
-					<h3 style="font-style: italic">New: leave projection as-is <br/>(CRS support!)</h3>
+					<h3 style="font-style: italic; color: greenyellow">New: leave projection as-is <br/>(CRS support!)</h3>
 				</section>
 				<section>
 					<h2>Technical Overview</h2>
@@ -140,27 +140,27 @@
 							</tr>
 							<tr>
 								<td align="center">Elasticsearch</td>
-								<td align="center">PostgreSQL/PostGIS</td>
+								<td align="center">PostGIS</td>
 								<td align="center">CSV</td>
 								<td align="center">Spatialite</td>
-								<td align="center">GeoJSON</td>
+								<td align="center">GeoJSON...</td>
 							</tr>
 						</tbody>
 					</table>
-					<p>* also via GDAL/OGR Provider</p>
 				</section>
 				<section>
 					<h2>Feature Data Providers - GDAL/OGR</h2>
 					<img src="static/gdal.png" />
 					<ul>
 						<li>Via OGR-Python bindings</li>
-						<li>Unleashes <a href="https://gdal.org/drivers/vector/" target="_blank">~100 Vector Formats!</a> (WFS 1/2, GeoPackage, Shapefile, GeoJSON, PostGIS, ...)</li>
+						<li>Unleashes <a href="https://gdal.org/drivers/vector/" target="_blank">~100 Vector Formats!</a> (WFS v1/v2, GeoPackage, Shapefile, GeoJSON, PostGIS, ...)</li>
 						<li>Paging, reprojection, spatial/attribute query</li>
-						<li>Unlock existing WFS 1/2s!</li>
+						<li>Unlock existing WFS v1/v2s, even ESRI FS!</li>
 					</ul>
 				</section>
 				<section>
 					<h2>Other OGC APIs</h2>
+					<p>in various stages of development</p>
 					<ul>
 						<li>Coverage - NetCDF, Cloud Optimized GeoTIFF, ...</li>
 						<li>Tiles - minio, ZXY, ...</li>
@@ -170,10 +170,12 @@
 					</ul>
 				</section>
                  <section>
-                    <h2>Implementing your own Plugin</h2>
+                    <h2>Implement your own Plugin</h2>
+					<p>as Feature Data, Process, ... Provider</p>
                     <ul>
-                        <li>Develop / propose / maintain as core plugin</li>
-                        <li>Develop / maintain in your own repository</li>
+                        <li>Propose / develop as core plugin</li>
+                        <li>Develop in your own repository</li>
+						<li><a target="_blank" href="https://docs.pygeoapi.io/en/latest/plugins.html">Plugin dev documentation</a></li>
                     </ul>
                 </section>
 			</section>
@@ -232,7 +234,7 @@ AddressesNL_28992:
 						   via Python Decorator @crs_transform</li>
 					   </ul>
 					   </li>
-					   <li><a href="https://apitestbed.geonovum.nl/test-results/cite-apitestbed-pygeoapi.pdf">CITE Test Compliant</a></li>
+					   <li><a href="https://apitestbed.geonovum.nl/test-results/cite-apitestbed-pygeoapi.pdf">CITE Test Compliance</a></li>
 				   </ul>
    				</section>
 				<section>
