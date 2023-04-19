@@ -1,5 +1,6 @@
 ## Presentations
 
+- [CRS, INSPIRE, ADR Additions for Geonovum Tender 2023](geonovum-tender-2023)
 - [OGC Stack Winter School 2022 presentation](ogc-stack-winter-school-2022)
 - [FedGeoDay2022 presentation](fedgeoday2022)
 - [FOSS4G 2022 presentation](foss4g2022)

@@ -11,7 +11,7 @@ title: Documentation
 
 ### Presentations
 
-- Slides: [CRS, INSPIRE, ADR Additions for Geonovum Tender](../presentations/geonovum-tender-2023)
+- Slides: [CRS, INSPIRE, ADR Additions for Geonovum Tender 2023](../presentations/geonovum-tender-2023)
 - Slides: [OGC Stack Winter School 2022 presentation](../presentations/ogc-stack-winter-school-2022)
 - Slides: [FedGeoDay2022 presentation](../presentations/fedgeoday2022)
 - Slides: [FOSS4G 2022 presentation](../presentations/foss4g2022)
