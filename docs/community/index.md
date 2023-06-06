@@ -44,7 +44,6 @@ For those wishing only to follow repository changes/updates, the pygeoapi-activi
 
 The official pygeoapi Twitter handle is at [https://twitter.com/pygeoapi](https://twitter.com/pygeoapi).
 
-
 ## Mastodon
 
 The official pygeoapi Mastodon handle is at [https://noc.social/@pygeoapi](https://noc.social/@pygeoapi).
@@ -58,6 +57,10 @@ pygeoapi discussions on Stack Overflow can be found with the [pygeoapi](https://
 pygeoapi service providers (core development, support, training) can be found on the [Service Providers page](service-providers/).
 
 Service providers are also listed on the [OSGeo Service Provider Directory](https://www.osgeo.org/service-providers).
+
+## Swag
+
+pygeoapi swag (t-shirts, hoodies, stickers, etc.) are available and can be purchased via the [OSGeo Redbubble shop](https://www.redbubble.com/shop/ap/146590645).
 
 ## GitHub (Wiki, Issues, Code)
 
