@@ -11,7 +11,7 @@ title: Documentation
 
 ### Presentations
 
-- Podcast: [pygeoapi – A Python Geospatial Server (May 2023)](https://mapscaping.com/podcast/pygeoapi-a-python-geospaital-server)
+- Podcast: [pygeoapi – A Python Geospatial Server (May 2023)](https://mapscaping.com/podcast/pygeoapi-a-python-geospatial-server)
 - Slides: [CRS, INSPIRE, ADR Additions for Geonovum Tender 2023](../presentations/geonovum-tender-2023)
 - Slides: [OGC Stack Winter School 2022 presentation](../presentations/ogc-stack-winter-school-2022)
 - Slides: [FedGeoDay2022 presentation](../presentations/fedgeoday2022)
