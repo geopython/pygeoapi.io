@@ -1,6 +1,7 @@
 ## Presentations
 
 - [FOSS4G 2023 presentation](foss4g2023)
+- Podcast: [pygeoapi – A Python Geospatial Server (May 2023)](https://mapscaping.com/podcast/pygeoapi-a-python-geospatial-server)
 - [CRS, INSPIRE, ADR Additions for Geonovum Tender 2023](geonovum-tender-2023)
 - [OGC Stack Winter School 2022 presentation](ogc-stack-winter-school-2022)
 - [FedGeoDay2022 presentation](fedgeoday2022)
