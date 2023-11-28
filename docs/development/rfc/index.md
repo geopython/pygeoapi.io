@@ -11,3 +11,4 @@ pygeoapi, major additions to functionality, or changes in the direction of
 the project.
 
 * [RFC1: Project Steering Committee Guidelines](1)
+* [RFC2: Dependency policy](2)
