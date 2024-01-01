@@ -1,4 +1,4 @@
-Copyright (c) 2019 - 2023 Tom Kralidis
+Copyright (c) 2019 - 2024 pygeoapi development team
 
 This website is released under the Creative Commons Attribution 4.0 International (CC BY 4.0) license.
 
