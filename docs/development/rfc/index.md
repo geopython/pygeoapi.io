@@ -12,3 +12,5 @@ the project.
 
 * [RFC1: Project Steering Committee Guidelines](1)
 * [RFC2: Dependency policy](2)
+* [RFC3: Architectural Decision Records](3)
+* [RFC4: GitHub Issue and Pull Request management](4)
