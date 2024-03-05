@@ -23,5 +23,5 @@
 - [Resources configuration in pygeoapi](https://youtu.be/r-2XmzLbsPk?si=iWD6wbxw7hbLxMSl) 
 - [Uploading CSV to pygeoapi](https://youtu.be/UNz8JJI1xvY?si=v25j7w77spB_1zig) 
 - [pygeoapi installation for Windows](https://youtu.be/piNgi8HWAUY?si=IxTXRD1aNdk-6p5e) 
-- [How to implement OGC API Features by using pygeoapi](https://youtu.be/PMCTHZu4BxI?si=QSiVQmNcV9xgSK44) 
+- [How to implement OGC API - Features by using pygeoapi](https://youtu.be/PMCTHZu4BxI?si=QSiVQmNcV9xgSK44) 
 - [Implementing OGC API - Processes with prefect and pygeoapi](https://youtu.be/w-KRCe4Mguc?si=KUTxAoLhav6_4-Z7) 
