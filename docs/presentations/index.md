@@ -17,6 +17,7 @@ title: Presentations
 
 ## Videos
 
+- [Presentation at FOSSGIS 2024](https://media.ccc.de/v/fossgis2024-38773-pygeoapi-eine-python-server-software-fr-ogc-api-standards#t=301)
 - [Presentation at GeoPython 2020](https://www.youtube.com/watch?v=pVfWRlmlJAE)
 - [Presentation at FOSS4G 2019](https://media.ccc.de/v/bucharest-32-next-generation-ogc-web-services-with-pygeoapi)
 - [Installing pygeoapi from GitHub](https://youtu.be/2yO-g6-xEPE?si=xvTD0wD_i-nvQFxF)
