@@ -4,6 +4,7 @@ title: Presentations
 
 ## Presentations
 
+- [FOSS4G Europe 2024 presentation](foss4g-europe2024)
 - [FOSS4G 2023 presentation](foss4g2023)
 - Podcast: [pygeoapi – A Python Geospatial Server (May 2023)](https://mapscaping.com/podcast/pygeoapi-a-python-geospatial-server)
 - [CRS, INSPIRE, ADR Additions for Geonovum Tender 2023](geonovum-tender-2023)
