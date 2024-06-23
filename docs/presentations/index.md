@@ -18,6 +18,7 @@ title: Presentations
 
 ## Videos
 
+- [GISE Winter School on OGC Stack (2023)](https://www.youtube.com/playlist?list=PLDQnWQSI_34_mS0aKVppjm8p8DrtGhRBX)
 - [Presentation at FOSSGIS 2024](https://media.ccc.de/v/fossgis2024-38773-pygeoapi-eine-python-server-software-fr-ogc-api-standards#t=301)
 - [Presentation at GeoPython 2020](https://www.youtube.com/watch?v=pVfWRlmlJAE)
 - [Presentation at FOSS4G 2019](https://media.ccc.de/v/bucharest-32-next-generation-ogc-web-services-with-pygeoapi)
