@@ -89,7 +89,7 @@ If you are a service provider and would like to be listed on this page, please f
   <div class="service-provider">
     <h2>Rotten Grapes Private Limited</h2>
     <p>
-      <span><a href="https://rottengrapes.tech/"><img width="100" src="https://rottengrapes.tech/wp-content/uploads/2023/10/cropped-f1ec4ad3-c77e-407a-8829-4746de037892-removebg-preview.png"/></a></span>
+      <span><a href="https://rottengrapes.tech/"><img width="100" src="https://rottengrapes.tech/assets/images/logo.png"/></a></span>
       <span><a href="https://rottengrapes.tech/">Rotten Grapes</a> (India) is an open-source first Geospatial company providing unique solutions for your business via our Services and Products! We are small agency of 6 developers and designers all walking down from different paths of life and sharing same purpose <b> Helping local business leverage geospatial data</b>! 
     </p>
   </div>
