@@ -12,7 +12,7 @@
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
 		<meta property="og:description" content="pygeoapi is a Python server implementation of the OGC API suite of standards. The project emerged as part of the next generation OGC API efforts in 2018 and provides the capability for organizations to deploy an RESTful OGC API endpoint using OpenAPI, GeoJSON, and HTML. pygeoapi is open source and released under an MIT license." />
-		<title>pygeoapi - An OGC API to geospatial data</title>
+		<title>pygeoapi FOSSG2024 update</title>
 		<link rel="stylesheet" href="../default/css/reveal.css">
 		<link rel="stylesheet" href="../default/css/theme/black.css">
 
@@ -59,8 +59,8 @@
 				<h1 style="background-color:white"><img src="../default/static/pygeoapi-logo-notrans.png" style="vertical-align: middle;"/></h1>
 				<h2>An OGC API to geospatial data</h2>
 				<p><a href="https://pygeoapi.io">pygeoapi.io</a></p>
-				<p><a title="OSGeo Project" href="https://osgeo.org"><img style="background: white;" alt="OSGeo Project" src="https://raw.githubusercontent.com/OSGeo/osgeo/master/incubation/project/OSGeo_project.png" height="64"/></a> <a title="FOSS4G 2023 Prizren" href="https://2023.foss4g.org"><img style="background: white;" alt="FOSS4G 2023 Prizren" src="https://2023.foss4g.org/img/logo.png" height="64"/></a></p>
-				<p style="font-size: 20px;">This presentation available at <a href="https://pygeoapi.io/presentations/foss4g2023">pygeoapi.io/presentations/foss4g2023</a></p>
+				<p><a title="OSGeo Project" href="https://osgeo.org"><img style="background: white;" alt="OSGeo Project" src="https://raw.githubusercontent.com/OSGeo/osgeo/master/incubation/project/OSGeo_project.png" height="64"/></a> <a title="FOSS4G 2024 Belém" href="https://2024.foss4g.org"><img style="background: white;" alt="FOSS4G 2024 Belém" src="https://2024.foss4g.org/_next/static/media/foss4g-belem-logo-vertical.30d8343b.svg" height="64"/></a></p>
+				<p style="font-size: 20px;">This presentation available at <a href="https://pygeoapi.io/presentations/foss4g2024">pygeoapi.io/presentations/foss4g2024</a></p>
 			</section>
 			<section id="table-of-contents">
 				<h1>Table of contents</h1>
@@ -93,7 +93,7 @@
                         <li>REST/JSON/OpenAPI/Swagger</li>
 						<li>OGC Compliant</li>
 						<li>OSGeo Project</li>
-						<li>International team (Canada, Netherlands, Greece, Italy, New Zealand, United States, Spain)
+						<li>International team (Canada, Netherlands, Greece, Italy, New Zealand, United States, Portugal)
 							<ul>
 								<li>Numerous core <a href="https://github.com/geopython/pygeoapi/graphs/contributors">contributors</a></li>
 								<li>21000 upstream contributors (dependencies)</li>
@@ -136,29 +136,42 @@ curl http://localhost:5000  # or open in a web browser
 					<img src="https://docs.pygeoapi.io/en/latest/_images/how-pygeoapi-works.png" width="70%" style="background: white; border-radius: 10px"/>
 				</section>
 				<section>
-                    <h1>Provider plugin framework</h1>
-                    <ul>
-                        <li>Features (Elasticsearch, PostgreSQL/PostGIS, CSV, GeoJSON, OGR, MongoDB, Esri, Azure)</li>
-                        <li>Coverages (xarray, rasterio)</li>
-                        <li>Tiles (MinIO, ZXY directory tree)</li>
-                        <li>Records (Elasticsearch, TinyDB)</li>
-                        <li>Implement your own!</li>
-                    </ul>
+					<h1>Provider plugin framework</h1>
+					<ul>
+						<li>Features (Elasticsearch, PostgreSQL/PostGIS, CSV, GeoJSON, GeoParquet, OGR, MongoDB, Esri, Azure)</li>
+						<li>Coverages (xarray, rasterio)</li>
+						<li>Tiles (MinIO, ZXY directory tree)</li>
+						<li>Records (Elasticsearch, TinyDB)</li>
+						<li>WxS facades / bridges (WMS/WMTS, WFS, CSW)</li>
+						<li>Implement your own!</li>
+					</ul>
 				</section>
 				<section>
-                    <h1>Processing framework</h1>
-                    <ul>
-                        <li>Expose your Python workflow as processes</li>
-                        <li>Process manager support for job control</li>
-                        <li>Implement your own!</li>
-                    </ul>
+					<h1>Processing framework</h1>
+					<ul>
+						<li>Expose your Python workflow as processes</li>
+						<li>Process manager support for job control</li>
+						<li>Implement your own!</li>
+					</ul>
 				</section>
 				<section>
-                    <h1>Implementing your own Plugin</h1>
-                    <ul>
-                        <li>Develop / propose / maintain as core plugin</li>
-                        <li>Develop / maintain in your own repository</li>
-                    </ul>
+					<h1>Implementing your own Plugin</h1>
+					<ul>
+						<li>Develop / propose / maintain as core plugin</li>
+						<li>Develop / maintain in your own repository</li>
+					</ul>
+				</section>
+				<section>
+                     <h1>Implementing your own API</h1>
+                     <ul>
+                         <li>Add an OGC API, contribute to the core</li>
+                         <li>Add an ad hoc API</li>
+                     </ul>
+ 				</section>
+				<section>
+					<h1>Community Plugins and Themes</h1>
+					<img src="../default/static/community-plugins-and-themes.png" style="max-height:300px" />
+					<p><a href="https://github.com/geopython/pygeoapi/wiki/CommunityPluginsThemes">github.com/geopython/pygeoapi/wiki/CommunityPluginsThemes</a> -- add yours!</p>
 				</section>
 				<section>
 					<h2>schema.org</h2>
@@ -178,12 +191,14 @@ curl http://localhost:5000  # or open in a web browser
 					</ul>
 				</section>
 			    <section>
-                    <h1>Deploying</h1>
+				<h1>Deploying</h1>
     				<p>Numerous <a href="https://docs.pygeoapi.io/en/latest/installation.html">deployment options</a></p>
     				<ul>
     					<li>PyPI</li>
     					<li>UbuntuGIS</li>
-    					<li>Docker</li>
+     					<li>Docker<ul>
+     					<li>See numerous ready to use examples (Kubernetes, AWS Lambda, etc.) at <a href="https://github.com/geopython/pygeoapi-examples">pygeoapi-examples</a></li>
+     					</ul></li>
     					<li>Conda</li>
     					<li>FreeBSD</li>
     				</ul>
@@ -234,17 +249,44 @@ curl http://localhost:5000  # or open in a web browser
 					<h1>HTML templating</h1>
 					<h1 style="background-color: white"><img src="../default/static/tour-html-templating.png" style="vertical-align: middle;"/></h1>
 				</section>
+				<section>
+					<h1>Admin API</h1>
+					<h1 style="background-color: white"><img src="../default/static/tour-admin-api.png" style="vertical-align: middle;"/></h1>
+				</section>
 			</section>
 			<section id="latest-developments">
 				<section>
 					<h1>Latest developments</h1>
 				</section>
 				<section>
+					<h2>New core committers</h2>
+					<p>Welcome Bernhard Mallinger (@totycro)</p>
+					<p><a href="https://github.com/totycro"><img src="https://avatars.githubusercontent.com/u/357581?v=4" width="200"/></a></p>
+					<ul>
+						<li>Austria</li>
+						<li>EOX IT Services GmbH</li>
+						<li>pygeoapi: OGC API Processes, Coverages</li>
+					</ul>
+				</section>
+				<section>
 					<h2>Releases</h2>
 					<ul>
-						<li>November 2022: 0.13</li>
-						<li>February 2023: 0.14</li>
-						<li>May 2023: 0.15</li>
+						<li>March 2024: 0.16</li>
+						<li>July 2024: 0.17</li>
+						<li>September 2024: 0.18</li>
+						<li>December 2024: 0.19</li>
+					</ul>
+				</section>
+				<section>
+					<h2>EDR updates</h2>
+					<ul>
+						<li>TODO</li>
+					</ul>
+				</section>
+				<section>
+					<h2>GeoParquet support</h2>
+					<ul>
+						<li>TODO</li>
 					</ul>
 				</section>
 				<section>
@@ -253,9 +295,8 @@ curl http://localhost:5000  # or open in a web browser
 					<ul>
 						<li>Rapid/early adoption of specifications/updates</li>
 						<li>Experimentation (servers, clients)</li>
-						<li>Metadata Code Sprint (September 2022)</li>
-						<li>Web Mapping Code Sprint (November 2022)</li>
-						<li>OGC/OSGeo/ASF Joint Sprint (March 2023)</li>
+						<li>Open Standards Code Sprint (October 2023)</li>
+						<li>OGC/OSGeo/ASF Joint Sprint (February 2024)</li>
 						<li>Collaboration
 						<ul>
 							<li>OSGeo projects</li>
@@ -264,70 +305,61 @@ curl http://localhost:5000  # or open in a web browser
 					</ul>
 				</section>
 				<section>
-					<h2>OGC API Transactions</h2>
+					<h2>Admin API</h2>
 					<ul>
-						<li>OGC Metadata Code Sprint (September 2022)</li>
+						<li>API-based configuration workflow (server, resources)</li>
 						<li>OGC API - Features - Part 4</li>
 						<li>Create, Replace, Update, Delete</li>
+						<li>TODO: HTML UI/Web application</li>
 					</ul>
-					<img src="../default/static/pygeoapi-transactions.png">
+					<img src="../default/static/tour-admin-api.png">
 				</section>
 				<section>
-					<h2>OGC API - Maps</h2>
+					<h2>OGC Compliance</h2>
 					<ul>
-						<li>OGC Web Mapping Code Sprint (November 2022)</li>
-						<li>MapServer MapScript, WMS Facade</li>
+						<li>OGC API - Tiles</li>
+						<li>OGC API - Processes</li>
 					</ul>
-					<img src="../default/static/tour-oamaps.png">
-				</section>
-				<section>
-				   <h2>CRS Support</h2>
-				   <ul>
-					   <li>OGC API - Features - Part 2</li>
-					   <li>Available for ALL Feature Providers</li>
-					   <li>Per Feature Provider
-					   <ul>
-						   <li>handle internally (OGR, PostGIS), or</li>
-						   <li>delegate to core</li>
-					   </ul>
-					  <li>Community cooperation - <a href="https://github.com/mtachon" target="_blank">Mathieu Tachon</a>!</li>
-					   <li>demo: <a href="https://apitestbed.geonovum.nl/" target="_blank">Geonovum testbed server</a></li>
-					   <li>documentation: <a href="https://docs.pygeoapi.io/en/latest/crs.html" target="_blank">documentation</a>
-						   - <a href="https://apitestbed.geonovum.nl/test-results/cite-apitestbed-pygeoapi.pdf" target="_blank">CITE Test Compliance</a>
-					   </li>
-				   </ul>
-       			</section>
-				<section>
-					<h2>Adherence to Dutch API rules (ADR)</h2>
-               <ul>
-                  <li>API-03: <s>Apply standard HTTP methods</s></li>
-                  <li>API-16: <s>Provide OpenAPI Specification</s></li>
-                  <li>API-20: Include major version number in URI</li>
-                  <li>API-48: Leave off trailing slashes from URIs</li>
-                  <li>API-51: <s>OAS at a standard location as JSON</s></li>
-                  <li>API-56: Adhere to Semantic Versioning model</li>
-                  <li>API-57: Full version number in response header</li>
-               </ul>
 				</section>
 				<section>
 					<h2>New plugins</h2>
 					<ul>
-						<li>Esri REST API</li>
-						<li>Azure (STAC)</li>
-						<li>ERDDAP</li>
-						<li>MongoDB process manager</li>
+						<li>CSWFacade (record)</li>
+						<li>WMTSFacade (map)</li>
+						<li>Shapely functions (process)</li>
 					</ul>
-					<img src="../default/static/pygeoapi-erddap.png">
 				</section>
 				<section>
-					<h2>More new features</h2>
+					<h2>Dependency policy</h2>
 					<ul>
-						<li>Django support (done at FOSS4G 2022 Sprint!)</li>
-						<li>JSON minification option</li>
-						<li>JSON-LD templating for feature collection items</li>
-						<li>Numerous ongoing improvements (standards, plugins)</li>
-						<li>INSPIRE improvements (collections/links)</li>
+						<li><a href="https://pygeoapi.io/development/rfc/2/">RFC2</a></li>
+						<li>baseline for stability, security</li>
 					</ul>
+				</section>
+				<section>
+					<h2>API code refactor</h2>
+					<ul>
+						<li>splitting of <code>pygeoapi/api.py</code> into modules</li>
+						<li>Thank you <a href="https://github.com/totycro">Bernhard Mallinger</a> of <a href="https://eox.at">EOX</a>!</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Security</h2>
+					<ul>
+						<li>CI / Docker CVE scanning</li>
+						<li><a href="https://github.com/aquasecurity/trivy">Trivy</a></li>
+					</ul>
+				</section>
+				<section>
+					<h2>First ever pygeoapi code sprint</h2>
+					<ul>
+						<li>Évora, Portugal</li>
+						<li>29 February - 01 March 2024</li>
+						<li><a href="https://github.com/geopython/pygeoapi/wiki/Code-Sprint-2024-02-29-to-2024-03-01">Wiki page / report</a></li>
+						<li>Re-establishment of monthly <a href="https://github.com/geopython/pygeoapi/wiki/Meetings">meetings</a> (open to all)</li>
+						<li><a href="https://pygeoapi.io/development/rfc/4">RFC4</a>: automated warn/closure of PRs and issues after 90 days (stale bot) (thank you <a href="https://github.com/ricardogsilva">Ricardo Silva</a>!)</li>
+					</ul>
+					<p>Next code sprint: 2025 (Stay tuned!)</p>
 				</section>
 			</section>
 			<section id="selected-recent-projects">
@@ -336,21 +368,37 @@ curl http://localhost:5000  # or open in a web browser
 					<p><a href="https://github.com/geopython/pygeoapi/wiki/LiveDeployments">github.com/geopython/pygeoapi/wiki/LiveDeployments</a></p>
 				</section>
 				<section>
-					<h1>Spain</h1>
+					<h2>Infraestructura de Datos Espaciales de España</h2>
+					<h2> Instituto Geográfico Nacional de España</h2>
 					<ul>
-						<li>National Cartographic System of Spain</li>
-						<li>National Geographic Institute of Spain</li>
-						<li>OGC API - Maps (¡Felicidades!) / OGC API - Features</li>
-						<li>More to come (OGC API - Coverages, OGC API - Proceses, etc.)</li>
+						<li>OGC API - Features, Processes, Maps, Coverages</li>
 					</ul>
-					<p><a href="https://api-features.idee.es">api-features.idee.es</a></p>
-					<p><a href="https://api-features.ign.es">api-features.ign.es</a></p>
 				</section>
 				<section>
-					<img src="../default/static/idee-es.png"/>
+					<img src="../default/static/spain-idee-ign.png"/>
 				</section>
 				<section>
-					<img src="../default/static/ign-es.png"/>
+					<h1>Italy</h1>
+					<h2>Municipality of Rome Capital</h2>
+					<ul>
+						<li>National Interoperability Platform PDND</li>
+						<li>OGC API - Features</li>
+					</ul>
+					<p><a href="https://geoportale-preprod.comune.roma.it/pdnd">geoportale-preprod.comune.roma.it/pdnd</a></p>
+				</section>
+				<section>
+					<img src="../default/static/rome-municipality.png"/>
+				</section>
+				<section>
+					<h1>Australia</h1>
+					<h2>Geoscience Australia Linked Data Register</h2>
+					<ul>
+						<li>OGC API - Features</li>
+					</ul>
+					<p><a href="https://linkeddata.pid.geoscience.gov.au">linkeddata.pid.geoscience.gov.au</a></p>
+				</section>
+				<section>
+					<img src="../default/static/geoscience-australia.png"/>
 				</section>
 				<section>
 					<h1>UN/WMO: wis2box</h1>
@@ -366,15 +414,6 @@ curl http://localhost:5000  # or open in a web browser
 				</section>
 				<section>
 					<img src="../default/static/wmo-wis2box-graph.png"/>
-				</section>
-				<section>
-					<h1>UN/WMO: OpenCDMS</h1>
-					<ul>
-						<li>FOSS implementation of WMO Climate Data Management System Specifications</li>
-						<li>API component</li>
-						<li>Customizes and extends pygeoapi including adding vocabularies, authentication and new plugins</li>
-					</ul>
-					<p><a href="https://opencdms.org">opencdms.org</a></p>
 				</section>
 			</section>
 			<section id="roadmap">
@@ -395,11 +434,10 @@ curl http://localhost:5000  # or open in a web browser
 						<li>1.0
 							<ul>
 								<li>OGC API - Styles</li>
-								<li>API Refactor</li>
-								<li>Long term stability / dependencies</li>
 							</ul>
 						</li>
-						<li>Oracle feature provider</li>
+						<li>Ensure compliance against all OGC API standards that have CITE tests</li>
+						<li>OGC CITE GitHub Actions (@ricardogsilva)</li>
 						<li>TileDB feature provider</li>
 						<li>Data / provider specific HTML templating</li>
 					</ul>
@@ -454,11 +492,11 @@ curl http://localhost:5000  # or open in a web browser
 				<h1>Thank you!</h1>
 				<p>
 					<a href="https://twitter.com/tomkralidis">@tomkralidis</a>
-					<a href="https://twitter.com/JMendesDeJesus">@JMendesDeJesus</a>
-					<a href="https://twitter.com/justb4">@justb4</a>
-					<a href="https://twitter.com/pvangenuchten">@pvgenuchten</a>
-					<a href="https://twitter.com/tzotsos">@tzotsos</a>
 					<a href="https://twitter.com/francbartoli">@francbartoli</a>
+					<a href="https://twitter.com/tzotsos">@tzotsos</a>
+					<a href="https://twitter.com/pvangenuchten">@pvgenuchten</a>
+					<a href="https://twitter.com/justb4">@justb4</a>
+					<a href="https://twitter.com/JMendesDeJesus">@JMendesDeJesus</a>
 				</p>
 			</section>
 		</div>
