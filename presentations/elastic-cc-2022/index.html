@@ -1,0 +1,227 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta property="og:title" content="Implementing OGC APIs using Elasticsearch and pygeoapi" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://pygeoapi.io/presentations/elastic-cc-2022" />
+		<meta property="og:image" content="https://pygeoapi.io/presentations/default/static/pygeoapi_intro.png" />
+		<meta property="og:image:url" content="https://pygeoapi.io/presentations/default/static/pygeoapi_intro.png" />
+		<meta property="og:image:type" content="image/png" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:description" content="The Open Geospatial Consortium API family of standards (OGC API) are being developed to make it easy for anyone to provide geospatial data to the web, and are the next generation of geospatial web API standards designed with resource-oriented architecture, RESTful principles and OpenAPI. In addition, OGC APIs are being built for cloud capability and agility.  pygeoapi is a Python server implementation of the OGC API suite of standards. The project emerged as part of the OGC API efforts started in 2018 and provides the capability for organizations to deploy OGC API endpoint using OpenAPI, GeoJSON, and HTML. pygeoapi is open source and released under an MIT license. pygeoapi is built on an extensible plugin framework in support of clean, adaptive data integration (called 'providers'). pygeoapi has deep support for Elasticsearch via its ES provider.  This presentation will provide an overview of OGC APIs, pygeoapi and Elasticsearch integration, and demonstrate usage in real world data dissemination environments." />
+		<title>Implementing OGC APIs using Elasticsearch and pygeoapi</title>
+		<link rel="stylesheet" href="../default/css/reveal.css">
+		<link rel="stylesheet" href="../default/css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../default/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement('link');
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match(/print-pdf/gi) ? '../default/css/print/pdf.css' : '../default/css/print/paper.css';
+			document.getElementsByTagName('head')[0].appendChild(link);
+		</script>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400i" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Exo+2:200i" rel="stylesheet">
+		<link rel="stylesheet" href="../default/css/fullscreen-img.css">
+
+		<style type="text/css">
+			.reveal section img {
+				background: none;
+				border: none;
+				box-shadow: none;
+			}
+			
+			.reveal pre code {
+				max-height: 600px;
+			}
+			
+			.reveal code {
+				font-size: 75%;
+			}
+			
+			.reveal h1 {
+				font-family: 'Roboto', sans-serif;
+				font-size: 2.0em;
+			}
+		</style>
+	</head>
+	<body>
+	<div class="reveal">
+		<div class="slides">
+			<section id="frontpage">
+				<h1 style="background-color:white"><img src="../default/static/pygeoapi-logo-notrans.png" style="vertical-align: middle;"/></h1>
+				<h2>Implementing OGC APIs using Elasticsearch and pygeoapi</h2>
+				<p><a href="https://pygeoapi.io">pygeoapi.io</a></p>
+				<p><a title="OSGeo Community Project" href="https://osgeo.org"><img style="background: white;" alt="OSGeo Community Project" src="https://raw.githubusercontent.com/OSGeo/osgeo/master/incubation/community/OSGeo_community.png" height="64"/></a></p>
+				<p style="font-size: 20px;">This presentation available at <a href="https://pygeoapi.io/presentations/elastic-cc-2022">pygeoapi.io/presentations/elastic-cc-2022</a></p>
+			</section>
+			<section id="table-of-contents">
+				<h1>Table of contents</h1>
+				<ul>
+					<li>OGC API Overview</li>
+					<li>Say hello to pygeoapi</li>
+					<li>Elasticsearch integration</li>
+					<li>pygeoapi in production</li>
+				</ul>
+			</section>
+			<section id="ogc-api-overview">
+				<section>
+					<h1>OGC API Overview</h1>
+					<p><a href="https://ogcapi.org">ogcapi.org</a></p>
+				</section>
+				<section>
+					<h1>Open Geospatial Consortium (OGC)</h1>
+					<ul>
+						<li>circa 1994</li>
+						<li>Geospatial standards (formats, interfaces)</li>
+						<li>Web Map Service (WMS) flagship first generation standard (1999)</li>
+					</ul>
+				</section>
+				<section>
+					<h1>OGC API</h1>
+					<ul>
+						<li>Geospatial APIs for the web</li>
+						<li><a href="https://www.w3.org/TR/sdw-bp">W3C Spatial Data on the Web</a></li>
+						<li>Being webby (humans, search engines)</li>
+						<li>Developer friendly</li>
+						<li>Lightweight specification development (GitHub)</li>
+						<li>Removing HTTP use as a tunnel
+							<ul>
+								<li><strike>/ows?request=GetFeature&typename=roads&featureid=5</strike></li>
+								<li>/api/collections/roads/items/5</li>
+							</ul>
+						</li>
+						<li>Modular specifications (building blocks)</li>
+					</ul>
+				</section>
+				<section>
+					<h1>OGC API standards</h1>
+					<img src="static/ogc-api-standards.png" style="background: white; border-radius: 10px"/>
+					</ul>
+				</section>
+			</section>
+			<section id="pygeoapi">
+				<section>
+					<h1>Say hello to pygeoapi</h1>
+					<h1 style="background-color: white"><img src="../default/static/pygeoapi-logo-notrans.png" style="vertical-align: middle;"/></h1>
+					<ul>
+						<li><a href="https://geopython.github.io" target="_blank"><img width="60" height="60" src="../default/static/geopython.png" alt="geopython.github.io" style="background: white; border-radius: 10px"/></a> A <a href="https://geopython.github.io">Geopython</a> project</li>
+						<li>Created by <a href="https://twitter.com/tomkralidis">Tom Kralidis</a> in 2018 on Valentine's Day with ❤️ </li>
+						<li><a href="https://www.osgeo.org/projects/pygeoapi/">OSGeo Community Project</a></li>
+					</ul>
+				</section>
+				<section>
+					<h1>Project Overview</h1>
+					<ul>
+						<li>Geospatial data API framework</li>
+						<li>OGC Reference Implementation</li>
+						<li>International team (Canada, Netherlands, Greece, Italy, New Zealand)
+							<ul>
+								<li>Numerous core <a href="https://github.com/geopython/pygeoapi/graphs/contributors">contributors</a></li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<img src="../default/static/pygeoapi-arch1.png" style="background: white; border-radius: 10px"/>
+				</section>
+			</section>
+			<section id="es-provider">
+				<section>
+					<h1>Elasticsearch integration</h1>
+				</section>
+				<section>
+					<img src="static/providers.png" style="background: white; border-radius: 10px" width="80%"/>
+				</section>
+				<section>
+					<img src="static/es-provider.png" style="background: white; border-radius: 10px" width="80%"/>
+				</section>
+				<section>
+					<img src="static/es-provider-cql.png" style="background: white; border-radius: 10px" width="50%"/>
+				</section>
+			</section>
+			<section id="production-instances">
+				<section>
+					<h1>Production instances</h1>
+				</section>
+				<section>
+					<h1>Canada</h1>
+					<h3>Meteorological Service of Canada <a href="https://eccc-msc.github.io/open-data/msc-geomet/readme_en">GeoMet</a> API platform</h3>
+					<span><a href="https://api.weather.gc.ca">api.weather.gc.ca</a></span>
+					<ul>
+						<li>OGC platform of Canadian weather, climate and water data</li>
+						<li>Realtime weather</li>
+						<li>Numerical weather prediction</li>
+						<li>Hydrometric and Climate archives</li>
+					</ul>
+				</section>
+				<section>
+					<h1>MSC GeoMet</h1>
+					<h1 style="background-color: white"><img src="static/msc-geomet-ogc-api.png" style="vertical-align: middle;"/></h1>
+				</section>
+			</section>
+			<section>
+                <h1>Upcoming Code Sprint</h1>
+                8 - 10 March 2022: Joint OGC OSGeo ASF Code Sprint
+                <img src="static/ogc.png" style="background: white; border-radius: 10px" width="30%"/>
+                <img src="static/osgeo.png" style="background: white; border-radius: 10px" width="30%"/>
+                <img src="static/asf.png" style="background: white; border-radius: 10px" width="30%"/>
+                Free registration, Free participation
+                <a href="https://developer.ogc.org/sprints/15">developer.ogc.org/sprints/15</a>
+
+
+			</section>
+			<section>
+				<h1>Thank you!</h1>
+                <p>
+					<a href="https://twitter.com/tomkralidis">@tomkralidis</a>
+                </p>
+				<ul>
+					<li>Website: <a href="https://pygeoapi.io" target="_blank">pygeoapi.io</a></li>
+					<li>Docs: <a href="https://docs.pygeoapi.io" target="_blank">docs.pygeoapi.io</a></li>
+					<li>Demo: <a href="https://demo.pygeoapi.io" target="_blank">demo.pygeoapi.io</a></li>
+					<li>GitHub: <a href="https://github.com/geopython/pygeoapi" target="_blank">github.com/geopython/pygeoapi</a></li>
+					<li>Docker: <a href="https://hub.docker.com/r/geopython/pygeoapi" target="_blank">hub.docker.com/r/geopython/pygeoapi</a></li>
+					<li>Gitter: <a href="https://gitter.im/geopython/pygeoapi" target="_blank">gitter.im/geopython/pygeoapi</a></li>
+					<li>Mailing list: <a href="https://lists.osgeo.org/mailman/listinfo/pygeoapi" target="_blank">lists.osgeo.org/mailman/listinfo/pygeoapi</a></li>
+				</ul>
+			</section>
+		</div>
+	</div>
+	<script src="../default/lib/js/head.min.js"></script>
+	<script src="../default/js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			//slideNumber : true,
+			history: true,
+			dependencies : [ {
+				src : '../default/plugin/markdown/marked.js'
+			}, {
+				src : '../default/plugin/markdown/markdown.js'
+			}, {
+				src : '../default/plugin/fullscreen/fullscreen-img.js'
+			}, {
+				src : '../default/plugin/notes/notes.js',
+				async : true
+			}, {
+				src : '../default/plugin/highlight/highlight.js',
+				async : true,
+				callback : function() {
+					hljs.initHighlightingOnLoad();
+				}
+			} ]
+		});
+	</script>
+</body>
+</html>
