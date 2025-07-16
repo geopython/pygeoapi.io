@@ -4,6 +4,7 @@ title: Presentations
 
 ## Presentations
 
+- [FOSS4G Europe 2025 presentation](foss4g-europe2025)
 - [FOSS4G 2024 presentation](foss4g2024)
 - [FOSS4G Europe 2024 presentation](foss4g-europe2024)
 - [FOSS4G 2023 presentation](foss4g2023)
