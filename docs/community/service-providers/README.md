@@ -8,7 +8,7 @@ While listing new entities is welcome, the pygeoapi [Project Steering Committee 
 
 To add your entity:
 
-- edit the page `https://github.com/geopython/pygeoapi.io/blob/master/docs/community/service-providers/index.md`, by adding the below HTML div (following the last entry) as follows:
+- edit the page https://github.com/geopython/pygeoapi.io/blob/master/docs/community/service-providers/index.md, by adding the below HTML div (following the last entry) as follows:
 
 ```html
   <div class="service-provider">
