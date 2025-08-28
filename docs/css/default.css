@@ -4,6 +4,7 @@
 
 header {
     display: inline-block;
+    overflow: visible;
 }
 
 main {
