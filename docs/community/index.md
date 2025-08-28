@@ -68,7 +68,7 @@ The pygeoapi [wiki](https://github.com/geopython/pygeoapi/wiki) provides an area
 
 The pygeoapi [issue tracker](https://github.com/geopython/pygeoapi/issues) is the place to report bugs or request enhancements.  To submit a [bug](https://github.com/geopython/pygeoapi/issues/) be sure to specify the version you are using, the appropriate component, a description of how to reproduce the bug, as well as what version of Python and platform.
 
-GitHub provides the ability for users to issue [pull requests](https://help.github.com/articles/creating-a-pull-request), and is the preferred way to have your contributions added to pygeoapi, although patches and other mechanisms are welcome as well.
+GitHub provides the ability for users to issue [Pull Requests](https://help.github.com/articles/creating-a-pull-request), and is the preferred way to have your contributions added to pygeoapi, although patches and other mechanisms are welcome as well.
 
 All pygeoapi [source code](https://github.com/geopython/pygeoapi) is managed on GitHub, which includes the latest (`master`) and other supported branches.
 

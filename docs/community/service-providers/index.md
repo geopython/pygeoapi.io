@@ -34,7 +34,7 @@ If you are a service provider and would like to be listed on this page, please f
     <h2>EOX IT Services GmbH</h2>
     <p>
       <span><a href="https://eox.at"><img width="100" src="https://eox.at/EOX_Logo.svg"/></a></span>
-      <span><a href="https://eox.at">EOX IT Services GmbH</a> (Austria) offers solutions and services in the geodata domain in general and in the Earth Observation domain in particular. EOX is strongly committed towards utilizing and contributing to Open Source Software for example by adapting pygeoapi for <a href="https://github.com/eurodatacube/pygeoapi-kubernetes-papermill">kubernetes-based cloud environments</a>. EOX furthermore provides managed compute and storage resources in the EOxHub Workspace.</span>
+      <span><a href="https://eox.at">EOX IT Services GmbH</a> (Austria) offers solutions and services in the geodata domain in general and in the Earth Observation domain in particular. EOX is strongly committed towards utilizing and contributing to Open Source Software for example by adapting pygeoapi for <a href="https://github.com/eurodatacube/pygeoapi-kubernetes-papermill">Kubernetes-based cloud environments</a>. EOX furthermore provides managed compute and storage resources in the EOxHub Workspace.</span>
     </p>
   </div>
 
@@ -89,7 +89,7 @@ If you are a service provider and would like to be listed on this page, please f
   <div class="service-provider">
     <h2>Rotten Grapes Private Limited</h2>
     <p>
-      <span><a href="https://rottengrapes.tech/"><img width="100" src="https://rottengrapes.tech/assets/images/logo.png"/></a></span>
+      <span><a href="https://rottengrapes.tech/"><img width="100" src="https://rottengrapes.tech/assets/images/logo.webp"/></a></span>
       <span><a href="https://rottengrapes.tech/">Rotten Grapes</a> (India) is an open-source first Geospatial company providing unique solutions for your business via our Services and Products! We are small agency of 6 developers and designers all walking down from different paths of life and sharing same purpose <b> Helping local business leverage geospatial data</b>! 
     </p>
   </div>
