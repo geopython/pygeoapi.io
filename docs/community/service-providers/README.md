@@ -21,4 +21,4 @@ To add your entity:
 
 - open a GitHub Pull Request of your addition, for review
 
-If the Pull Request is merged, the page at https://pygeoapi.io/community/service-providers will be updated live.  Note that entities are randomly shuffled on each page load.
+If/once the Pull Request is merged, the page at https://pygeoapi.io/community/service-providers will be updated live.  Note that entities are randomly shuffled on each page load.
