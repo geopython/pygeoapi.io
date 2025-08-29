@@ -14,7 +14,7 @@ To add your entity:
   <div class="service-provider">
     <h2>My Entity</h2>
     <p>
-      <span>Description of my Entity which can include HTML.</span>
+      <span>Description of My Entity which can include HTML.</span>
     </p>
   </div>
 ```
