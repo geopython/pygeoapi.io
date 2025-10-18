@@ -22,7 +22,7 @@ cd pygeoapi
 git clone https://github.com/geopython/pygeoapi.git
 cd pygeoapi
 pip3 install -r requirements.txt
-python3 setup.py install
+pip3 install .
 cp pygeoapi-config.yml example-config.yml
 vi example-config.yml  # edit as required
 export PYGEOAPI_CONFIG=example-config.yml
