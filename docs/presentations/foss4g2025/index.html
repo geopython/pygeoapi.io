@@ -104,14 +104,14 @@
 				<section>
 					<h1>Install in 5 minutes</h1>
 		                <pre><code data-trim>
-# Python 3.10 required
+# Python 3.12 recommended
 python3 -m venv pygeoapi
 cd pygeoapi
 . bin/activate
 git clone https://github.com/geopython/pygeoapi.git
 cd pygeoapi
 pip3 install -r requirements.txt
-python3 setup.py install
+pip3 install .
 cp pygeoapi-config.yml example-config.yml
 vi example-config.yml  # edit as required
 export PYGEOAPI_CONFIG=example-config.yml
@@ -198,7 +198,7 @@ curl http://localhost:5000  # or open in a web browser
     					<li>PyPI</li>
     					<li>UbuntuGIS</li>
      					<li>Docker<ul>
-     					<li>See numerous ready to use examples (Kubernetes, AWS Lambda, etc.) at <a href="https://github.com/geopython/pygeoapi-examples">pygeoapi-examples</a></li>
+     					<li>See numerous ready to use examples (Kubernetes, OpenShift, AWS Lambda, etc.) at <a href="https://github.com/geopython/pygeoapi-examples">pygeoapi-examples</a></li>
      					</ul></li>
     					<li>Conda</li>
     					<li>FreeBSD</li>
@@ -243,7 +243,7 @@ curl http://localhost:5000  # or open in a web browser
 					<h1 style="background-color: white"><img src="../default/static/tour-oaedr.png" style="vertical-align: middle;"/></h1>
 				</section>
 				<section>
-					<h1>SpatioTemporal Asset Catalog (STAC)</h1>
+					<h1>SpatioTemporal Asset Catalog (STAC) / API</h1>
 					<h1 style="background-color: white"><img src="../default/static/tour-stac.png" style="vertical-align: middle;"/></h1>
 				</section>
 				<section>
@@ -263,7 +263,6 @@ curl http://localhost:5000  # or open in a web browser
 					<h2>Community updates</h2>
 					<ul>
 						<li>Monthly <a href="https://github.com/geopython/pygeoapi/wiki/Meetings">meetings</a> (open to all)</li>
-						<li>project sprint at the OSGeo community sprint in Riga, Latvia (29 September - 03 October 2025)</li>
 					</ul>
 				</section>
 				<section>
@@ -326,8 +325,9 @@ curl http://localhost:5000  # or open in a web browser
 					</ul>
 				</section>
 				<section>
-					<h2>Data limiting</h2>
+					<h2>Fine grained data limiting</h2>
 					<ul>
+						<li>Server wide, collection specific</li>
 						<li>Default limits</li>
 						<li>Maximum limits</li>
 						<li>Distance based limits</li>
@@ -336,19 +336,19 @@ curl http://localhost:5000  # or open in a web browser
 				<section>
 					<h2>More updates</h2>
 					<ul>
+						<li>Custom TileMatrixSet definitions</li>
 						<li>Collection level HTML templating</li>
 						<li>SQLAlchemy2 update</li>
 						<li>Processes: fix support for binary job results</li>
-						<li>Distance based limits</li>
 					</ul>
 				</section>
 				<section>
 					<h2>Releases</h2>
 					<ul>
-						<li>September 2024: 0.18</li>
-						<li>December 2024: 0.19</li>
 						<li>March 2025: 0.20</li>
-						<li>July 2025: 0.21 (coming soon)</li>
+						<li>July 2025: 0.21</li>
+						<li>November 2025: 0.22</li>
+						<li>February 2026: 0.23</li>
 					</ul>
 				</section>
 			</section>
@@ -356,6 +356,48 @@ curl http://localhost:5000  # or open in a web browser
 				<section>
 					<h1>Selected recent projects</h1>
 					<p><a href="https://github.com/geopython/pygeoapi/wiki/LiveDeployments">github.com/geopython/pygeoapi/wiki/LiveDeployments</a></p>
+				</section>
+				<section>
+					<h1>Australia</h1>
+					<h2>Geoscience Australia Linked Data Register</h2>
+					<ul>
+						<li>OGC API - Features</li>
+					</ul>
+					<p><a href="https://linkeddata.pid.geoscience.gov.au">linkeddata.pid.geoscience.gov.au</a></p>
+				</section>
+				<section>
+					<img src="../default/static/geoscience-australia.png"/>
+				</section>
+				<section>
+					<h1>Pacific Community (SPC)</h1>
+					<h2>Ocean Data Management System</h2>
+					<h3>Oceanographic datasets (lidar, satellite, observations, drones)</h3>
+					<ul>
+						<li>OGC API - Records</li>
+					</ul>
+					<p><a href="https://opmdata.gem.spc.int/dms/pygeoapi">https://opmdata.gem.spc.int/dms/pygeoapi</a></p>
+				</section>
+				<section>
+					<img src="../default/static/spc1.png"/>
+				</section>
+				<section>
+					<img src="../default/static/spc2.png"/>
+				</section>
+				<section>
+					<h1>UN/WMO: wis2box</h1>
+					<ul>
+						<li><a href="https://community.wmo.int/activity-areas/wis">WMO Information System 2.0</a></li>
+						<li>Event-driven weather/climate/water data exchange</li>
+						<li>API component of WMO Reference Implementation</li>
+						<li>Over 60 deployments</li>
+					</ul>
+					<p><a href="https://demo.wis2box.wis.wmo.int">demo.wis2box.wis.wmo.int</a></p>
+				</section>
+				<section>
+					<img src="../default/static/wmo-wis2box-ui.png"/>
+				</section>
+				<section>
+					<img src="../default/static/wmo-wis2box-graph.png"/>
 				</section>
 				<section>
 					<h1>Portugal</h1>
@@ -381,30 +423,7 @@ curl http://localhost:5000  # or open in a web browser
 					<img src="../default/static/spain-idee-ign.png"/>
 				</section>
 				<section>
-					<h1>Australia</h1>
-					<h2>Geoscience Australia Linked Data Register</h2>
-					<ul>
-						<li>OGC API - Features</li>
-					</ul>
-					<p><a href="https://linkeddata.pid.geoscience.gov.au">linkeddata.pid.geoscience.gov.au</a></p>
-				</section>
-				<section>
 					<img src="../default/static/geoscience-australia.png"/>
-				</section>
-				<section>
-					<h1>UN/WMO: wis2box</h1>
-					<ul>
-						<li><a href="https://community.wmo.int/activity-areas/wis">WMO Information System 2.0</a></li>
-						<li>Event-driven weather/climate/water data exchange</li>
-						<li>API component of WMO Reference Implementation</li>
-					</ul>
-					<p><a href="https://demo.wis2box.wis.wmo.int">demo.wis2box.wis.wmo.int</a></p>
-				</section>
-				<section>
-					<img src="../default/static/wmo-wis2box-ui.png"/>
-				</section>
-				<section>
-					<img src="../default/static/wmo-wis2box-graph.png"/>
 				</section>
 			</section>
 			<section id="roadmap">
@@ -437,10 +456,12 @@ curl http://localhost:5000  # or open in a web browser
 					<ul>
 						<li>ensure compliance against all OGC API standards that have CITE tests</li>
 						<li>OGC CITE GitHub Actions (@ricardogsilva)</li>
+						<li>Authentication passthrough</li>
+						<li>Custom formatters</li>
 						<li>MapScript support for Coverages</li>
 						<li>data validation framework (for transactions)</li>
 						<li>refactoring Docker images (slim/full)</li>
-						<li>more OGC APIs - Moving Features, DGGS, Routes</li>
+						<li>more OGC APIs: Moving Features, DGGS, Routes</li>
 					</ul>
 				</section>
 				<section>

@@ -15,7 +15,7 @@ title: pygeoapi - an OGC API to geospatial data
 
 ## Install in 5 minutes
 ```python
-# Python 3.10 required
+# Python 3.12 recommended
 python3 -m venv pygeoapi
 cd pygeoapi
 . bin/activate
