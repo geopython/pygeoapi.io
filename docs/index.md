@@ -16,8 +16,8 @@ title: pygeoapi - an OGC API to geospatial data
 ## Install in 5 minutes
 ```python
 # Python 3.12 recommended
-python3 -m venv pygeoapi
-cd pygeoapi
+python3 -m venv venv
+cd venv
 . bin/activate
 git clone https://github.com/geopython/pygeoapi.git
 cd pygeoapi
