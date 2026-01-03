@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>RFC1 - Project Steering Committee Guidelines - pygeoapi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en-US">
+    <meta name="description" content="pygeoapi provides an API to geospatial data">
+    <meta name="keywords" content="geospatial,data,api">
+    <link rel="canonical" href="https://pygeoapi.io">
+    <link rel="me" href="https://noc.social/@pygeoapi">    
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/mini.css@3.0.1/dist/mini-default.min.css">
+    <link rel="stylesheet" href="https://pygeoapi.io//css/default.css">
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </head>
+  <body>
+    <header class="sticky row">
+      <label for="drawer-control" class="drawer-toggle"></label>
+      <input type="checkbox" id="drawer-control" class="drawer">
+      <nav class="col-sm-12 col-md-12 col-md-offset-1">
+        <label for="drawer-control" class="drawer-close"></label>
+        <a href="https://pygeoapi.io/" class="logo hidden-md" role="button">
+          <img src="https://pygeoapi.io//img/pygeoapi-logo.png" title="pygeoapi" style="height:40px;vertical-align: middle;"/></a>
+        <a title="Fork me on GitHub" href="https://github.com/geopython/pygeoapi"><img style="z-index: 1110; position: fixed; top: 0; right: 0; border: 0; padding: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"/></a>
+        <a href="https://pygeoapi.io/">Home</a> <span class='hidden-sm'>|</span>
+        <a href="https://pygeoapi.io//community">Community</a> <span class='hidden-sm'>|</span>
+        <a href="https://pygeoapi.io//documentation">Documentation</a> <span class='hidden-sm'>|</span>
+        <a href="https://demo.pygeoapi.io">Demo</a> <span class='hidden-sm'>|</span>
+        <a href="https://github.com/geopython/pygeoapi">Code</a> <span class='hidden-sm'>|</span>
+        <a href="https://pygeoapi.io//download">Download</a> <span class='hidden-sm'>|</span>
+        <a href="https://pygeoapi.io//development">Development</a>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-10 col-md-offset-1">
+            <h1 id="rfc1-project-steering-committee-guidelines">RFC1: Project Steering Committee Guidelines</h1>
+<ul>
+<li>date: 2019-10-09</li>
+<li>author: Tom Kralidis</li>
+<li>contact: tomkralidis@gmail.com</li>
+<li>status: adopted</li>
+<li>modified: 2019-10-26</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>This RFC describes the pygeoapi Project Steering Committee (PSC) rules of engagement and decision making process for all aspects of the project.</p>
+<p>Examples of PSC responsibilities:</p>
+<ul>
+<li>ensuring community code of conduct</li>
+<li>setting the overall development roadmap</li>
+<li>technical standards and policies (coding conventions, etc.)</li>
+<li>ensuring a regular release schedule (major and maintenance)</li>
+<li>reviewing RFCs</li>
+<li>project infrastructure (issue tracker, source code management, hosting, etc.)</li>
+<li>formalization with external entities such as OSGeo, OGC (CITE), etc.</li>
+<li>setting project priorities</li>
+</ul>
+<p>In brief the project team votes on proposals on the pygeoapi <a href="https://lists.osgeo.org/mailman/listinfo/pygeoapi">mailing list</a>.  Proposals are available for review for at least two days, and a single veto is sufficient to delay progress though ultimately a majority of members can pass a proposal.</p>
+<h2 id="detailed-process">Detailed Process</h2>
+<ul>
+<li>Proposals are written and submitted to the pygeoapi mailing list for discussion and voting, by anyone</li>
+<li>Proposals need to be available for review for at least two business days before a final decision can be made</li>
+<li>RFCs can be drafted on the pygeoapi wiki, and once voted on, cast on website at https://pygeoapi.io/development/rfc/xxx</li>
+<li>Respondants may vote using the following rubric:</li>
+<li>+1: support the proposal and a willingness to support implementation</li>
+<li>-1: veto the proposal, but must provide clear reasoning and alternate approaches to resolving issues within the two days</li>
+<li>-0: mild disagreement, but has no effect</li>
+<li>0: no opinion</li>
+<li>+0: mild support, but has no effect</li>
+<li>Anyone can comment on proposals, but only PSC member votes will be counted</li>
+<li>A proposal will be accepted if it receives +2 (including the author) and no vetoes (-1)</li>
+<li>If a proposal is vetoed, and it cannot be revised to satisfy all parties, then it can be resubmitted for an override vote in which a majority of all eligible votes indicating +1 is sufficient to pass it.  Note that this is a majority of all committee members, not just those who actively vote</li>
+<li>Upon completion of discussion and voting the author should announce whether they are proceeding (proposal accepted) or are withdrawing (vetoed)</li>
+<li>The Chair gets a vote</li>
+<li>The Chair is responsible for keeping track of who is a member of the PSC.  The authoritative and current PSC membership list is maintained at <a href="https://pygeoapi.io/community/psc">https://pygeoapi.io/community/psc</a></li>
+<li>Addition and removal of members from the PSC, including selection of a Chair should be handled as a proposal to the committee</li>
+<li>The Chair adjudicates in cases of disputes about voting</li>
+</ul>
+<h2 id="when-is-a-vote-required">When is a Vote Required?</h2>
+<ul>
+<li>changes in committee membership</li>
+<li>significant changes to project infrastructure</li>
+<li>backward compatibility issues</li>
+<li>significant feature implementation(s)</li>
+<li>Changing the inter-subsystem API, or objects</li>
+<li>Issues of process/procedures</li>
+<li>Release management</li>
+<li>Relationships with external entities (OSGeo, OGC, etc.)</li>
+<li>Anything controversial</li>
+</ul>
+<h2 id="observations">Observations</h2>
+<ul>
+<li>The Chair is the ultimate adjudicator if things break down</li>
+<li>The absolute majority rule can be used to override an obstructionist veto, but it is intended that in normal circumstances vetoers need to be convinced to withdraw their veto.  We are trying to reach consensus</li>
+<li>It is anticipated that seperate activities will exist to manage conferences, presentations, websites, demos, etc.</li>
+</ul>
+<h2 id="committee-membership">Committee Membership</h2>
+<p>The PSC is comprised of individuals who are:</p>
+<ul>
+<li>technical contributors</li>
+<li>documentation and training contributors</li>
+<li>other prominent members of the pygeoapi community</li>
+<li>contributors of strategic direction to pygeoapi as an SDI component</li>
+</ul>
+<h3 id="adding-members">Adding Members</h3>
+<p>Any member of the pygeoapi mailing list may nominate someone for committee membership at any time.  Only existing PSC members may vote on new members.  Nominees must receive a majority vote from existing members to be added to the PSC.</p>
+<h3 id="stepping-down">Stepping Down</h3>
+<p>If for some reason a PSC member is not able to fully participate then they are free to step down.  If a member is not active for a period of 12 months then the committee reserves the right to seek nominations to fill that position.  PSC members who have stepped down or have been replaced as certainly welcome to return upon nomincation.</p>
+<h2 id="membership-responsibilities">Membership Responsibilities</h2>
+<h3 id="guiding-development">Guiding Development</h3>
+<p>Members should take an active role guiding the development of new features they feel passionate about.  Once a change request has been accepted and given the go ahead to proceed does not mean the members are free of their obligation.  PSC members voting +1 for a change request are expected to stay engaged and ensure the change is implemented and documented in a way that is most beneficial to users.  Note that this applies not only to change requests that affect code, but also those that affect the website, technical infrastructure, policies and standards.</p>
+<h3 id="meeting-attendance">Meeting Attendance</h3>
+<p>PSC members are expected to participate in pre-scheduled <a href="https://gitter.im/geopython/pygeoapi">Gitter</a> meetings.  Initial frequency is set to once a month.</p>
+<h3 id="mailing-list-participation">Mailing List Participation</h3>
+<p>PSC members are expected to be active on the pygeoapi mailing list and Gitter chat.  Non-developer members of the PSC are not expected to respond to coding level questions on the pygeoapi mailing list, however they are expected to provide their thoughts and opinions on user level requirements and compatibility issues when RFC discussions take place.</p>
+<h3 id="bootstrapping">Bootstrapping</h3>
+<p>Prior to forming the PSC, this RFC must be distributed before the pygeoapi community for review and comment.  Any and all substantive comments are encouraged to be discussed via the pygeoapi mailing list or Gitter channel.</p>
+<p>Tom Kralidis is declared initial Chair of the PSC.</p>
+<p>Initial PSC members are (in alphabetical order):</p>
+<ul>
+<li><a href="https://github.com/francbartoli">Francesco Bartoli</a></li>
+<li><a href="https://github.com/justb4">Just van den Broecke</a></li>
+<li><a href="https://github.com/pvgenuchten">Paul van Genuchten</a></li>
+<li><a href="https://github.com/jorgejesus">Jorge Samuel Mendes de Jesus</a></li>
+<li><a href="https://github.com/tomkralidis">Tom Kralidis</a> (Chair)</li>
+<li><a href="https://github.com/kalxas">Angelos Tzotsos</a></li>
+</ul>
+<h2 id="voting-history">Voting History</h2>
+<p>Adopted on 2019-10-26 with +1 from francbartoli, justb4, pvgenuchten, jorgejesus, tomkralidis, kalxas</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer style="text-align: center;">
+      <a rel="license" title="This work is licensed under a Creative Commons Attribution 4.0 International License" href="https://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
+      &copy; 2019 - 2026 pygeoapi development team
+      <a title="Open Hub project report for pygeoapi" href="https://www.openhub.net/p/pygeoapi"><img src="https://www.openhub.net/p/pygeoapi/widgets/project_thin_badge.gif"/></a>
+      <br/>Powered by <a href="https://www.mkdocs.org/">MkDocs</a>
+    </footer>
+  </body>
+</html>
