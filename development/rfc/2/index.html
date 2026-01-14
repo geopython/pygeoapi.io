@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>RFC2 - Dependency policy - pygeoapi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en-US">
+    <meta name="description" content="pygeoapi provides an API to geospatial data">
+    <meta name="keywords" content="geospatial,data,api">
+    <link rel="canonical" href="https://pygeoapi.io">
+    <link rel="me" href="https://noc.social/@pygeoapi">    
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/mini.css@3.0.1/dist/mini-default.min.css">
+    <link rel="stylesheet" href="https://pygeoapi.io//css/default.css">
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </head>
+  <body>
+    <header class="sticky row">
+      <label for="drawer-control" class="drawer-toggle"></label>
+      <input type="checkbox" id="drawer-control" class="drawer">
+      <nav class="col-sm-12 col-md-12 col-md-offset-1">
+        <label for="drawer-control" class="drawer-close"></label>
+        <a href="https://pygeoapi.io/" class="logo hidden-md" role="button">
+          <img src="https://pygeoapi.io//img/pygeoapi-logo.png" title="pygeoapi" style="height:40px;vertical-align: middle;"/></a>
+        <a title="Fork me on GitHub" href="https://github.com/geopython/pygeoapi"><img style="z-index: 1110; position: fixed; top: 0; right: 0; border: 0; padding: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"/></a>
+        <a href="https://pygeoapi.io/">Home</a> <span class='hidden-sm'>|</span>
+        <a href="https://pygeoapi.io//community">Community</a> <span class='hidden-sm'>|</span>
+        <a href="https://pygeoapi.io//documentation">Documentation</a> <span class='hidden-sm'>|</span>
+        <a href="https://demo.pygeoapi.io">Demo</a> <span class='hidden-sm'>|</span>
+        <a href="https://github.com/geopython/pygeoapi">Code</a> <span class='hidden-sm'>|</span>
+        <a href="https://pygeoapi.io//download">Download</a> <span class='hidden-sm'>|</span>
+        <a href="https://pygeoapi.io//development">Development</a>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-10 col-md-offset-1">
+            <h1 id="rfc2-dependency-policy">RFC2: Dependency policy</h1>
+<ul>
+<li>date: 2023-11-10</li>
+<li>author: Tom Kralidis</li>
+<li>contact: tomkralidis@gmail.com</li>
+<li>status: draft</li>
+<li>modified: 2024-01-06</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>This RFC outlines pygeoapi policy on upstream dependency management, development and stable branch workflow.</p>
+<h2 id="background">Background</h2>
+<p>Having <a href="https://github.com/geopython/pygeoapi/commit/17edb346a177c9cfdb1d4a7494a029c9e64ed89e">started in 2018</a>, a core goal of pygeoapi was to develop and provide an OGC API server that is light on core dependencies.  Since then, the project has experienced considerable success in the number of features implemented and standards supported.  A reality of the aforementioned has been the addition of numerous dependencies that have impacted the codebase on various operating systems and environments.</p>
+<p>pygeoapi is currently provided for the below:</p>
+<ul>
+<li>UbuntuGIS</li>
+<li>pip3</li>
+<li>Docker</li>
+<li>Conda</li>
+<li>FreeBSD</li>
+</ul>
+<p>Operating systems and build systems are managed on schedules and timelines that are driven by project requirements.  As a result, various differences in dependencies and requirements arise.  This is especially evident when adding features based on new packages that are available on some environments but not others.</p>
+<p>Given the above, it is critical that pygeoapi establish a dependency policy in order to manage development.</p>
+<h2 id="dependency-policy">Dependency policy</h2>
+<h3 id="stable-branch">Stable branch</h3>
+<p>On a major or minor release, pygeoapi will implement a stable branch which is pinned to the dependencies at the time of release against master. In particular for a given dependency version such rules shall be met:</p>
+<ul>
+<li>the dependency must not have known high or critical vulnerabilities</li>
+<li>the Python dependency must have a corresponding operating system package for the supported Ubuntu version at the time</li>
+</ul>
+<p>As a result, stable branch shall only rely upon those libraries (and respective versions) which can be found on the above given OS baseline repositories. At the same time, the Docker image built with all the dependencies from stable branch must not have known high or critical vulnerabilities.</p>
+<h3 id="master-branch"><code>master</code> branch</h3>
+<p>master branch dependencies and requirements shall be possibly consistent against a given operating system baseline:</p>
+<ul>
+<li>pip3 requirements</li>
+<li>Ubuntu dependencies (nice to have but not mandatory, see below for fixes)</li>
+<li>Docker / Docker Compose</li>
+</ul>
+<p>Fixes will be made and backported to stable branches as required. For security fixes, stable branch dependencies shall be updated as required.</p>
+<h3 id="addingremoving-new-dependencies">Adding/Removing (new) dependencies</h3>
+<p>Careful consideration shall be given when new dependencies are proposed.  New dependencies represent long term commitment and maintenance to dependency management and stability of pygeoapi.</p>
+<p>Any new dependency that does not have a corresponding Debian or Ubuntu package shall be fixed as soon as possible and the missing package made available via Ubuntu within <strong>120 days (4 months)</strong>.  If the dependency is not made available to the given distributions in the approved timeline, the developer who introduced the dependency is responsible for removing/reverting/replacing the dependency and the associated code in the codebase.</p>
+<p>The pygeoapi PSC reserves the right to remove/revert/replace the dependency and its associated code.</p>
+<p><strong>Changes (Pull Requests) which add or remove dependencies shall be discussed and have a minimum of two approvals from the PSC</strong>.</p>
+<h2 id="bootstrapping">Bootstrapping</h2>
+<p>To bootstrap this RFC, the following baseline is proposed:</p>
+<ul>
+<li>master branch shall be compatible to dependences available on Ubuntu 22.04</li>
+</ul>
+<h2 id="voting-history">Voting History</h2>
+<p>Adopted on 2024-01-06 with +1 from francbartoli, justb4, pvgenuchten, jorgejesus, tomkralidis, kalxas</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer style="text-align: center;">
+      <a rel="license" title="This work is licensed under a Creative Commons Attribution 4.0 International License" href="https://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
+      &copy; 2019 - 2026 pygeoapi development team
+      <a title="Open Hub project report for pygeoapi" href="https://www.openhub.net/p/pygeoapi"><img src="https://www.openhub.net/p/pygeoapi/widgets/project_thin_badge.gif"/></a>
+      <br/>Powered by <a href="https://www.mkdocs.org/">MkDocs</a>
+    </footer>
+  </body>
+</html>
