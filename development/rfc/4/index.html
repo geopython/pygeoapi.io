@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>RFC4 - GitHub Issue and Pull Request management - pygeoapi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en-US">
+    <meta name="description" content="pygeoapi provides an API to geospatial data">
+    <meta name="keywords" content="geospatial,data,api">
+    <link rel="canonical" href="https://pygeoapi.io">
+    <link rel="me" href="https://noc.social/@pygeoapi">    
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/mini.css@3.0.1/dist/mini-default.min.css">
+    <link rel="stylesheet" href="https://pygeoapi.io//css/default.css">
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </head>
+  <body>
+    <header class="sticky row">
+      <label for="drawer-control" class="drawer-toggle"></label>
+      <input type="checkbox" id="drawer-control" class="drawer">
+      <nav class="col-sm-12 col-md-12 col-md-offset-1">
+        <label for="drawer-control" class="drawer-close"></label>
+        <a href="https://pygeoapi.io/" class="logo hidden-md" role="button">
+          <img src="https://pygeoapi.io//img/pygeoapi-logo.png" title="pygeoapi" style="height:40px;vertical-align: middle;"/></a>
+        <a title="Fork me on GitHub" href="https://github.com/geopython/pygeoapi"><img style="z-index: 1110; position: fixed; top: 0; right: 0; border: 0; padding: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"/></a>
+        <a href="https://pygeoapi.io/">Home</a> <span class='hidden-sm'>|</span>
+        <a href="https://pygeoapi.io//community">Community</a> <span class='hidden-sm'>|</span>
+        <a href="https://pygeoapi.io//documentation">Documentation</a> <span class='hidden-sm'>|</span>
+        <a href="https://demo.pygeoapi.io">Demo</a> <span class='hidden-sm'>|</span>
+        <a href="https://github.com/geopython/pygeoapi">Code</a> <span class='hidden-sm'>|</span>
+        <a href="https://pygeoapi.io//download">Download</a> <span class='hidden-sm'>|</span>
+        <a href="https://pygeoapi.io//development">Development</a>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-10 col-md-offset-1">
+            <h1 id="rfc4-github-issue-and-pull-request-management">RFC4 - GitHub Issue and Pull Request management</h1>
+<ul>
+<li>date: 2024-03-01</li>
+<li>author: Tom Kralidis</li>
+<li>contact: tomkralidis@gmail.com</li>
+<li>status: draft</li>
+<li>modified: 2024-03-07</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>This RFC describes the policies and procedures for handling pygeoapi GitHub Issues and Pull Requests (PRs).</p>
+<h2 id="issue-and-pr-management">Issue and PR management</h2>
+<p>From a software management perspective, the pygeoapi project is managed on GitHub, which includes the following:</p>
+<ul>
+<li>source code / version control (software, documentation)</li>
+<li>Issues (bugs, feature enhancements, etc), milestones and triage</li>
+<li>Pull Requests</li>
+<li>wiki</li>
+<li>milestones</li>
+</ul>
+<p>Given the free and open-source nature and spirit of the project, contributions are enabled and encouraged.  To
+efficiently manage the above elements in the context of the pygeoapi PSC, committers and collaborators,
+it is proposed to put forth clear principles for handling GitHub contributions.</p>
+<h2 id="key-principles">Key principles</h2>
+<ul>
+<li>contributions to (new features, bugs, documentation, testing) are encouraged and greatly appreciated</li>
+<li>non-trivial contributions in the form of Pull Requests are best put forth in the context of an Issue, so that discussion
+  can take place to identify any possible concerns or impacts</li>
+<li>pygeoapi PSC, committers and collaborators are able to triage and collaborate on Issues and Pull Requests in a timely
+  fashion</li>
+<li>over time, it is normal that Issues may be without activity for any given reason</li>
+</ul>
+<h2 id="implementation">Implementation</h2>
+<p>To efficiently manage pygeoapi Issues and Pull Requests and to maintain a healthy and sustainable enviroment for pygeoapi
+PSC, committers and collaborators, the following implementation is proposed:</p>
+<ul>
+<li>all Issues and Pull Requests shall be at least addressed (triaged or commented on) within ten (10) business days (assuming working days Monday - Friday)</li>
+<li>Issues or Pull Requests with more than ninety (90) days of inactivity shall receive an automated update to the Issue with a warning that the Issue or Pull Request will be automatically closed in 7 days<ul>
+<li>Issues with a label of <code>blocker</code> shall not be closed under any circumstance</li>
+<li>automated updates shall be run on a weekly basis</li>
+</ul>
+</li>
+<li>GitHub Issue Templates shall be updated as follows:<ul>
+<li>reminding the submitter that the Issue or Pull Request is subject to the above policies and procedures</li>
+<li>encouraging and guiding the submitter that a given Pull Request should be based on an Issue</li>
+</ul>
+</li>
+</ul>
+<h2 id="voting-history">Voting History</h2>
+<p>Adopted on 2024-03-07 with +1 from francbartoli, justb4, pvgenuchten, jorgejesus, tomkralidis, kalxas</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer style="text-align: center;">
+      <a rel="license" title="This work is licensed under a Creative Commons Attribution 4.0 International License" href="https://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
+      &copy; 2019 - 2026 pygeoapi development team
+      <a title="Open Hub project report for pygeoapi" href="https://www.openhub.net/p/pygeoapi"><img src="https://www.openhub.net/p/pygeoapi/widgets/project_thin_badge.gif"/></a>
+      <br/>Powered by <a href="https://www.mkdocs.org/">MkDocs</a>
+    </footer>
+  </body>
+</html>
