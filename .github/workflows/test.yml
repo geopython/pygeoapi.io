@@ -10,13 +10,13 @@ jobs:
     name: Test website build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: actions/checkout@master
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.x'
       - name: Install requirements 📦
         run: |
           python3 -m pip install --upgrade pip
-          pip3 install mkdocs
+          pip3 install zensical
       - name: Test build 📦
-        run: mkdocs build --strict
+        run: zensical build --clean --strict
