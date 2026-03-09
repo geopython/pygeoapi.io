@@ -11,7 +11,7 @@
     <link rel="me" href="https://noc.social/@pygeoapi">    
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://unpkg.com/mini.css@3.0.1/dist/mini-default.min.css">
-    <link rel="stylesheet" href="https://pygeoapi.io//css/default.css">
+    <link rel="stylesheet" href="https://pygeoapi.io/css/default.css">
     <!--[if lt IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
@@ -24,31 +24,31 @@
       <input type="checkbox" id="drawer-control" class="drawer">
       <nav class="col-sm-12 col-md-12 col-md-offset-1">
         <label for="drawer-control" class="drawer-close"></label>
-        <a href="https://pygeoapi.io/" class="logo hidden-md" role="button">
-          <img src="https://pygeoapi.io//img/pygeoapi-logo.png" title="pygeoapi" style="height:40px;vertical-align: middle;"/></a>
+        <a href="https://pygeoapi.io" class="logo hidden-md" role="button">
+          <img src="https://pygeoapi.io/img/pygeoapi-logo.png" title="pygeoapi" style="height:40px;vertical-align: middle;"/></a>
         <a title="Fork me on GitHub" href="https://github.com/geopython/pygeoapi"><img style="z-index: 1110; position: fixed; top: 0; right: 0; border: 0; padding: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"/></a>
-        <a href="https://pygeoapi.io/">Home</a> <span class='hidden-sm'>|</span>
-        <a href="https://pygeoapi.io//community">Community</a> <span class='hidden-sm'>|</span>
-        <a href="https://pygeoapi.io//documentation">Documentation</a> <span class='hidden-sm'>|</span>
+        <a href="https://pygeoapi.io">Home</a> <span class='hidden-sm'>|</span>
+        <a href="https://pygeoapi.io/community">Community</a> <span class='hidden-sm'>|</span>
+        <a href="https://pygeoapi.io/documentation">Documentation</a> <span class='hidden-sm'>|</span>
         <a href="https://demo.pygeoapi.io">Demo</a> <span class='hidden-sm'>|</span>
         <a href="https://github.com/geopython/pygeoapi">Code</a> <span class='hidden-sm'>|</span>
-        <a href="https://pygeoapi.io//download">Download</a> <span class='hidden-sm'>|</span>
-        <a href="https://pygeoapi.io//development">Development</a>
+        <a href="https://pygeoapi.io/download">Download</a> <span class='hidden-sm'>|</span>
+        <a href="https://pygeoapi.io/development">Development</a>
       </nav>
     </header>
     <main>
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-10 col-md-offset-1">
-            <h1 id="rfc5-enhanced-data-limit-handling">RFC5 - Enhanced data limit handling</h1>
+            <h1 id="rfc5-enhanced-data-limit-handling">RFC5 - Enhanced data limit handling<a class="headerlink" href="#rfc5-enhanced-data-limit-handling" title="Permanent link">&para;</a></h1>
 <ul>
 <li>date: 2024-11-19</li>
 <li>author: Tom Kralidis</li>
-<li>contact: tomkralidis@gmail.com</li>
+<li>contact: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#116;&#111;&#109;&#107;&#114;&#97;&#108;&#105;&#100;&#105;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#116;&#111;&#109;&#107;&#114;&#97;&#108;&#105;&#100;&#105;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></li>
 <li>status: draft</li>
 <li>modified: 2025-01-23</li>
 </ul>
-<h2 id="overview">Overview</h2>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>This RFC describes enhanced limit handling implementation in support of better definition and control on data query limiting.</p>
 <p>Currently, pygeoapi defines a <code>server.limit</code> configuration directive which corresponds to the <code>limit</code> query parameter as part of the OGC API - Features and OGC API - Records <code>.../items</code> endpoint.  The following scenarios are missing from this setting:</p>
 <ul>
@@ -57,16 +57,16 @@
 <li>given this setting is defined at the server level, it may not be suitable for all datasets in a given configuration</li>
 <li>limits currently only apply to vector data</li>
 </ul>
-<h2 id="proposed-solution">Proposed solution</h2>
+<h2 id="proposed-solution">Proposed solution<a class="headerlink" href="#proposed-solution" title="Permanent link">&para;</a></h2>
 <p>pygeoapi will define a <code>limits</code> configuration parameter that will allow a user to define default and maximum limits for multiple data types.  This parameter will be defined at the server level (<code>server.limits</code>) with the ability to override at resource level (<code>resources[*].limits</code>).  An example of this setting is shown below:</p>
-<pre><code class="language-yaml">limits:
-    default_items: 20  # applies to vector data
-    max_items: 500  # applies to vector data
-    max_distance_x: 123  # applies to all datasets
-    max_distance_y: 456 # applies to all datasets
-    max_distance_units: m  # as per UCUM https://ucum.org/ucum#section-Tables-of-Terminal-Symbols
-    on_exceed: error  # one of error, throttle
-</code></pre>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">limits</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">default_items</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span><span class="w">  </span><span class="c1"># applies to vector data</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">max_items</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500</span><span class="w">  </span><span class="c1"># applies to vector data</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">max_distance_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">123</span><span class="w">  </span><span class="c1"># applies to all datasets</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">max_distance_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">456</span><span class="w"> </span><span class="c1"># applies to all datasets</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nt">max_distance_units</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">m</span><span class="w">  </span><span class="c1"># as per UCUM https://ucum.org/ucum#section-Tables-of-Terminal-Symbols</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">on_exceed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">error</span><span class="w">  </span><span class="c1"># one of error, throttle</span>
+</span></code></pre></div>
 <p>The <code>limits</code> setting will be applied as follows:</p>
 <ul>
 <li>pygeoapi administrator is able to use at both the <code>server</code> and <code>resources</code> levels, with <code>resources</code> limits overriding server wide <code>limits</code> settings</li>
@@ -74,21 +74,21 @@
 <li>limit specified by client: calculate the minimum of the query parameter and <code>limits.max_items</code> to set the result set size</li>
 <li>bbox or spatial dimensions: compare distance of request to maximum definition allowed in <code>limits.max_distance_x</code> and <code>limits.max_distance_y</code></li>
 </ul>
-<h2 id="implementation">Implementation</h2>
+<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
 <ul>
 <li>an <code>evaluate_limit</code> function will be added to the <code>pygeoapi</code> module for use by <code>pygeoapi.api</code> accordingly</li>
 <li>if <code>limits.on_exceed</code> is <code>error</code>, then pygeoapi will throw HTTP 413</li>
 </ul>
-<h3 id="backwards-compatibility-issues">Backwards Compatibility Issues</h3>
+<h3 id="backwards-compatibility-issues">Backwards Compatibility Issues<a class="headerlink" href="#backwards-compatibility-issues" title="Permanent link">&para;</a></h3>
 <p>The <code>limits</code> setting fully replaces <code>server.limit</code> and represents a compatibility break.  The new functionality will not be backported to other branches.</p>
-<h3 id="testing">Testing</h3>
+<h3 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h3>
 <p>Tests will be added to ensure the expected functionality.</p>
-<h3 id="documentation">Documentation</h3>
+<h3 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h3>
 <p>Documentation will be added to the configuration description page.</p>
-<h2 id="issue-and-pull-request-tracking">Issue and Pull Request tracking</h2>
+<h2 id="issue-and-pull-request-tracking">Issue and Pull Request tracking<a class="headerlink" href="#issue-and-pull-request-tracking" title="Permanent link">&para;</a></h2>
 <p>Issue: <a href="https://github.com/geopython/pygeoapi/issues/1856">https://github.com/geopython/pygeoapi/issues/1856</a></p>
 <p>Pull Request: <a href="https://github.com/geopython/pygeoapi/pull/1892">https://github.com/geopython/pygeoapi/pull/1892</a></p>
-<h2 id="voting-history">Voting History</h2>
+<h2 id="voting-history">Voting History<a class="headerlink" href="#voting-history" title="Permanent link">&para;</a></h2>
 <p>Adopted on 2025-01-23 with +1 from kalxas, jorgejesus, justb4, tomkralidis</p>
           </div>
         </div>
@@ -96,9 +96,9 @@
     </main>
     <footer style="text-align: center;">
       <a rel="license" title="This work is licensed under a Creative Commons Attribution 4.0 International License" href="https://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
-      &copy; 2019 - 2026 pygeoapi development team
+      © 2019 - 2026 pygeoapi development team
       <a title="Open Hub project report for pygeoapi" href="https://www.openhub.net/p/pygeoapi"><img src="https://www.openhub.net/p/pygeoapi/widgets/project_thin_badge.gif"/></a>
-      <br/>Powered by <a href="https://www.mkdocs.org/">MkDocs</a>
+      <br/>Powered by <a href="https://zensical.org/">Zensical</a>
     </footer>
   </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Home - pygeoapi</title>
+    <title>pygeoapi - an OGC API to geospatial data - pygeoapi</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="language" content="en-US">
     <meta name="description" content="pygeoapi provides an API to geospatial data">
@@ -11,7 +11,7 @@
     <link rel="me" href="https://noc.social/@pygeoapi">    
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://unpkg.com/mini.css@3.0.1/dist/mini-default.min.css">
-    <link rel="stylesheet" href="https://pygeoapi.io//css/default.css">
+    <link rel="stylesheet" href="https://pygeoapi.io/css/default.css">
     <!--[if lt IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
@@ -24,16 +24,16 @@
       <input type="checkbox" id="drawer-control" class="drawer">
       <nav class="col-sm-12 col-md-12 col-md-offset-1">
         <label for="drawer-control" class="drawer-close"></label>
-        <a href="https://pygeoapi.io/" class="logo hidden-md" role="button">
-          <img src="https://pygeoapi.io//img/pygeoapi-logo.png" title="pygeoapi" style="height:40px;vertical-align: middle;"/></a>
+        <a href="https://pygeoapi.io" class="logo hidden-md" role="button">
+          <img src="https://pygeoapi.io/img/pygeoapi-logo.png" title="pygeoapi" style="height:40px;vertical-align: middle;"/></a>
         <a title="Fork me on GitHub" href="https://github.com/geopython/pygeoapi"><img style="z-index: 1110; position: fixed; top: 0; right: 0; border: 0; padding: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"/></a>
-        <a href="https://pygeoapi.io/">Home</a> <span class='hidden-sm'>|</span>
-        <a href="https://pygeoapi.io//community">Community</a> <span class='hidden-sm'>|</span>
-        <a href="https://pygeoapi.io//documentation">Documentation</a> <span class='hidden-sm'>|</span>
+        <a href="https://pygeoapi.io">Home</a> <span class='hidden-sm'>|</span>
+        <a href="https://pygeoapi.io/community">Community</a> <span class='hidden-sm'>|</span>
+        <a href="https://pygeoapi.io/documentation">Documentation</a> <span class='hidden-sm'>|</span>
         <a href="https://demo.pygeoapi.io">Demo</a> <span class='hidden-sm'>|</span>
         <a href="https://github.com/geopython/pygeoapi">Code</a> <span class='hidden-sm'>|</span>
-        <a href="https://pygeoapi.io//download">Download</a> <span class='hidden-sm'>|</span>
-        <a href="https://pygeoapi.io//development">Development</a>
+        <a href="https://pygeoapi.io/download">Download</a> <span class='hidden-sm'>|</span>
+        <a href="https://pygeoapi.io/development">Development</a>
       </nav>
     </header>
     <main>
@@ -49,25 +49,25 @@
 
 </h4>
 
-<h2 id="install-in-5-minutes">Install in 5 minutes</h2>
-<pre><code class="language-python"># Python 3.12 recommended
-python3 -m venv venv
-cd venv
-. bin/activate
-git clone https://github.com/geopython/pygeoapi.git
-cd pygeoapi
-pip3 install -r requirements.txt
-pip3 install .
-cp pygeoapi-config.yml example-config.yml
-vi example-config.yml  # edit as required
-export PYGEOAPI_CONFIG=example-config.yml
-export PYGEOAPI_OPENAPI=example-openapi.yml
-pygeoapi openapi generate $PYGEOAPI_CONFIG --output-file $PYGEOAPI_OPENAPI
-pygeoapi serve
-# in another terminal
-curl http://localhost:5000  # or open in a web browser
-</code></pre>
-<h2 id="features">Features</h2>
+<h2 id="install-in-5-minutes">Install in 5 minutes<a class="headerlink" href="#install-in-5-minutes" title="Permanent link">&para;</a></h2>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Python 3.12 recommended</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="n">venv</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">cd</span> <span class="n">venv</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="o">.</span> <span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">geopython</span><span class="o">/</span><span class="n">pygeoapi</span><span class="o">.</span><span class="n">git</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">cd</span> <span class="n">pygeoapi</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">pip3</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">pip3</span> <span class="n">install</span> <span class="o">.</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">cp</span> <span class="n">pygeoapi</span><span class="o">-</span><span class="n">config</span><span class="o">.</span><span class="n">yml</span> <span class="n">example</span><span class="o">-</span><span class="n">config</span><span class="o">.</span><span class="n">yml</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">vi</span> <span class="n">example</span><span class="o">-</span><span class="n">config</span><span class="o">.</span><span class="n">yml</span>  <span class="c1"># edit as required</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">export</span> <span class="n">PYGEOAPI_CONFIG</span><span class="o">=</span><span class="n">example</span><span class="o">-</span><span class="n">config</span><span class="o">.</span><span class="n">yml</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">export</span> <span class="n">PYGEOAPI_OPENAPI</span><span class="o">=</span><span class="n">example</span><span class="o">-</span><span class="n">openapi</span><span class="o">.</span><span class="n">yml</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">pygeoapi</span> <span class="n">openapi</span> <span class="n">generate</span> <span class="err">$</span><span class="n">PYGEOAPI_CONFIG</span> <span class="o">--</span><span class="n">output</span><span class="o">-</span><span class="n">file</span> <span class="err">$</span><span class="n">PYGEOAPI_OPENAPI</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">pygeoapi</span> <span class="n">serve</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="c1"># in another terminal</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">5000</span>  <span class="c1"># or open in a web browser</span>
+</span></code></pre></div>
+<h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
 <p>At a glance:</p>
 <ul>
 <li>Easy to install: install a full implementation via pip or git</li>
@@ -87,9 +87,9 @@ curl http://localhost:5000  # or open in a web browser
     </main>
     <footer style="text-align: center;">
       <a rel="license" title="This work is licensed under a Creative Commons Attribution 4.0 International License" href="https://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
-      &copy; 2019 - 2026 pygeoapi development team
+      © 2019 - 2026 pygeoapi development team
       <a title="Open Hub project report for pygeoapi" href="https://www.openhub.net/p/pygeoapi"><img src="https://www.openhub.net/p/pygeoapi/widgets/project_thin_badge.gif"/></a>
-      <br/>Powered by <a href="https://www.mkdocs.org/">MkDocs</a>
+      <br/>Powered by <a href="https://zensical.org/">Zensical</a>
     </footer>
   </body>
 </html>
