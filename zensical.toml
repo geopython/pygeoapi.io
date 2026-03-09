@@ -1,0 +1,26 @@
+[project]
+site_name = "pygeoapi"
+site_description = "pygeoapi: an OGC API to geospatial data"
+site_author = "the pygeoapi community"
+copyright = "© 2019 - 2026 pygeoapi development team"
+site_url = "https://pygeoapi.io"
+repo_url = "https://github.com/geopython/pygeoapi.io"
+docs_dir = "docs"
+directory_urls = true
+
+nav = [
+    { "Home" = "index.md"},
+    { "Community" = "community/index.md"},
+    { "Documentation" = "documentation.md"},
+    { "Demo" = "https://demo.pygeoapi.io"},
+    { "Code" = "https://github.com/geopython/pygeoapi"},
+    { "Download" = "download.md"},
+    { "Development" = "development/index.md"}
+]
+
+
+[project.theme]
+    custom_dir = "pygeoapi.io-theme"
+
+[project.extra]
+homepage = "https://pygeoapi.io"
