@@ -38,8 +38,8 @@ curl http://localhost:5000  # or open in a web browser
 
 At a glance:
 
-- Easy to install: install a full implementation via pip or git
 - OGC Compliant: pygeoapi is certified [OGC Compliant and an OGC Reference Implementation](https://github.com/geopython/pygeoapi/wiki/OGCCompliance)
+- Easy to install: install a full implementation via pip or git
 - Easy to deploy: via UbuntuGIS or the official Docker image
 - Flexible: built on a robust plugin framework
     - connect to custom data sources (files, services, databases, etc.)
