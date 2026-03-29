@@ -67,6 +67,11 @@ table:not(.horizontal) {
     }
 }
 
-span {
-    padding: 5px;
+pre code span, .nb, .w {
+    font-size: 1.1em;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.headerlink {
+    visibility: hidden;
 }
