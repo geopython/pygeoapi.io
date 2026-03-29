@@ -47,24 +47,23 @@
 <a title="Certified OGC Compliant" href="https://github.com/geopython/pygeoapi/wiki/OGCCompliance"><img alt="Certified OGC Compliant" src="https://portal.ogc.org/public_ogc/compliance/OGC_Certified_Badge.png" width="164" height="64"/></a> <a title="OGC Reference Implementation" href="https://github.com/geopython/pygeoapi/wiki/OGCCompliance"><img alt="OGC Reference Implementation" src="https://portal.ogc.org/public_ogc/compliance/badge.php?s=ogcapi-features-1 1.0&r=1&n=1)" width="164" height="64"/></a> <a title="OGC Reference Implementation" href="https://github.com/geopython/pygeoapi/wiki/OGCCompliance"><img alt="OGC Reference Implementation" src="https://portal.ogc.org/public_ogc/compliance/badge.php?s=ogcapi-edr-1 1.0.1&r=1&n=1" width="164" height="64"/> <a title="OGC Reference Implementation" href="https://github.com/geopython/pygeoapi/wiki/OGCCompliance"><img alt="OGC Reference Implementation" src="https://portal.ogc.org/public_ogc/compliance/badge.php?s=ogcapi-tiles-1%201.0&r=1&n=1" width="164" height="64"/></a>  <a title="OGC Reference Implementation" href="https://github.com/geopython/pygeoapi/wiki/OGCCompliance"><img alt="OGC Reference Implementation" src="https://portal.ogc.org/public_ogc/compliance/badge.php?s=ogcapi-processes-1%201.0&n=1" width="164" height="64"/></a> <a title="OSGeo Project" href="https://www.osgeo.org/projects/pygeoapi"><img alt="OSGeo Project" src="https://raw.githubusercontent.com/OSGeo/osgeo/master/incubation/project/OSGeo_project.png" width="164" height="64"/></a><a title="FOSS4G Conference" href="https://2026.foss4g.org"><img alt="FOSS4G Conference" width="180" height="78" src="img/foss4g-2026.png"/></a><a href="https://github.com/geopython/pygeoapi/wiki/Sponsorship"><img alt="Sponsorship" width="147" height="47" src="img/btn_donateCC_LG.gif"/></a></p>
 <hr />
 <h2 id="install-in-5-minutes">Install in 5 minutes<a class="headerlink" href="#install-in-5-minutes" title="Permanent link">&para;</a></h2>
-<p>```bash</p>
-<h1 id="python-312-recommended">Python 3.12 recommended<a class="headerlink" href="#python-312-recommended" title="Permanent link">&para;</a></h1>
-<p>python3 -m venv venv
-cd venv
-. bin/activate
-git clone <a href="https://github.com/geopython/pygeoapi.git">https://github.com/geopython/pygeoapi.git</a>
-cd pygeoapi
-pip3 install -r requirements.txt
-pip3 install .
-cp pygeoapi-config.yml example-config.yml
-vi example-config.yml  # edit as required
-export PYGEOAPI_CONFIG=example-config.yml
-export PYGEOAPI_OPENAPI=example-openapi.yml
-pygeoapi openapi generate $PYGEOAPI_CONFIG --output-file $PYGEOAPI_OPENAPI
-pygeoapi serve</p>
-<h1 id="in-another-terminal">in another terminal<a class="headerlink" href="#in-another-terminal" title="Permanent link">&para;</a></h1>
-<p>curl <a href="http://localhost:5000">http://localhost:5000</a>  # or open in a web browser
-```</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Python 3.12 recommended</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">cd</span><span class="w"> </span>venv
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>.<span class="w"> </span>bin/activate
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/geopython/pygeoapi.git
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nb">cd</span><span class="w"> </span>pygeoapi
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>pip3<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>pip3<span class="w"> </span>install<span class="w"> </span>.
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>cp<span class="w"> </span>pygeoapi-config.yml<span class="w"> </span>example-config.yml
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>vi<span class="w"> </span>example-config.yml<span class="w">  </span><span class="c1"># edit as required</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PYGEOAPI_CONFIG</span><span class="o">=</span>example-config.yml
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PYGEOAPI_OPENAPI</span><span class="o">=</span>example-openapi.yml
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>pygeoapi<span class="w"> </span>openapi<span class="w"> </span>generate<span class="w"> </span><span class="nv">$PYGEOAPI_CONFIG</span><span class="w"> </span>--output-file<span class="w"> </span><span class="nv">$PYGEOAPI_OPENAPI</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>pygeoapi<span class="w"> </span>serve
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="c1"># in another terminal</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>curl<span class="w"> </span>http://localhost:5000<span class="w">  </span><span class="c1"># or open in a web browser</span>
+</span></code></pre></div>
 <h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
 <p>At a glance:</p>
 <ul>
