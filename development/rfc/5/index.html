@@ -59,14 +59,14 @@
 </ul>
 <h2 id="proposed-solution">Proposed solution<a class="headerlink" href="#proposed-solution" title="Permanent link">&para;</a></h2>
 <p>pygeoapi will define a <code>limits</code> configuration parameter that will allow a user to define default and maximum limits for multiple data types.  This parameter will be defined at the server level (<code>server.limits</code>) with the ability to override at resource level (<code>resources[*].limits</code>).  An example of this setting is shown below:</p>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">limits</span><span class="p">:</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">default_items</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span><span class="w">  </span><span class="c1"># applies to vector data</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">max_items</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500</span><span class="w">  </span><span class="c1"># applies to vector data</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">max_distance_x</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">123</span><span class="w">  </span><span class="c1"># applies to all datasets</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">max_distance_y</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">456</span><span class="w"> </span><span class="c1"># applies to all datasets</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nt">max_distance_units</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">m</span><span class="w">  </span><span class="c1"># as per UCUM https://ucum.org/ucum#section-Tables-of-Terminal-Symbols</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">on_exceed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">error</span><span class="w">  </span><span class="c1"># one of error, throttle</span>
-</span></code></pre></div>
+<p><code>yaml
+limits:
+    default_items: 20  # applies to vector data
+    max_items: 500  # applies to vector data
+    max_distance_x: 123  # applies to all datasets
+    max_distance_y: 456 # applies to all datasets
+    max_distance_units: m  # as per UCUM https://ucum.org/ucum#section-Tables-of-Terminal-Symbols
+    on_exceed: error  # one of error, throttle</code></p>
 <p>The <code>limits</code> setting will be applied as follows:</p>
 <ul>
 <li>pygeoapi administrator is able to use at both the <code>server</code> and <code>resources</code> levels, with <code>resources</code> limits overriding server wide <code>limits</code> settings</li>
