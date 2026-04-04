@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>RFC6 - Add an optional plugin context and remove pydantic from core - pygeoapi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en-US">
+    <meta name="description" content="pygeoapi provides an API to geospatial data">
+    <meta name="keywords" content="geospatial,data,api">
+    <link rel="canonical" href="https://pygeoapi.io">
+    <link rel="me" href="https://noc.social/@pygeoapi">    
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/mini.css@3.0.1/dist/mini-default.min.css">
+    <link rel="stylesheet" href="https://pygeoapi.io/css/default.css">
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </head>
+  <body>
+    <header class="sticky row">
+      <label for="drawer-control" class="drawer-toggle"></label>
+      <input type="checkbox" id="drawer-control" class="drawer">
+      <nav class="col-sm-12 col-md-12 col-md-offset-1">
+        <label for="drawer-control" class="drawer-close"></label>
+        <a href="https://pygeoapi.io" class="logo hidden-md" role="button">
+          <img src="https://pygeoapi.io/img/pygeoapi-logo.png" title="pygeoapi" style="height:40px;vertical-align: middle;"/></a>
+        <a title="Fork me on GitHub" href="https://github.com/geopython/pygeoapi"><img style="z-index: 1110; position: fixed; top: 0; right: 0; border: 0; padding: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"/></a>
+        <a href="https://pygeoapi.io">Home</a> <span class='hidden-sm'>|</span>
+        <a href="https://pygeoapi.io/community">Community</a> <span class='hidden-sm'>|</span>
+        <a href="https://pygeoapi.io/documentation">Documentation</a> <span class='hidden-sm'>|</span>
+        <a href="https://demo.pygeoapi.io">Demo</a> <span class='hidden-sm'>|</span>
+        <a href="https://github.com/geopython/pygeoapi">Code</a> <span class='hidden-sm'>|</span>
+        <a href="https://pygeoapi.io/download">Download</a> <span class='hidden-sm'>|</span>
+        <a href="https://pygeoapi.io/development">Development</a>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-10 col-md-offset-1">
+            <h1 id="rfc-add-an-optional-plugin-context-and-remove-pydantic-from-core">RFC - Add an optional plugin context and remove pydantic from core<a class="headerlink" href="#rfc-add-an-optional-plugin-context-and-remove-pydantic-from-core" title="Permanent link">&para;</a></h1>
+<ul>
+<li>date: 2026-03-28</li>
+<li>author: Francesco Bartoli</li>
+<li>contact: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#120;&#98;&#97;&#114;&#116;&#111;&#108;&#111;&#110;&#101;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#120;&#98;&#97;&#114;&#116;&#111;&#108;&#111;&#110;&#101;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></li>
+<li>status: draft</li>
+<li>modified: 2026-03-29</li>
+</ul>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>This RFC describes the introduction of a <code>PluginContext</code> dataclass to inject optional dependencies in the plugin system and the migration of core pydantic models to standard library dataclasses.</p>
+<p>Currently, pygeoapi plugins rely on global state for runtime dependencies (logger, locales) and use pydantic <code>BaseModel</code> for configuration and metadata validation in core modules. The following issues arise from this design:</p>
+<ul>
+<li>plugins cannot receive per-instance dependencies, making unit testing difficult</li>
+<li>pydantic is a required core dependency even though most providers do not use its validation features</li>
+<li>the pydantic v1/v2 compatibility layer adds maintenance burden</li>
+<li>downstream projects cannot easily extend or override validation behaviour</li>
+</ul>
+<h2 id="proposed-solution">Proposed solution<a class="headerlink" href="#proposed-solution" title="Permanent link">&para;</a></h2>
+<h3 id="optional-plugincontext-class-to-add-more-dependencies-to-plugins">Optional PluginContext class to add more dependencies to plugins<a class="headerlink" href="#optional-plugincontext-class-to-add-more-dependencies-to-plugins" title="Permanent link">&para;</a></h3>
+<p>An optional <code>context</code> parameter is added to <code>load_plugin()</code> and the base classes (<code>BaseProvider</code>, <code>BaseProcessor</code>, <code>BaseManager</code>):</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nd">@dataclass</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">class</span><span class="w"> </span><span class="nc">PluginContext</span><span class="p">:</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">config</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">logger</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">locales</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">base_url</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+</span></code></pre></div>
+<p>Plugins that accept <code>context</code> gain access to injected dependencies. Plugins that do not are unaffected -- the parameter defaults to <code>None</code> and all base classes fall back to global state.</p>
+<h3 id="dataclasses-replacing-pydantic-in-core">Dataclasses replacing pydantic in core<a class="headerlink" href="#dataclasses-replacing-pydantic-in-core" title="Permanent link">&para;</a></h3>
+<p>All pydantic <code>BaseModel</code> classes in <code>pygeoapi/models/</code> are replaced with <code>@dataclass</code> equivalents that:</p>
+<ul>
+<li>validate types at construction via a shared <code>validate_type()</code> utility</li>
+<li>expose a <code>model_dump(exclude_none=False)</code> method for serialization</li>
+<li>can be overridden downstream via duck typing (any class with the same interface satisfies a Protocol check)</li>
+</ul>
+<p>The affected models are:</p>
+<ul>
+<li><code>APIRules</code> in <code>pygeoapi/models/config.py</code></li>
+<li><code>OAPIFormat</code> in <code>pygeoapi/models/openapi.py</code></li>
+<li><code>TileMatrixSetEnumType</code>, <code>TileMatrixLimitsType</code>, <code>TwoDBoundingBoxType</code>, <code>LinkType</code>, <code>GeospatialDataType</code>, <code>StyleType</code>, <code>TilePointType</code>, <code>TileSetMetadata</code> in <code>pygeoapi/models/provider/base.py</code></li>
+<li><code>VectorLayers</code>, <code>MVTTilesJson</code> in <code>pygeoapi/models/provider/mvt.py</code></li>
+</ul>
+<p>Pydantic remains fully usable at the plugin level. Providers that need pydantic validation (e.g. MVT providers for tile metadata) can continue using it as a plugin-level dependency.</p>
+<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
+<h3 id="plugincontext">PluginContext<a class="headerlink" href="#plugincontext" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>PluginContext</code> dataclass is added to <code>pygeoapi/plugin.py</code></li>
+<li><code>load_plugin()</code> accepts an optional <code>context</code> keyword argument and forwards it to the plugin constructor</li>
+<li><code>BaseProvider</code>, <code>BaseProcessor</code>, <code>BaseManager</code> accept <code>context: Optional[PluginContext] = None</code> with typed parameter</li>
+<li>base classes use injected logger/locales when provided, falling back to module-level globals otherwise</li>
+</ul>
+<h3 id="dataclass-migration">Dataclass migration<a class="headerlink" href="#dataclass-migration" title="Permanent link">&para;</a></h3>
+<ul>
+<li>a <code>validate_type()</code> function is added to <code>pygeoapi/models/validation.py</code> providing runtime type checking equivalent to pydantic's behaviour</li>
+<li>each <code>BaseModel</code> is replaced with a <code>@dataclass</code> that calls <code>validate_type(self)</code> in <code>__post_init__</code></li>
+<li><code>model_dump()</code> is implemented on each dataclass to maintain serialization compatibility</li>
+<li><code>MVTTilesJson</code> accepts and silently ignores unknown kwargs and coerces string values to int where needed, matching pydantic's behaviour when instantiated from arbitrary JSON metadata</li>
+</ul>
+<h3 id="backwards-compatibility-issues">Backwards Compatibility Issues<a class="headerlink" href="#backwards-compatibility-issues" title="Permanent link">&para;</a></h3>
+<p>This change is designed for full backwards compatibility:</p>
+<ul>
+<li><code>context</code> defaults to <code>None</code> -- existing plugins work unchanged</li>
+<li><code>model_dump()</code> method signature and behaviour are preserved</li>
+<li><code>APIRules.create()</code> factory method is preserved</li>
+<li>all existing tests pass without modification (except <code>test_models.py</code> which switches from <code>ModelFactory</code> to <code>DataclassFactory</code> for polyfactory)</li>
+</ul>
+<p>The <code>api/</code> module continues to call <code>load_plugin()</code> without a context. Wiring <code>PluginContext</code> into the API layer is a natural follow-up but intentionally out of scope to keep this change focused and low-risk.</p>
+<h3 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h3>
+<ul>
+<li>unit tests for all dataclass models (creation, validation, type errors, <code>model_dump</code>, <code>exclude_none</code>)</li>
+<li>unit tests for <code>PluginContext</code> and dependency injection in plugin loading</li>
+<li>integration tests verifying tile metadata serialization (<code>test_tiles.py</code>)</li>
+<li>integration tests verifying <code>APIRules</code> through <code>get_api_rules()</code> and framework apps</li>
+</ul>
+<h3 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h3>
+<p>Documentation will be updated to reflect the new <code>PluginContext</code> parameter and the dataclass-based models.</p>
+<h2 id="issue-and-pull-request-tracking">Issue and Pull Request tracking<a class="headerlink" href="#issue-and-pull-request-tracking" title="Permanent link">&para;</a></h2>
+<p>Issue: <a href="https://github.com/geopython/pygeoapi/wiki/Code-Sprint-2024-02-29-to-2024-03-01#notes">Summit discussion</a>, <a href="https://github.com/geopython/pygeoapi/wiki/Meeting-2025-05-02">meeting</a></p>
+<p>Pull Request: <a href="https://github.com/geopython/pygeoapi/pull/2307">#2307</a></p>
+<h2 id="voting-history">Voting History<a class="headerlink" href="#voting-history" title="Permanent link">&para;</a></h2>
+<p>TBD</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer style="text-align: center;">
+      <a rel="license" title="This work is licensed under a Creative Commons Attribution 4.0 International License" href="https://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
+      © 2019 - 2026 pygeoapi development team
+      <a title="Open Hub project report for pygeoapi" href="https://www.openhub.net/p/pygeoapi"><img src="https://www.openhub.net/p/pygeoapi/widgets/project_thin_badge.gif"/></a>
+      <br/>Powered by <a href="https://zensical.org/">Zensical</a>
+    </footer>
+  </body>
+</html>
