@@ -57,6 +57,15 @@ git commit -m 'update page' content/page.md
 git push origin master
 ```
 
+### Updating live deployments
+
+```bash
+python3 gen_live_deployments_geojson.py
+mv live-deployments.geojson docs/community
+git commit -m 'update live deployments GeoJSON' docs/community/live-deployments.geojson
+git push origin master
+```
+
 ## Publishing updates to the live site
 
 Website updates are automatically published via GitHub Actions.

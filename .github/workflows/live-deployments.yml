@@ -1,0 +1,35 @@
+name: Update live deployments GeoJSON ⚙️
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - docs/community/live-deployments.geojson
+  schedule:
+    #- cron: '* * * * *'  # runs minutely (for testing)
+    - cron: '0 * * * *'  # runs hourly at minute 0
+
+jobs:
+  build:
+    name: Update live deployments GeoJSON
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6.0.2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate live deployments GeoJSON 📦
+        run: |
+          python3 gen_live_deployments_geojson.py
+          mv -f live-deployments.geojson docs/community
+      - name: Commit and push update 📦
+        run: |
+          if [[ `git status --porcelain` ]]; then
+            git config --global user.email "tomkralidis@gmail.com"
+            git config --global user.name "Tom Kralidis"
+            git commit -m 'update live deployments GeoJSON' docs/community/live-deployments.geojson
+            git push
+          else
+            echo "No changes to push"
+          fi

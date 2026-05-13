@@ -75,3 +75,59 @@ pre code span, .nb, .w {
 .headerlink {
     visibility: hidden;
 }
+
+/* slideshows (from http://pocoo.org) */
+
+div.pycsw-powered a {
+    border: none;
+    vertical-align: middle;
+}
+
+div.pycsw-powered img {
+    padding: 5px 10px;
+    vertical-align: middle;
+}
+
+div.pycsw-powered a:hover {
+    background: white;
+}
+
+div.slideshow {
+    position: relative;
+    overflow: hidden;
+    height: 110px;
+    width: 620px;
+    margin: 10px -7px;
+}
+
+div.slideshow div.items {
+    position: absolute;
+    width: 100000px;
+    z-index: 500;
+    clear: both;
+}
+
+div.slideshow img {
+    padding: 0 20px;
+    margin: 0;
+}
+
+div.slideshow:before,
+div.slideshow:after {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 110px;
+    content: " ";
+    z-index: 1000;
+    background: url(../img/slideshow-cutout.png) repeat-y;
+}
+
+div.slideshow:before {
+    left: 0;
+}
+
+div.slideshow:after {
+    right: 0;
+    background-position: -20px 0;
+}
