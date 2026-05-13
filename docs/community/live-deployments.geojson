@@ -9,8 +9,8 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -75.7003,
-                    45.42
+                    -73.567256,
+                    45.5016889
                 ]
             }
         },
@@ -310,6 +310,19 @@
                 "coordinates": [
                     -1.6778,
                     48.1173
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "url": "<a target=\"_blank\" href=\"https://voice.pi.ingv.it/geoinquire\">Geo-INQUIRE Saas WP5</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.40127259,
+                    43.71553206
                 ]
             }
         }
