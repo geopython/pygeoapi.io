@@ -69,6 +69,7 @@ Want to add your deployment?  Add it to the [wiki page](https://github.com/geopy
   <a href="https://www.geoplatform.gov"><img alt="US Geoplatform.gov" src="/img/org-logos/usa-geoplatform.jpg" style="vertical-align: top;"/></a>
   <a href="https://internetofwater.org"><img alt="The Internet of Water Coalition" src="/img/org-logos/usa-iow.png" style="vertical-align: top;"/></a>
   <a href="https://usgs.gov"><img alt="United States Geological Survey" src="/img/org-logos/usa-usgs.jpg" style="vertical-align: top;"/></a>
+  <a href="https://www.ingv.it"><img alt="Istituto Nazionale di Geofisica e Vulcanologia" src="/img/org-logos/ita-ingv.png" style="vertical-align: middle;"/></a>
 </div>
 
 ## Code of Conduct
