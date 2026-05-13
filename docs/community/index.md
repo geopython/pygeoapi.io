@@ -20,7 +20,7 @@ title: Community
 ## Live deployments map
 <div id="map"></div>
 
-Want to add your deployment?  Add it to the [Live deployment wiki page](https://github.com/geopython/pygeoapi/wiki/LiveDeployments) (map is updated hourly).
+Want to add your deployment?  Add it to the [wiki page](https://github.com/geopython/pygeoapi/wiki/LiveDeployments) (map is updated hourly).
 
 <script>
   const map = L.map('map', {
