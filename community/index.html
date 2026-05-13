@@ -79,6 +79,11 @@
       const layer = L.geoJSON(data, {
         pointToLayer: (feature, latlng) => {
           return L.marker(latlng);
+        },
+        onEachFeature: (feature, layer) => {
+          layer.bindPopup(
+            feature.properties.url
+          );
         }
       }).addTo(map);
 
