@@ -1,0 +1,317 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "url": "<a target=\"_blank\" href=\"https://api.weather.gc.ca\">Meteorological Service of Canada Geospatial Web Services</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -75.7003,
+                    45.42
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "url": "<a target=\"_blank\" href=\"https://reference.geoconnex.us\">Internet of Water</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.1097,
+                    42.3736
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "url": "<a target=\"_blank\" href=\"https://emotional.byteroad.net\">eMOTIONAL Cities</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -9.1393,
+                    38.7223
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "url": "<a target=\"_blank\" href=\"https://geoapi.geoplatform.gov\">US Geoplatform.gov</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -77.0369,
+                    38.9073
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "url": "<a target=\"_blank\" href=\"https://ogcapi.bgs.ac.uk\">British Geological Survey</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.155,
+                    52.954
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "url": "<a target=\"_blank\" href=\"https://docs.wis2box.wis.wmo.int\">WMO WIS 2.0 in a box</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.143158,
+                    46.204391
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "url": "<a target=\"_blank\" href=\"https://merit.internetofwater.app\">River Runner</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.1097,
+                    42.3736
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "url": "<a target=\"_blank\" href=\"https://api.water.usgs.gov\">USGS Water Data</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -89.4008,
+                    43.0722
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "url": "<a target=\"_blank\" href=\"https://api.woudc.org\">WMO World Ozone and Ultraviolet Radiation Data Centre</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -79.3884,
+                    43.6548
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "url": "<a target=\"_blank\" href=\"https://api-features.idee.es\">National Cartographic System of Spain</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -3.70379,
+                    40.416775
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "url": "<a target=\"_blank\" href=\"https://api-features.ign.es\">National Geographic Institute of Spain</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -3.70379,
+                    40.416775
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "url": "<a target=\"_blank\" href=\"https://api-processes.idee.es\">National Cartographic System of Spain</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -3.70379,
+                    40.416775
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "url": "<a target=\"_blank\" href=\"https://api-maps.idee.es\">National Cartographic System of Spain</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -3.70379,
+                    40.416775
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "url": "<a target=\"_blank\" href=\"https://api-coverages.idee.es\">National Cartographic System of Spain</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -3.70379,
+                    40.416775
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "url": "<a target=\"_blank\" href=\"https://geoportale.comune.roma.it/geoapi\">Municipality of Rome Capital - Atlas of properties</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.49637,
+                    41.90278
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "url": "<a target=\"_blank\" href=\"https://geoportale-preprod.comune.roma.it/pdnd\">Municipality of Rome Capital - Collections for National Interoperability Platform PDND</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.49637,
+                    41.90278
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "url": "<a target=\"_blank\" href=\"https://geoportale-preprod.comune.roma.it/protected-pdnd\">Municipality of Rome Capital - Protected collections for National Interoperability Platform PDND</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.49637,
+                    41.90278
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "url": "<a target=\"_blank\" href=\"https://linkeddata.pid.geoscience.gov.au\">Geoscience Australia Linked Data Register</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    149.131,
+                    -35.2802
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "url": "<a target=\"_blank\" href=\"https://pygeoapi.glodal-inc.net\">OGC Code Sprint Tokyo 2025 OGC API Server - provided by GLODAL</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.6917,
+                    35.6895
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "url": "<a target=\"_blank\" href=\"https://ogcapi.dgterritorio.gov.pt\">OGC API Service from Dire\u00e7\u00e3o-Geral do Territ\u00f3rio (DGT)</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -9.1393,
+                    38.7223
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "url": "<a target=\"_blank\" href=\"https://api.waterdata.usgs.gov/ogcapi/v0\">USGS Water Data observations</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -89.4008,
+                    43.0722
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "url": "<a target=\"_blank\" href=\"https://wis2-gdc.weather.gc.ca\">WMO WIS 2.0 Global Discovery Catalogue</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -75.7003,
+                    45.42
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "url": "<a target=\"_blank\" href=\"https://wis2-grep.weather.gc.ca\">WMO WIS 2.0 Global Replay</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -75.7003,
+                    45.42
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "url": "<a target=\"_blank\" href=\"https://api.geosas.fr/rpg\">G\u00e9oSAS.fr</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.6778,
+                    48.1173
+                ]
+            }
+        }
+    ]
+}
