@@ -41,6 +41,12 @@
         <div class="row">
           <div class="col-sm-12 col-md-10 col-md-offset-1">
             <h1 id="community">Community<a class="headerlink" href="#community" title="Permanent link">&para;</a></h1>
+<script src="https://embed.github.com/view/geojson/geopython/pygeoapi.io/gh-pages/community/live-deployments.geojson"> </script>
+
+<div class="pygeoapi-powered">
+<a class="reference external image-reference" href="https://www.ga.gov.au"><img alt="Geoscience Australia" src="/img/org-logs/aus-ga.png"/></a>
+</div>
+
 <h2 id="code-of-conduct">Code of Conduct<a class="headerlink" href="#code-of-conduct" title="Permanent link">&para;</a></h2>
 <p>In support of an inclusive and welcoming community, the pygeoapi code of conduct can always be found at <a href="https://github.com/geopython/pygeoapi/blob/master/CODE_OF_CONDUCT.md">https://github.com/geopython/pygeoapi/blob/master/CODE_OF_CONDUCT.md</a>.</p>
 <p>There are numerous ways to interact with the pygeoapi community.</p>
@@ -86,6 +92,34 @@
 <li>Core development (bug fixing, feature implementation, etc.)</li>
 </ul>
 <p>See <a href="https://github.com/geopython/pygeoapi/blob/master/CONTRIBUTING.md">https://github.com/geopython/pygeoapi/blob/master/CONTRIBUTING.md</a> for more information on contributing.</p>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+  function makeSimpleSlideshow(container) {
+    container.addClass('slideshow').hide().slideDown('slow');
+    $('a', container).each(function() {
+      $(this).attr('title', $('img', this).attr('alt'));
+    }).clone().appendTo(container);
+    var links = $('a', container).wrapAll('<div class=items></div>');
+    var items = $('div.items', container);
+    var firstLink = $(links[0]);
+    var lastLink = $(links[links.length / 2 - 1]);
+    var pixels = lastLink.offset().left - firstLink.offset().left + lastLink.width();
+
+    function scroll() {
+      items.animate({left: -pixels + 'px'}, pixels * 20, 'linear', function() {
+        items.css('left', '0px');
+        scroll();
+      });
+    }
+    scroll();
+  }
+
+  $(document).ready(function() {
+      var powered = $('div.pygeoapi-powered');
+      if (powered.length > 0)
+          makeSimpleSlideshow(powered);
+  });
+</script>
           </div>
         </div>
       </div>
