@@ -108,7 +108,7 @@
         {
             "type": "Feature",
             "properties": {
-                "url": "<a target=\"_blank\" href=\"https://api.woudc.org\">WMO World Ozone and Ultraviolet Radiation Data Centre</a>"
+                "url": "<a target=\"_blank\" href=\"https://api.woudc.org\">WMO World Ozone and Ultraviolet Radiation Data Centre (WOUDC)</a>"
             },
             "geometry": {
                 "type": "Point",
@@ -342,7 +342,7 @@
         {
             "type": "Feature",
             "properties": {
-                "url": "<a target=\"_blank\" href=\"https://registration-api.develop.eoepca.org\">ESA EOEPCA</a>"
+                "url": "<a target=\"_blank\" href=\"https://registration-api.develop.eoepca.org\">ESA Earth Observation Exploitation Platform Common Architecture (EOEPCA)</a>"
             },
             "geometry": {
                 "type": "Point",
