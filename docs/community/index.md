@@ -56,7 +56,6 @@ Want to add your deployment?  Add it to the [wiki page](https://github.com/geopy
     });
 </script>
 
-
 <div class="pygeoapi-powered">
   <a href="https://www.ga.gov.au"><img alt="Geoscience Australia" src="/img/org-logos/aus-ga.png"/></a>
   <a href="https://ec.gc.ca"><img alt="Environment and Climate Change Canada" src="/img/org-logos/can-eccc.jpg"/></a>
@@ -66,10 +65,12 @@ Want to add your deployment?  Add it to the [wiki page](https://github.com/geopy
   <a href="https://wmo.int/site/knowledge-hub/programmes-and-initiatives/global-atmosphere-watch-programme-gaw"><img alt="World Meteorological Organization, Global Atmospheric Watch" src="/img/org-logos/int-wmo-gaw.jpg" style="vertical-align: top;"/></a>
   <a href="https://wmo.int"><img alt="World Meteorological Organization" src="/img/org-logos/int-wmo.jpg" style="vertical-align: top;"/></a>
   <a href="https://www.dgterritorio.gov.pt"><img alt="Direção-Geral do Território (DGT)" src="/img/org-logos/prt-dgt.png" style="vertical-align: middle;"/></a>
-  <a href="https://www.geoplatform.gov"><img alt="US Geoplatform.gov" src="/img/org-logos/usa-geoplatform.jpg" style="vertical-align: top;"/></a>
-  <a href="https://internetofwater.org"><img alt="The Internet of Water Coalition" src="/img/org-logos/usa-iow.png" style="vertical-align: top;"/></a>
+  <a href="https://www.geoplatform.gov"><img alt="US Geoplatform.gov" src="/img/org-logos/usa-geoplatform.jpg" style="vertical-align: middle;"/></a>
+  <a href="https://internetofwater.org"><img alt="The Internet of Water Coalition" src="/img/org-logos/usa-iow.png" style="vertical-align: middle;"/></a>
   <a href="https://usgs.gov"><img alt="United States Geological Survey" src="/img/org-logos/usa-usgs.jpg" style="vertical-align: top;"/></a>
   <a href="https://www.ingv.it"><img alt="Istituto Nazionale di Geofisica e Vulcanologia" src="/img/org-logos/ita-ingv.png" style="vertical-align: middle;"/></a>
+  <a href="https://www.cityofathens.gr"><img alt="Municipality of Athens, Greece" src="/img/org-logos/gre-city-of-athens.svg" style="vertical-align: middle;"/></a>
+  <a href="https://eoepca.org"><img alt="ESA Earth Observation Exploitation Platform Common Architecture (EOEPCA)" src="/img/org-logos/int-eoepca.png" style="vertical-align: middle;"/></a>
 </div>
 
 ## Code of Conduct
