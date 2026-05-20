@@ -351,6 +351,32 @@
                     41.8084
                 ]
             }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "url": "<a target=\"_blank\" href=\"https://geo.sv.rostock.de/metadata\">Municipality of Rostock (GDI.HRO) metadata catalog</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.0991,
+                    54.0924
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "url": "<a target=\"_blank\" href=\"https://geo.sv.rostock.de/service/ogcapi\">Municipality of Rostock (GDI.HRO) service catalog</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.0991,
+                    54.0924
+                ]
+            }
         }
     ]
 }
