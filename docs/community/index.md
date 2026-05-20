@@ -71,6 +71,7 @@ Want to add your deployment?  Add it to the [wiki page](https://github.com/geopy
   <a href="https://www.ingv.it"><img alt="Istituto Nazionale di Geofisica e Vulcanologia" src="/img/org-logos/ita-ingv.png" style="vertical-align: middle;"/></a>
   <a href="https://www.cityofathens.gr"><img alt="Municipality of Athens, Greece" src="/img/org-logos/gre-city-of-athens.svg" style="vertical-align: middle;"/></a>
   <a href="https://eoepca.org"><img alt="ESA Earth Observation Exploitation Platform Common Architecture (EOEPCA)" src="/img/org-logos/int-eoepca.png" style="vertical-align: middle;"/></a>
+  <a href="https://www.rostock.de"><img alt="Hanse- und Universitätsstadt Rostock" src="/img/org-logos/ger-hro.png" style="vertical-align: middle;"/></a>
 </div>
 
 ## Code of Conduct
