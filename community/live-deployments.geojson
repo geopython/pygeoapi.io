@@ -108,7 +108,7 @@
         {
             "type": "Feature",
             "properties": {
-                "url": "<a target=\"_blank\" href=\"https://api.woudc.org\">WMO World Ozone and Ultraviolet Radiation Data Centre</a>"
+                "url": "<a target=\"_blank\" href=\"https://api.woudc.org\">WMO World Ozone and Ultraviolet Radiation Data Centre (WOUDC)</a>"
             },
             "geometry": {
                 "type": "Point",
@@ -342,13 +342,39 @@
         {
             "type": "Feature",
             "properties": {
-                "url": "<a target=\"_blank\" href=\"https://registration-api.develop.eoepca.org\">ESA EOEPCA</a>"
+                "url": "<a target=\"_blank\" href=\"https://registration-api.develop.eoepca.org\">ESA Earth Observation Exploitation Platform Common Architecture (EOEPCA)</a>"
             },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
                     12.6761,
                     41.8084
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "url": "<a target=\"_blank\" href=\"https://geo.sv.rostock.de/metadata\">Municipality of Rostock (GDI.HRO) metadata catalog</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.0991,
+                    54.0924
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "url": "<a target=\"_blank\" href=\"https://geo.sv.rostock.de/service/ogcapi\">Municipality of Rostock (GDI.HRO) service catalog</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    12.0991,
+                    54.0924
                 ]
             }
         }
