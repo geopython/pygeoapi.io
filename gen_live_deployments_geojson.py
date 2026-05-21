@@ -64,16 +64,16 @@ def build_live_deployments_geojson():
     next(dep_reader)  # skip fields row
     next(dep_reader)  # skip dashed line row
     for row in dep_reader:
-        url = row[2].strip()
+        url = row[3].strip()
         try:
             # health_check_pygeoapi(url)
 
-            latitude, longitude = float(row[3]), float(row[4])
+            latitude, longitude = float(row[4]), float(row[5])
 
             feature = {
                 'type': 'Feature',
                 'properties': {
-                    'url': f'<a target="_blank" href="{url}">{row[1].strip()}</a>'  # noqa
+                    'url': f'<a target="_blank" href="{url}">{row[2].strip()}</a>'  # noqa
                 },
                 'geometry': {
                     'type': 'Point',
