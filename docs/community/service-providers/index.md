@@ -90,7 +90,7 @@ If you are a service provider and would like to be listed on this page, please f
     <h2>Rotten Grapes Private Limited</h2>
     <p>
       <span><a href="https://rottengrapes.tech/"><img width="100" src="https://rottengrapes.tech/static/assets/images/logo.webp"/></a></span>
-      <span><a href="https://rottengrapes.tech/">Rotten Grapes</a> (India) works in Custom geospatial API development, consulting, and professional training focused on open standards and scalable architectures. We help organizations design, deploy, and maintain production-grade APIs using pygeoapi and related open-source geospatial technologies. We also conduct hands-on trainings and workshops around pygeoapi, OGC APIs, and modern geospatial data services for enterprise, government, and research teams.
+      <span><a href="https://rottengrapes.tech/">Rotten Grapes</a> (India) works in custom geospatial API development, consulting, and professional training focused on open standards and scalable architectures. We help organizations design, deploy, and maintain production-grade APIs using pygeoapi and related open-source geospatial technologies. We also conduct hands-on trainings and workshops around pygeoapi, OGC APIs, and modern geospatial data services for enterprise, government, and research teams.
     </p>
   </div>
 </div>
