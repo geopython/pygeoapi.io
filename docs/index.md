@@ -18,8 +18,7 @@ pygeoapi is a Python server implementation of the [OGC API suite of standards](h
 ```bash
 # Python 3.12 recommended
 python3 -m venv venv
-cd venv
-. bin/activate
+. venv/bin/activate
 git clone https://github.com/geopython/pygeoapi.git
 cd pygeoapi
 pip3 install -r requirements.txt
