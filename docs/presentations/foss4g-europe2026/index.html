@@ -271,12 +271,32 @@ curl http://localhost:5000  # or open in a web browser
 						<li>Rapid/early adoption of specifications/updates</li>
 						<li>Experimentation (servers, clients)</li>
 						<li>OSGeo Code Sprint (Riga, Latvia, September 2025)</li>
+						<li>OGC API Code Sprint (Rotterdam, Netherlands, October 2026)</li>
 						<li>OGC API Code Sprint (Fort Collins, CO, USA, January 2026)</li>
 						<li>Collaboration
 						<ul>
 							<li>OSGeo projects</li>
 							<li>OGC API implementing clients/servers</li>
-						</ul>
+						</ul></li>
+					</ul>
+				</section>
+				<section>
+					<h2>OGC API - Publish-Subscribe Workflow support</h2>
+					<ul>
+						<li>Implements draft specification (<a title="25-030" href="https://docs.ogc.org/DRAFTS/25-030.html">25-030</a>) (<a title="ogcapi.ogc.org/pubsub" href="https://ogcapi.ogc.org/pubsub">ogcapi.ogc.org/pubsub</a>)</li>
+						<li>Autodiscovery, AsyncAPI</li>
+						<li>Plugins: MQTT, HTTP, Kafka</li>
+					</ul>
+					<h1 style="background-color: white"><img src="../default/static/ogc-sprint-pygeoapi-pubsub-demo-2026-01-29.png" style="vertical-align: middle;"/></h1>
+				</section>
+				<section>
+					<h2>Query/filter refactoring</h2>
+					<ul>
+						<li>Streamline code/use of <a href="https://github.com/geopython/pygeofilter">pygeofilter</a> for all filter handling</li>
+							<ul>
+								<li>CQL2 JSON</li>
+								<li>CQL2 Text</li>
+							</ul>
 					</ul>
 				</section>
 				<section>
@@ -291,25 +311,20 @@ curl http://localhost:5000  # or open in a web browser
 					</ul>
 				</section>
 				<section>
-					<h2>Query/filter refactoring</h2>
+					<h2>STAC API support</h2>
 					<ul>
-						<li>Streamline code/use of <a href="https://github.com/geopython/pygeofilter">pygeofilter</a> for all filter handling</li>
-							<ul>
-								<li>CQL2 JSON</li>
-								<li>CQL2 Text</li>
-							</ul>
+						<li>Implements Core, Item Search</li>
+						<li>Wrapper atop any collection with a feature or record provider</li>
 					</ul>
 				</section>
 				<section>
-					<h2>STAC API support</h2>
-				</section>
-				<section>
-					<h2>OGC API - Publish-Subscribe Workflow support</h2>
-				</section>
-				<section>
-					<h2>Python 3.12</h2>
-					<h2>OpenShift</h2>
-					<h2>External TileMatrixSet definitions</h2>
+					<h2>Additional updates</h2>
+					<ul>
+						<li>Docker: ubuntu:noble, Python 3.12, virtualenv</li>
+						<li>OpenShift (rootless)</li>
+						<li>External TileMatrixSet definitions</li>
+						<li>Portuguese (Brazil) translations</li>
+					</ul>
 				</section>
 				<section>
 					<h2>Releases</h2>
@@ -329,30 +344,15 @@ curl http://localhost:5000  # or open in a web browser
 					<p><a href="https://github.com/geopython/pygeoapi/wiki/LiveDeployments">github.com/geopython/pygeoapi/wiki/LiveDeployments</a></p>
 				</section>
 				<section>
-					<h1>Pacific Community (SPC)</h1>
-					<h2>Ocean Data Management System</h2>
-					<h3>Oceanographic datasets (lidar, satellite, observations, drones)</h3>
+					<h1>Geo-INQUIRE</h1>
+					<h2>Geosphere INfrastructures for QUestions into Integrated REsearch</h2>
 					<ul>
-						<li>OGC API - Records</li>
+						<li>OGC API - Processes</li>
 					</ul>
-					<p><a href="https://opmdata.gem.spc.int/dms/pygeoapi">https://opmdata.gem.spc.int/dms/pygeoapi</a></p>
+					<p><a href="https://voice.pi.ingv.it/geoinquire">voice.pi.ingv.it/geoinquire</a></p>
 				</section>
 				<section>
-					<img src="../default/static/spc1.png"/>
-				</section>
-				<section>
-					<img src="../default/static/spc2.png"/>
-				</section>
-				<section>
-					<h1>Australia</h1>
-					<h2>Geoscience Australia Linked Data Register</h2>
-					<ul>
-						<li>OGC API - Features</li>
-					</ul>
-					<p><a href="https://linkeddata.pid.geoscience.gov.au">linkeddata.pid.geoscience.gov.au</a></p>
-				</section>
-				<section>
-					<img src="../default/static/geoscience-australia.png"/>
+					<img src="../default/static/geo-inquire.png"/>
 				</section>
 				<section>
 					<h1>UN/WMO: wis2box</h1>
@@ -368,7 +368,43 @@ curl http://localhost:5000  # or open in a web browser
 					<img src="../default/static/wmo-wis2box-ui.png"/>
 				</section>
 				<section>
-					<img src="../default/static/wmo-wis2box-graph.png"/>
+					<h2>Over 60 operational deployments</h2>
+					<h2>Weather / climate / water data exchange</h2>
+					<img src="../default/static/wmo-wis2box-deployments.png"/>
+				</section>
+				<section>
+					<h1>UN/WMO WIGOS</h1>
+					<ul>
+						<li><a href="https://community.wmo.int/site/knowledge-hub/programmes-and-initiatives/wmo-integrated-global-observing-system-wigos">WMO Integrated Global Observing System</a></li>
+						<li>API component of the WIGOS Global Station Catalogue</li>
+					</ul>
+					<img style="background-color: white;" src="../default/static/wmo-wigos-phase2.png"/>
+					<p><a href="https://community.wmo.int/site/knowledge-hub/programmes-and-initiatives/wmo-integrated-global-observing-system-wigos">WIGOS website</a></p>
+				</section>
+				<section>
+					<h1>Pacific Community (SPC)</h1>
+					<h2>Ocean Data Management System</h2>
+					<h3>Oceanographic datasets (lidar, satellite, observations, drones)</h3>
+					<ul>
+						<li>OGC API - Records</li>
+					</ul>
+					<p><a href="https://opmdata.gem.spc.int/dms/pygeoapi">https://opmdata.gem.spc.int/dms/pygeoapi</a></p>
+				</section>
+				<section>
+					<img src="../default/static/spc1.png"/>
+				</section>
+				<section>
+					<h1>FES India</h1>
+					<ul>
+						<li>Foundation for Ecological Security</li>
+						<li>Non-profit for sustainable natural resource management</li>
+						<li>OGC API - Features</li>
+						<li>OGC API - Publish-Subscribe Workflow (Kafka)</li>
+					</ul>
+					<p><a href="https://catalog1.indiaobservatory.org.in">https://catalog1.indiaobservatory.org.in</a></p>
+				</section>
+				<section>
+					<img src="../default/static/fes-india.png"/>
 				</section>
 			</section>
 			<section id="roadmap">
@@ -376,49 +412,14 @@ curl http://localhost:5000  # or open in a web browser
 					<h1>Roadmap</h1>
 				</section>
 				<section>
-					<h2>OGC API - Pub/Sub</h2>
-					<ul>
-						<li>Developing specification on event driven workflow</li>
-						<li>Initial implementation at OGC/OSGeo/ASF Joint Sprint (April 2023)</li>
-						<li>Following OGC API - Pub/Sub SWG activity</li>
-					</ul>
-					<img src="../default/static/pygeoapi-pubsub-asyncapi.png">
-				</section>
-				<section>
-					<h2>OGC API - Processes - Part 2 - Deploy, Replace, Undeploy</h2>
-					<ul>
-						<li>User defined processes / publishing</li>
-						<li>Initial implementation at OGC Code Sprint (July 2024)</li>
-						<li>Common workflow language (CWL)</li>
-						<li>Using <a href="https://cwltool.readthedocs.io/">cwltool</a></li>
-					</ul>
-				</section>
-				<section>
-					<img src="../default/static/pygeoapi-oaproc-part2-architecture.png" style="background: white;">
-				</section>
-				<section>
 					<h2>Roadmap</h2>
 					<ul>
-						<li>ensure compliance against all OGC API standards that have CITE tests</li>
-						<li>OGC CITE GitHub Actions (@ricardogsilva)</li>
-						<li>Authentication passthrough</li>
-						<li>Custom formatters</li>
-						<li>MapScript support for Coverages</li>
 						<li>data validation framework (for transactions)</li>
 						<li>refactoring Docker images (slim/full)</li>
-						<li>more OGC APIs: Moving Features, DGGS, Routes</li>
-					</ul>
-				</section>
-				<section>
-					<h2>What about an admin UI to manage the configuration?</h2>
-					<ul>
-						<li>pygeoapi:
-							<ul>
-								<li>is headless by design</li>
-								<li>has an admin API</li>
-								<li>can benefit from an admin UI</li>
-							</ul>
-						<li>An admin UI can live outside of the pygeoapi core (talks to admin API)</li>
+						<li>OGC API - Records - Part 2: Facets</li>
+						<li>OGC API - Records - Part 1: Core: Local Resources Catalog</li>
+						<li>OGC CITE GitHub Actions (@ricardogsilva)</li>
+						<li>Authentication passthrough</li>
 					</ul>
 				</section>
 			</section>
@@ -440,6 +441,14 @@ curl http://localhost:5000  # or open in a web browser
 						<li><a href="https://pygeoapi.io/community/service-providers">pygeoapi.io/community/service-providers</a></li>
 					</ul>
 				</section>
+			</section>
+			<section>
+				<h1>Diving into pygeoapi workshop</h1>
+				<ul>
+					<li>Tomorrow, 14:00 - 18:00, room A12</li>
+					<li><a title="Schedule/agenda" href="https://github.com/geopython/diving-into-pygeoapi/wiki/Agenda-2026-07-02-FOSS4G-Europe">Schedule/agenda</a></li>
+					<li><a title="Diving into pygeoapi workshop" href="https://dive.pygeoapi.io">dive.pygeoapi.io</a></li>
+				</ul>
 			</section>
 			<section>
 				<h1>Swag!</h1>
@@ -467,12 +476,12 @@ curl http://localhost:5000  # or open in a web browser
 				<h1>Thank you!</h1>
 				<p>
 					<a href="https://github.com/tomkralidis">@tomkralidis</a>
-					<a href="https://github.com.com/xbartolone">@xbartolone</a>
-					<a href="https://github.com/kalxas">@kalxas</a>
 					<a href="https://github.com/pvgenuchten">@pvgenuchten</a>
 					<a href="https://github.com/justb4">@justb4</a>
+					<a href="https://github.com.com/xbartolone">@xbartolone</a>
+					<a href="https://github.com/kalxas">@kalxas</a>
 					<a href="https://github.com/jorgejesus">@jorgejesus</a>
-					<a href="https://github.com/doublebyte1">@doublebyte1</a>
+					a href="https://github.com/doublebyte1">@doublebyte1</a>
 				</p>
 			</section>
 		</div>
