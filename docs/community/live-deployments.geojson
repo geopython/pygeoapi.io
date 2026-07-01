@@ -377,6 +377,19 @@
                     54.0924
                 ]
             }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "url": "<a target=\"_blank\" href=\"https://catalog1.indiaobservatory.org.in\">Foundation for Ecological Security (FES), India</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    72.9768,
+                    22.5304
+                ]
+            }
         }
     ]
 }
