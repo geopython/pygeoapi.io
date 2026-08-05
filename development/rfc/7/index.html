@@ -83,7 +83,7 @@
 <li>for a given transactional workflow, pygeoapi will check if a collection's provider is editable (<code>editable: true</code>) and has a <code>validator</code> setting</li>
 <li>if a validator is defined, pygeoapi will load the plugin and call its <code>validate()</code> method, throwing HTTP 400 if the plugin raises <code>ValidatorValidationError</code></li>
 <li>code will be implemented in <code>pygeoapi/validator/base.py</code> as an abstract base class with an <code>validate(data, partials) -&gt; None</code> method</li>
-<li>returns None on valid data payload<ul>
+<li>returns <code>None</code> on valid data payload<ul>
 <li>note that <code>partials</code> (default <code>False</code>) is added for HTTP PATCH workflow</li>
 </ul>
 </li>
