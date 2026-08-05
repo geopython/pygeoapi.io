@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>RFC7 - Data validation for transactions - pygeoapi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en-US">
+    <meta name="description" content="pygeoapi provides an API to geospatial data">
+    <meta name="keywords" content="geospatial,data,api">
+    <link rel="canonical" href="https://pygeoapi.io">
+    <link rel="me" href="https://noc.social/@pygeoapi">    
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/mini.css@3.0.1/dist/mini-default.min.css">
+    <link rel="stylesheet" href="https://pygeoapi.io/css/default.css">
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </head>
+  <body>
+    <header class="sticky row">
+      <label for="drawer-control" class="drawer-toggle"></label>
+      <input type="checkbox" id="drawer-control" class="drawer">
+      <nav class="col-sm-12 col-md-12 col-md-offset-1">
+        <label for="drawer-control" class="drawer-close"></label>
+        <a href="https://pygeoapi.io" class="logo hidden-md" role="button">
+          <img src="https://pygeoapi.io/img/pygeoapi-logo.png" title="pygeoapi" style="height:40px;vertical-align: middle;"/></a>
+        <a title="Fork me on GitHub" href="https://github.com/geopython/pygeoapi"><img style="z-index: 1110; position: fixed; top: 0; right: 0; border: 0; padding: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"/></a>
+        <a href="https://pygeoapi.io">Home</a> <span class='hidden-sm'>|</span>
+        <a href="https://pygeoapi.io/community">Community</a> <span class='hidden-sm'>|</span>
+        <a href="https://pygeoapi.io/documentation">Documentation</a> <span class='hidden-sm'>|</span>
+        <a href="https://demo.pygeoapi.io">Demo</a> <span class='hidden-sm'>|</span>
+        <a href="https://github.com/geopython/pygeoapi">Code</a> <span class='hidden-sm'>|</span>
+        <a href="https://pygeoapi.io/download">Download</a> <span class='hidden-sm'>|</span>
+        <a href="https://pygeoapi.io/development">Development</a>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-10 col-md-offset-1">
+            <h1 id="rfc7-data-validation-for-transactions">RFC7 - Data validation for transactions<a class="headerlink" href="#rfc7-data-validation-for-transactions" title="Permanent link">&para;</a></h1>
+<ul>
+<li>date: 2026-08-05</li>
+<li>author: Tom Kralidis</li>
+<li>contact: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#116;&#111;&#109;&#107;&#114;&#97;&#108;&#105;&#100;&#105;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#116;&#111;&#109;&#107;&#114;&#97;&#108;&#105;&#100;&#105;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></li>
+<li>status: draft</li>
+<li>modified: 2026-08-05</li>
+</ul>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>This RFC describes the addition of data validation functionality in the context of OGC API transactional workflow.</p>
+<p>Currently, pygeoapi allows for read/write capabilities for items based datasets.  This is realized by:</p>
+<ul>
+<li>using a data provider plugin with transaction capabilities</li>
+<li>setting <code>editable: true</code> as part of the provider definition in configuration</li>
+</ul>
+<p>pygeoapi data providers implement generic bindings to given backends and/or data formats.  While pygeoapi's provider architecture enables a plugin developer to implement data validation internally, data providers typically implement read access and (optionally) transactional capability.  Futhermore, depending on a given dataset, implementing business rules in a custom provider can lead to duplicated code for different dataset business rules.  Finally, from a security perspective, data validation is a critical feature to be decoupled from pure transactional functionality, allowing for content validation and handling upstream of pure transaction workflow.</p>
+<h2 id="proposed-solution">Proposed solution<a class="headerlink" href="#proposed-solution" title="Permanent link">&para;</a></h2>
+<p>pygeoapi will define a <code>validator</code> provider level configuration parameter that will allow a user to define a factory for data validation, in alignment and consistent with the plugin architecture.</p>
+<p>Sample configuration:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">lakes</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">collection</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">title</span><span class="p">:</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="nt">en</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Large Lakes</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="nt">fr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Grands Lacs</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nt">description</span><span class="p">:</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="nt">en</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lakes of the world, public domain</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="nt">fr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lacs du monde, domaine public</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="nt">providers</span><span class="p">:</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">feature</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Elasticsearch</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">          </span><span class="nt">editable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">          </span><span class="nt">data</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://localhost:9200/ne_110m_populated_places_simple</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">          </span><span class="nt">id_field</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">geonameid</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">          </span><span class="nt">time_field</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">datetimefield</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">          </span><span class="nt">validator</span><span class="p">:</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">              </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mycoolpackage.my_validator.MyCoolValidator</span>
+</span></code></pre></div>
+<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
+<ul>
+<li>for a given transactional workflow, pygeoapi will check if a collection's provider is editable (<code>editable: true</code>) and has a <code>validator</code> setting</li>
+<li>if a validator is defined, pygeoapi will load the plugin and call its <code>validate()</code> method, throwing HTTP 400 if the plugin raises <code>ValidatorValidationError</code></li>
+<li>code will be implemented in <code>pygeoapi/validator/base.py</code> as an abstract base class with an <code>validate(data, partials) -&gt; None</code> method</li>
+<li>returns None on valid data payload<ul>
+<li>note that <code>partials</code> (default <code>False</code>) is added for HTTP PATCH workflow</li>
+</ul>
+</li>
+<li>raise <code>ValidatorValidationError</code> on invalid data payload</li>
+<li>custom validator plugins are implemented by subclassing <code>pygeoapi.validator.base.BaseValidator</code> and overriding methods accordingly</li>
+</ul>
+<p>The resulting implementation allows for loosely coupled data validation and transactional workflow, allowing for customized business rules against any data undergoing a transaction.</p>
+<p>The initial implementation is focused on item types (features, records).</p>
+<h3 id="backwards-compatibility-issues">Backwards Compatibility Issues<a class="headerlink" href="#backwards-compatibility-issues" title="Permanent link">&para;</a></h3>
+<p>Given this is a new feature, there are no backwards compatibility issues forseeen.</p>
+<p>The new functionality will not be backported to other branches.</p>
+<h3 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h3>
+<p>Tests will be added to ensure the expected functionality.</p>
+<h3 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h3>
+<p>Documentation will be added to the configuration and plugins sections.</p>
+<h2 id="issue-and-pull-request-tracking">Issue and Pull Request tracking<a class="headerlink" href="#issue-and-pull-request-tracking" title="Permanent link">&para;</a></h2>
+<p>Pull Request: <a href="https://github.com/geopython/pygeoapi/pull/2396">https://github.com/geopython/pygeoapi/pull/2396</a></p>
+<h2 id="voting-history">Voting History<a class="headerlink" href="#voting-history" title="Permanent link">&para;</a></h2>
+<p>TBD</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer style="text-align: center;">
+      <a rel="license" title="This work is licensed under a Creative Commons Attribution 4.0 International License" href="https://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
+      © 2019 - 2026 pygeoapi development team
+      <a title="Open Hub project report for pygeoapi" href="https://www.openhub.net/p/pygeoapi"><img src="https://www.openhub.net/p/pygeoapi/widgets/project_thin_badge.gif"/></a>
+      <br/>Powered by <a href="https://zensical.org/">Zensical</a>
+    </footer>
+  </body>
+</html>
