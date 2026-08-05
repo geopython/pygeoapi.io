@@ -16,3 +16,4 @@ the project.
 * [RFC4: GitHub Issue and Pull Request management](4)
 * [RFC5: Enhanced data limit handling](5)
 * [RFC6: Add an optional plugin context and remove pydantic from core](6)
+* [RFC7: Data validation for transactions](7)
