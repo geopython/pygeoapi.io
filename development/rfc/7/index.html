@@ -48,7 +48,7 @@
 <li>author: Tom Kralidis</li>
 <li>contact: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#116;&#111;&#109;&#107;&#114;&#97;&#108;&#105;&#100;&#105;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#116;&#111;&#109;&#107;&#114;&#97;&#108;&#105;&#100;&#105;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></li>
 <li>status: draft</li>
-<li>modified: 2026-08-05</li>
+<li>modified: 2026-08-18</li>
 </ul>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>This RFC describes the addition of data validation functionality in the context of OGC API transactional workflow.</p>
@@ -84,9 +84,9 @@
 <ul>
 <li>for a given transactional workflow, pygeoapi will check if a collection's provider is editable (<code>editable: true</code>) and has a <code>validator</code> setting</li>
 <li>if a validator is defined, pygeoapi will load the plugin and call its <code>validate()</code> method, throwing HTTP 400 if the plugin raises <code>ValidatorValidationError</code></li>
-<li>code will be implemented in <code>pygeoapi/validator/base.py</code> as an abstract base class with an <code>validate(data, partials) -&gt; None</code> method</li>
+<li>code will be implemented in <code>pygeoapi/validator/base.py</code> as an abstract base class with a <code>validate(data, partial) -&gt; None</code> method</li>
 <li>returns <code>None</code> on valid data payload<ul>
-<li>note that <code>partials</code> (default <code>False</code>) is added for HTTP PATCH workflow</li>
+<li>note that <code>partial</code> (default <code>False</code>) is added for HTTP PATCH workflow</li>
 </ul>
 </li>
 <li>raise <code>ValidatorValidationError</code> on invalid data payload</li>
@@ -104,7 +104,7 @@
 <h2 id="issue-and-pull-request-tracking">Issue and Pull Request tracking<a class="headerlink" href="#issue-and-pull-request-tracking" title="Permanent link">&para;</a></h2>
 <p>Pull Request: <a href="https://github.com/geopython/pygeoapi/pull/2396">https://github.com/geopython/pygeoapi/pull/2396</a></p>
 <h2 id="voting-history">Voting History<a class="headerlink" href="#voting-history" title="Permanent link">&para;</a></h2>
-<p>TBD</p>
+<p>Adopted on 2026-08-18 with +1 from justb4, kalxas, jorgejesus, francbartoli, tomkralidis</p>
           </div>
         </div>
       </div>
