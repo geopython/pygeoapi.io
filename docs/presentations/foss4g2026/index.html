@@ -134,7 +134,7 @@ curl http://localhost:5000  # or open in a web browser
 						<li>YAML configuration (metadata, dataset connections)</li>
 						<li>Automated OpenAPI document generation and data binding</li>
 						<li>Robust plugin framework (data connections, formats, processing)</li>
-						<li>Easy deployment (pip3 install, Docker, K8s, conda, UbuntuGIS)</li>
+						<li>Easy deployment (pip3 install, Docker, K8s, conda, UbuntuGIS, FreeBSD)</li>
 						<li>Minimal core dependencies</li>
 					</ul>
 				</section>
@@ -279,6 +279,7 @@ curl http://localhost:5000  # or open in a web browser
 						<li>OSGeo Code Sprint (Riga, Latvia, September 2025)</li>
 						<li>OGC API Code Sprint (Rotterdam, Netherlands, October 2025)</li>
 						<li>OGC API Code Sprint (Fort Collins, CO, USA, January 2026)</li>
+						<li>OGC API Code Sprint (London, UK, June 2026)</li>
 						<li>Collaboration
 						<ul>
 							<li>OSGeo projects</li>
@@ -306,6 +307,19 @@ curl http://localhost:5000  # or open in a web browser
 					</ul>
 				</section>
 				<section>
+					<h2>OGC API - maps refactoring</h2>
+					<ul>
+						<li>Extended CRS support on all core plugins</li>
+					</ul>
+						<thead>
+						<tr>
+						<th style="text-align: center;"><img width="30%" alt="map" src="../default/static/map_4326.png" /></th>
+						<th style="text-align: center;"><img width="30%" alt="map" src="../default/static/map_3857.png" /></th>
+						<th style="text-align: center;"><img width="30%" alt="map" src="../default/static//map_3395.png" /></th>
+						</tr>
+						</thead>
+				</section>
+				<section>
 					<h2>New plugins</h2>
 					<ul>
 						<li>TinyDB (feature)</li>
@@ -331,6 +345,25 @@ curl http://localhost:5000  # or open in a web browser
 						<li><a href="https://geosander.github.io/pygeoapi">Overview/demo/code</a></li>
 					</ul>
 					<h1 style="background-color: white"><img src="../default/static/ogcapi-joins-poc.png" style="vertical-align: middle;"/></h1>
+				</section>
+				<section>
+					<h2>OGC API - Connected Systems proof of concept</h2>
+					<ul>
+						<li>OGC API Code Sprint (Rotterdam, October 2025)</li>
+						<li>Jan Speckamp (52°North)</li>
+						<li><a href="https://github.com/52North/connected-systems-pygeoapi">Code</a>, <a href="https://csa.demo.52north.org/">demo</a>(certificate warning)</li>
+					</ul>
+					<h1 style="background-color: white"><img src="../default/static/csapi-poc.png" style="vertical-align: middle;"/></h1>
+				</section>
+				<section>
+					<h2>QGIS pygeoapi configurator plugin</h2>
+					<ul>
+						<li>Create/edit a pygeoapi configuration file</li>
+						<li>Validation, diff on save</li>
+						<li>Experimental: direct I/O output to pygeoapi instance</li>
+						<li><a href="https://pygeoapi-config.byteroad.net/">User Guide</a> (presentation Tuesday at 5PM, Room 1)</li>
+					</ul>
+					<h1 style="background-color: white"><img src="../default/static/pygeoapi_config.png" style="vertical-align: middle;"/></h1>
 				</section>
 				<section>
 					<h2>Additional updates</h2>
@@ -421,6 +454,19 @@ curl http://localhost:5000  # or open in a web browser
 				<section>
 					<img src="../default/static/fes-india.png"/>
 				</section>
+			<section>
+				<h1>Direção Geral do Território (DGT)</h1>
+				<ul>
+					<li>Portuguese National Mapping Agency</li>
+					<li>OGC API Features, Tiles, Maps and Records</li>
+					<li>Critical datasets like Cadastral (> 1 million features)</li>
+					<li>Migrating to k8 (presentation on Thursday, 2:30 PM Ran2)</li>
+				</ul>
+				<p><a href="https://ogcapi.dgterritorio.gov.pt/">https://ogcapi.dgterritorio.gov.pt/</a></p>
+			</section>
+			<section>
+				<img src="../default/static/cadastral-info.png"/>
+			</section>
 			</section>
 			<section id="roadmap">
 				<section>
