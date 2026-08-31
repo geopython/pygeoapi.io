@@ -338,9 +338,16 @@ curl http://localhost:5000  # or open in a web browser
 					</ul>
 				</section>
 				<section>
+					<h2><a href="https://pygeoapi.io/development/rfc/7">RFC7</a>: data validation for transactions</h2>
+					<ul>
+						<li>Content validation (upstream from transactional capabilities)</li>
+						<li>Ability to implement custom business rules via plugin</li>
+					</ul>
+				</section>
+				<section>
 					<h2>OGC API - Joins proof of concept</h2>
 					<ul>
-						<li>OGC API Code Sprint (Rotterdam, October 2025)</li>
+						<li>OGC API Code Sprint (Rotterdam, Netherlands, October 2025)</li>
 						<li>Sander Schaminee (GeoCat bv)</li>
 						<li><a href="https://geosander.github.io/pygeoapi">Overview/demo/code</a></li>
 					</ul>
@@ -349,7 +356,7 @@ curl http://localhost:5000  # or open in a web browser
 				<section>
 					<h2>OGC API - Connected Systems proof of concept</h2>
 					<ul>
-						<li>OGC API Code Sprint (Rotterdam, October 2025)</li>
+						<li>OGC API Code Sprint (Rotterdam, Netherlands, October 2025)</li>
 						<li>Jan Speckamp (52°North)</li>
 						<li><a href="https://github.com/52North/connected-systems-pygeoapi">Code</a>, <a href="https://csa.demo.52north.org/">demo</a>(certificate warning)</li>
 					</ul>
@@ -377,12 +384,11 @@ curl http://localhost:5000  # or open in a web browser
 				<section>
 					<h2>Releases</h2>
 					<ul>
-						<li>August 2025: 0.21</li>
-						<li>November 2025: 0.22</li>
 						<li>March 2026: 0.23</li>
 						<li>April 2026: 0.23.x (security releases)</li>
 						<li>July 2026: 0.24</li>
 						<li>October 2026: 0.25</li>
+						<li>January 2027: 0.26</li>
 					</ul>
 				</section>
 			</section>
@@ -408,7 +414,6 @@ curl http://localhost:5000  # or open in a web browser
 						<li><a href="https://community.wmo.int/activity-areas/wis">WMO Information System 2.0</a></li>
 						<li>Event-driven weather/climate/water data exchange</li>
 						<li>API component of WMO Reference Implementation</li>
-						<li>Over 60 deployments</li>
 					</ul>
 					<p><a href="https://demo.wis2box.wis.wmo.int">demo.wis2box.wis.wmo.int</a></p>
 				</section>
@@ -416,7 +421,7 @@ curl http://localhost:5000  # or open in a web browser
 					<img src="../default/static/wmo-wis2box-ui.png"/>
 				</section>
 				<section>
-					<h2>Over 60 operational deployments</h2>
+					<h2>Over 100 operational deployments</h2>
 					<h2>Weather / climate / water data exchange</h2>
 					<img src="../default/static/wmo-wis2box-deployments.png"/>
 				</section>
@@ -467,6 +472,15 @@ curl http://localhost:5000  # or open in a web browser
 			<section>
 				<img src="../default/static/cadastral-info.png"/>
 			</section>
+			<section>
+				<h1>pygeoapi-k8s-manager</h1>
+				<ul>
+					<li>52°North (<a href="https://github.com/52North/pygeoapi_k8s-manager">GitHub repository</a>)</li>
+					<li>Extends pygeoapi by a manager for Kubernetes jobs and a process to execute any container image on a cluster</li>
+					<li>Decoupled job management and execution from main pygeoapi instance</li>
+				</ul>
+			</section>
+
 			</section>
 			<section id="roadmap">
 				<section>
@@ -475,12 +489,11 @@ curl http://localhost:5000  # or open in a web browser
 				<section>
 					<h2>Roadmap</h2>
 					<ul>
-						<li>data validation framework (for transactions)</li>
+						<li>Authorization capability for plugins</li>
 						<li>refactoring Docker images (slim/full)</li>
 						<li>OGC API - Records - Part 2: Facets</li>
 						<li>OGC API - Records - Part 1: Core: Local Resources Catalog</li>
 						<li>OGC CITE GitHub Actions (@ricardogsilva)</li>
-						<li>Authorization passthrough</li>
 					</ul>
 				</section>
 			</section>
