@@ -390,6 +390,19 @@
                     22.5304
                 ]
             }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "url": "<a target=\"_blank\" href=\"https://ogcapi.hidrografico.pt/\">Marine Geospatial Data (IH), Portugal</a>"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -9.159756,
+                    38.708508
+                ]
+            }
         }
     ]
 }
