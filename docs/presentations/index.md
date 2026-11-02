@@ -4,6 +4,7 @@ title: Presentations
 
 ## Presentations
 
+- [FOSS4G North America 2026 presentation](foss4g-na2026)
 - [FOSS4G 2026 presentation](foss4g2026)
 - [FOSS4G Europe 2026 presentation](foss4g-europe2026)
 - [FOSS4G 2025 presentation](foss4g2025)
